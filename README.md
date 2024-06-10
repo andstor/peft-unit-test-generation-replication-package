@@ -1,9 +1,9 @@
-# ASE 2024 replication prackage
+# ASE 2024 replication package
 
 
 ## Repository structure
 
-This repository is organzized as follows:
+This repository is organized as follows:
 - **/training**: Contains all scripts for training.
 - **/generation**: Contains the scripts for generation.
 - **/data**: Contains the experiments' generated data.
