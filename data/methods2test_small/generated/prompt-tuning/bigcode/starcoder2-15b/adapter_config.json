@@ -1,0 +1,17 @@
+{
+    "peft_type": "PROMPT_TUNING",
+    "auto_mapping": null,
+    "base_model_name_or_path": "bigcode/starcoder2-15b",
+    "revision": null,
+    "task_type": "CAUSAL_LM",
+    "inference_mode": true,
+    "num_virtual_tokens": 20,
+    "token_dim": 6144,
+    "num_transformer_submodules": 1,
+    "num_attention_heads": 48,
+    "num_layers": 40,
+    "prompt_tuning_init": "RANDOM",
+    "prompt_tuning_init_text": null,
+    "tokenizer_name_or_path": "bigcode/starcoder2-15b",
+    "tokenizer_kwargs": null
+}
