@@ -28,7 +28,5 @@ Install the Python extension and select the kernel using `ctrl+shift+p`. Python 
 ### LaTeX
 Matplotlib's `pgf` support requires a recent [LaTeX](http://www.tug.org/) installation that includes the TikZ/PGF packages (such as [TeXLive](http://www.tug.org/texlive/))
 
-## Analysis
-
-### Steps
-
+### Docker with gVisor
+To run the analysis in a gVisor container, you need to have Docker installed. You can install Docker by following the instructions on the [Docker website](https://docs.docker.com/get-docker/). 
