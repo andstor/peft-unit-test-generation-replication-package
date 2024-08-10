@@ -1,4 +1,4 @@
-# ASE 2024 replication package
+# ICSE 2025 replication package
 
 
 ## Repository structure
