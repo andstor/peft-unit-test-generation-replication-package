@@ -56,7 +56,7 @@ data/
 
 
 ## Analysis
-From the generated data, we fix it using the `fix_data.ipynb` notebook. After fixing the data, we calculate the CodeBLEU scores using the `calc_score.ipynb` notebook. After calculating code coverage, we calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook. Finally, we analyze the data and generate the plots using the `plots.ipynb` notebook.
+From the generated data, we fix it using the `fix_data.ipynb` notebook. After fixing the data, we calculate the CodeBLEU scores using the `calc_score.ipynb` notebook. After code coverage is calculated (see the [evaluation](#evaluation) section), we calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook. Finally, we analyze the data and generate the plots using the `plots.ipynb` notebook.
 ```
 analysis/
 |-- java-universal-parser/       Directory containing the Java parser used to validate generated code.
@@ -67,7 +67,7 @@ analysis/
 ```
 
 ## Evaluation
-Code coverage is calculated using the `evaluate_humaneval-x.py` script. Due to potential security issues with executing arbitrary generated code, we use Docker. Execute at your own risk.
+Code coverage is calculated using the `evaluate_humaneval-x.py` script. Due to potential security issues with executing arbitrary generated code, we use Docker. Execute at your own risk. See the `evaluation/README.md` file for container build instructions.
 ````
 evaluation/
 |-- Dockerfile                   Dockerfile for building the evaluation environment.
@@ -82,7 +82,7 @@ Follow the setup instructions within each directory. To replicate the experiment
 2. Generate the unit tests using the `run_gen.py` script.
 3. Fix the generated data using the `fix_data.ipynb` notebook.
 4. Calculate the CodeBLEU scores using the `calc_score.ipynb` notebook.
-5. Generate coverage data by executing the `evaluate_humaneval-x.py` script within the provided Docker container. See the `evaluation/README.md` file for container build instructions.
+5. Generate coverage data by executing the `evaluate_humaneval-x.py` script within the provided Docker container.
 6. Calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook.
 5. Analyze the data and generate the plots using the `plots.ipynb` notebook.
 
