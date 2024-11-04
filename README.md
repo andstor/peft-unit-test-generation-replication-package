@@ -1,4 +1,4 @@
-# ICSE 2025 replication package
+# PEFT unit test generation replication package
 
 
 ## Repository structure
@@ -86,4 +86,4 @@ Follow the setup instructions within each directory. To replicate the experiment
 6. Calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook.
 5. Analyze the data and generate the plots using the `plots.ipynb` notebook.
 
-Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. The trained models are available [here](https://huggingface.co/fals3/peft-unit-test-generation-experiments). 
+Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. The trained models are available [here](https://huggingface.co/andstor/peft-unit-test-generation-experiments). 
