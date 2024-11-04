@@ -1,5 +1,4 @@
 # Analysis
-> This directory contains all scripts used for data analysis.
 
 ## Description
 This directory contains all scripts used for data analysis.
