@@ -41,16 +41,21 @@ data/
 |-- <dataset>/
 |   |-- generated/                                     The generated unit tests from each experiment.
 |   |   |-- <tuning_method>/                           The tuning method used. Full pre-trained, fine-tuning, LoRA, IA^3, and prompt tuning.
-|   |   |   |-- <namespace>/                           The organization that created the base model.
-|   |   |       |-- <model_name>/                      The name of the model.
-|   |   |           |-- 0000[i]-of-0000[n].test.jsonl  JSONL file with generated unit tests.
-|   |   |-- scores.csv                                 CSV file containing the CodeBLEU scores of the experiments.
-|   |   |-- valid_syntax.csv                           CSV file containing the valid syntax fraction generated code.
+|   |       |-- <namespace>/                           The organization that created the base model.
+|   |           |-- <model_name>/                      The name of the model.
+|   |               |-- 0000[i]-of-0000[n].test.jsonl  JSONL file with generated unit tests.
 |   |-- fixed/                                         Same as "generated" but with fixed data.
 |   |-- coverage/                                      The coverage data of the generated unit tests.
-|-- coverage_branch.csv                                CSV file containing the branch coverage of the generated unit tests.
-|-- coverage_instruction.csv                           CSV file containing the instruction coverage of the generated unit tests.
-|-- coverage_runnable.csv                              CSV file containing the percentage of the generated unit tests that are runnable.
+|   |   |-- <tuning_method>/                           The tuning method used. Full pre-trained, fine-tuning, LoRA, IA^3, and prompt tuning.
+|   |       |-- <namespace>/                           The organization that created the base model.
+|   |           |-- <model_name>/                      The name of the model.
+|   |               |-- jacoco.jsonl                   JSONL file with jacoco report data.
+|   |               |-- error.jsonl                    JSONL file with jacoco error report data.
+|   |-- coverage_branch.csv                            CSV file containing the branch coverage of the generated unit tests.
+|   |-- coverage_instruction.csv                       CSV file containing the instruction coverage of the generated unit tests.
+|   |-- coverage_runnable.csv                          CSV file containing the percentage of the generated unit tests that are runnable.
+|   |-- scores.csv                                     CSV file containing the CodeBLEU scores of the experiments.
+|   |-- valid_syntax.csv                               CSV file containing the valid syntax fraction generated code.
 |-- params_data.csv                                    CSV file with count of trainable parameters for each model.
 ```
 
