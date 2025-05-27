@@ -22,7 +22,17 @@ jobs:
       packages: write
       attestations: write
       id-token: write
-      #
+
+    strategy:
+      matrix:
+        build-dir:
+          - "evaluation/methods2test_runnable"
+          - "evaluation/humaneval-x"
+
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}/${{ matrix.build-dir.split('/').last() }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -47,7 +57,7 @@ jobs:
         id: push
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
-          context: "{{ defaultContext }}:evaluation/methods2test_runnable"
+          context: "{{ defaultContext }}:${{ matrix.build-dir }}"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
