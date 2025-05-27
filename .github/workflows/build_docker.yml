@@ -31,7 +31,7 @@ jobs:
 
     env:
       REGISTRY: ghcr.io
-      IMAGE_NAME: ${{ github.repository }}/${{ matrix.build-dir.split('/').last() }}
+      IMAGE_NAME: ${{ github.repository }}/${{ matrix.build-dir.split('/')[1] }}
 
     steps:
       - name: Checkout repository
