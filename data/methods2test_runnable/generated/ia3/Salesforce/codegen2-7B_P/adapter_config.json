@@ -1,0 +1,14 @@
+{
+    "task_type": "CAUSAL_LM",
+    "peft_type": "IA3",
+    "auto_mapping": null,
+    "base_model_name_or_path": "Salesforce/codegen2-7B_P",
+    "revision": null,
+    "inference_mode": true,
+    "target_modules": null,
+    "exclude_modules": null,
+    "feedforward_modules": null,
+    "fan_in_fan_out": false,
+    "modules_to_save": null,
+    "init_ia3_weights": true
+}

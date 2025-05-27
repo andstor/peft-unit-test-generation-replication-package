@@ -1,0 +1,17 @@
+{
+    "task_type": "CAUSAL_LM",
+    "peft_type": "PROMPT_TUNING",
+    "auto_mapping": null,
+    "base_model_name_or_path": "Salesforce/codegen2-7B_P",
+    "revision": null,
+    "inference_mode": true,
+    "num_virtual_tokens": 20,
+    "token_dim": 4096,
+    "num_transformer_submodules": 1,
+    "num_attention_heads": 16,
+    "num_layers": 32,
+    "prompt_tuning_init": "RANDOM",
+    "prompt_tuning_init_text": null,
+    "tokenizer_name_or_path": "Salesforce/codegen2-7B_P",
+    "tokenizer_kwargs": null
+}
