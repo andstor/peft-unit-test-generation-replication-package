@@ -1,5 +1,5 @@
 model,CodeLlama-7b-hf,starcoder2-3b,starcoder2-7b,starcoder2-15b,starcoderbase,codegen2-16B_P,codegen2-3_7B_P,codegen2-7B_P,codegen2-1B_P,codegen-350M-multi
-full_fine-tuning,0.9895,0.989,0.9915,0.9952,0.9916,0.9952,0,0.9975,0,1.0
+fine-tuning,0.9895,0.989,0.9915,0.9952,0.9916,0.9952,0,0.9975,0,1.0
 pre-trained,0.9833,0.994,0.9907,0.9893,0.9907,0.9866,0,0.9831,0,0.9733
 ia3,0.9877,0.9919,0.9935,0.9895,0.9907,0.9866,0,0.9806,0,0.9869
 prompt-tuning,0.9838,0.9967,0.994,0.9957,0.9872,0.9746,0,0.9855,0,0.9769
