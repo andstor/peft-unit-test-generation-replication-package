@@ -40,5 +40,5 @@ RUN gradle --version
 WORKDIR /workspace/evaluation/methods2test_runnable/
 
 COPY  src .
-COPY  validate_runner.py .
+COPY  validate_runnable.py .
 COPY  execute_tests.py .
