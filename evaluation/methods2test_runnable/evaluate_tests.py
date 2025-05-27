@@ -15,8 +15,7 @@ SAVE_DIR = DATA_DIR / "methods2test_runnable"  / "coverage"
 os.environ["GIT_TERMINAL_PROMPT"] = "0"  # Disable git terminal prompt
 
 #if not (os.environ.get("CONTAINER", "").lower() in ("yes", "y", "on", "true", "1")):
-parser_dir = pathlib.Path(os.path.dirname(os.path.abspath("__file__"))) / '../../utilities/java-universal-parser' / 'parser'
-sys.path.append(str(parser_dir))
+
 
 
 from src.test_executer import TestExecutor
