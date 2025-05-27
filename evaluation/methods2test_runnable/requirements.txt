@@ -1,0 +1,6 @@
+pandas
+datasets
+tqdm
+ipywidgets
+gitpython
+numpy
