@@ -39,6 +39,7 @@ RUN gradle --version
 # Set the working directory inside the container
 WORKDIR /workspace/evaluation/methods2test_runnable/
 
+COPY  __init__.py .
 COPY  src .
 COPY  validate_runnable.py .
-COPY  execute_tests.py .
+COPY  evaluate_tests.py .

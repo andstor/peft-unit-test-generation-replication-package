@@ -10,29 +10,33 @@ Please make sure you have Docker installed on your machine. See the [Docker inst
 
 
 ## Build
-Build the image from evaluation/docker/Dockerfile from the root of the repository:
+Build the image from evaluation/docker/Dockerfile from this directory.
 
 ```bash
-docker build -t jacoco-image -f evaluation/humaneval-x/Dockerfile .
+docker build -t humaneval-x .
 ```
 
+<!--
 After obtaining the image, create a folder for storing the results of the evaluation:
 ```bash
-mkdir data/humaneval-x/coverage
+mkdir ../data/humaneval-x/coverage
 ```
+-->
 
 Start a container using the following command:
 
 ```bash
 docker run \
   -it \
-  --mount type=bind,source="$(pwd)"/data/humaneval-x/coverage/,target=/workspace/coverage \
-  --mount type=bind,source="$(pwd)"/data/humaneval-x/fixed/,target=/workspace/data,readonly \
-  jacoco-image bash
+  -v "$(pwd)"/../../data/humaneval-x/coverage/:/workspace/data/humaneval-x/coverage:rw \
+  -v "$(pwd)"/../../data/humaneval-x/fixed/:/workspace/data/humaneval-x/fixed:ro \
+  humaneval-x python evaluate_tests.py
 ```
 
 To run the evaluation, run the following script from the root of the workspace directory (please execute with caution, the generated codes might have unexpected behaviors though with very low possibility). Execute at your own risk:
+<!--
 
 ```bash
-python evaluate_humaneval-x.py
+python evaluate_tests.py
 ```
+-->

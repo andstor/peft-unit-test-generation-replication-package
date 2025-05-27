@@ -8,8 +8,8 @@ from pathlib import Path
 
 SCRIPT_PATH: str = Path(os.path.abspath(__file__))
 SCRIPT_DIR: Path = SCRIPT_PATH.parent
-DATA_DIR = SCRIPT_DIR.parents[1] / "data"
-SAVE_DIR = DATA_DIR / "methods2test_runnable"  / "coverage"
+DATA_DIR = SCRIPT_DIR.parents[1] / "data" / "humaneval-x" / "fixed"
+SAVE_DIR = SCRIPT_DIR.parents[1] / "data" / "methods2test_runnable" / "coverage"
 
 
 os.environ["GIT_TERMINAL_PROMPT"] = "0"  # Disable git terminal prompt
@@ -25,18 +25,15 @@ def load_generated_data():
     import os
     import json
 
-    # Define the base directory
-    base_dir = "../../data/methods2test_runnable/fixed"
-
     # Initialize a dictionary to store data
     data = {}
 
     # Recursively traverse the directory
-    for root, dirs, files in os.walk(base_dir):
+    for root, dirs, files in os.walk(DATA_DIR):
         for file in files:
             if file.endswith(".jsonl"):
                 # Extract method, namespace, and model name from the path
-                relative_path = os.path.relpath(root, base_dir)
+                relative_path = os.path.relpath(root, DATA_DIR)
                 method, namespace, model_name = relative_path.split(os.sep)
                 
                 # Initialize structure if not already present

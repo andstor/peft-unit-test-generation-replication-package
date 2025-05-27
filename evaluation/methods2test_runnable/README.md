@@ -13,34 +13,28 @@ Please make sure you have Docker installed on your machine. See the [Docker inst
 Build the image from evaluation/docker/Dockerfile from the current directory:
 
 ```bash
-docker build -t methods2test-eval-image  .
+docker build -t methods2test_runnable .
 ```
 
-After obtaining the image, create a folder for storing the results of the evaluation:
+Start a container using the following command:
 ```bash
-mkdir data/humaneval-x/coverage
+docker run \
+  -it \
+  -v "$(pwd)"output/:/workspace/evaluation/methods2test_runnable/output:rw \
+  methods2test_runnable python validate_runnable.py
 ```
+
 
 Start a container using the following command:
 
 ```bash
 docker run \
   -it \
-  --mount type=bind,source="$(pwd)"/data/humaneval-x/coverage/,target=/workspace/coverage \
-  --mount type=bind,source="$(pwd)"/data/methods2test_small/fixed/,target=/workspace/data,readonly \
-  methods2test-eval-image bash
+  -v "$(pwd)"/../../data/methods2test_runnable/coverage/:/workspace/data/methods2test_runnable/coverage:rw \
+  -v "$(pwd)"/../../data/methods2test_runnable/fixed/:/workspace/data/methods2test_runnable/fixed:ro \
+  methods2test_runnable python evaluate_tests.py
 ```
 
-To run the evaluation, run the following script from the root of the workspace directory (please execute with caution, the generated codes might have unexpected behaviors though with very low possibility). Execute at your own risk:
-
-```bash
-python evaluate_humaneval-x.py
-```
-
-
-docker run \
-  -it \
-  methods2test-eval-image bash
 
 
 

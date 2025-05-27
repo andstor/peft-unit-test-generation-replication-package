@@ -7,9 +7,11 @@ import subprocess
 from datasets import load_dataset
 
 SCRIPT_PATH: str = Path(os.path.abspath(__file__))
-SCRIPT_DIR: str = SCRIPT_PATH.parent.parent
-DATA_DIR = SCRIPT_DIR / "data"
-SAVE_DIR = SCRIPT_DIR / "coverage"
+SCRIPT_DIR: str = SCRIPT_PATH.parent
+DATA_DIR = SCRIPT_DIR.parents[1] / "data" / "humaneval-x" / "fixed"
+SAVE_DIR = SCRIPT_DIR.parents[1] / "data" / "humaneval-x" / "coverage"
+
+
 
 dataset = load_dataset("THUDM/humaneval-x", "java")
 humanevalx = dataset["test"].to_pandas().set_index("task_id")
