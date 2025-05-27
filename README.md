@@ -75,9 +75,25 @@ analysis/
 Code coverage is calculated using the `evaluate_humaneval-x.py` script. Due to potential security issues with executing arbitrary generated code, we use Docker. Execute at your own risk. See the `evaluation/README.md` file for container build instructions.
 ````
 evaluation/
-|-- Dockerfile                   Dockerfile for building the evaluation environment.
-|-- evaluate_humaneval-x.py      Python script for evaluating the generated codes.
-|-- pom.xml                      Maven project file for building the evaluation environment.
+|-- humaneval-x/                          Directory containing the scripts for evaluating the Humaneval-X codes.
+|   |-- Dockerfile                        Dockerfile for building the evaluation environment.
+|   |-- evaluate_tests.py                 Python script for evaluating the generated codes.
+|   |-- pom.xml                           Maven project file for building the evaluation environment.
+|-- methods2test_runnable/                Directory containing the scripts for evaluating the runnable methods2test codes.
+|   |-- Dockerfile                        Dockerfile for building the evaluation environment.
+|   |-- evaluate_tests.py                 Python script for evaluating the generated codes.
+|   |-- validate_runnable.py              Python script for validating the runnable methods2test codes.
+|   |-- find_golden_commits.py            Python script for finding the golden commits in the methods2test repository.
+|   |-- dataset_meta.ipynb                Jupyter Notebook file for generating the dataset metadata.
+|   |-- src/                              Directory containing the source code for the runnable methods2test codes.
+|   |   |-- jacoco_report.py              Python script for generating the Jacoco report.
+|   |   |-- java_descriptor_converter.py  Python script for converting Java descriptors.
+|   |   |-- java_utils.py                 Python script for Java utility functions.
+|   |   |-- surefire_report.py            Python script for generating the Surefire report.
+|   |   |-- test_executer.py              Python script for executing the tests.
+|   |-- output/                           Directory for storing the intermediate results.
+|   |   |-- commits_[split].jsonl         JSONL file with commits for buildable methods2test test repositories.
+|   |   |-- runnable.jsonl                JSONL file with the runnable methods2test codes.
 ````
 
 ## Replication
@@ -91,4 +107,7 @@ Follow the setup instructions within each directory. To replicate the experiment
 6. Calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook.
 5. Analyze the data and generate the plots using the `plots.ipynb` notebook.
 
-Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. The trained models are available [here](https://huggingface.co/andstor/peft-unit-test-generation-experiments). 
+Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. Metadata and links to the trained models can be found at [here](https://huggingface.co/datasets/andstor/peft-unit-test-generation-experiments). 
+
+
+evaluation/methods2test_runnable/src evaluation/methods2test_runnable/src/__pycache__ evaluation/methods2test_runnable/src/__init__.py evaluation/methods2test_runnable/src/evaluate_methods2test.py evaluation/methods2test_runnable/src/jacoco_report.py evaluation/methods2test_runnable/src/java_descriptor_converter.py evaluation/methods2test_runnable/src/java_utils.py evaluation/methods2test_runnable/src/surefire_report.py evaluation/methods2test_runnable/src/test_executer.py
