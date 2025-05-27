@@ -16,25 +16,56 @@ Build the image from evaluation/docker/Dockerfile from the current directory:
 docker build -t methods2test_runnable .
 ```
 
+
+After obtaining the image, create a folder for storing the results of the evaluation:
+```bash
+mkdir ./output
+```
+
+
 Start a container using the following command:
 ```bash
 docker run \
   -it \
-  -v "$(pwd)"output/:/workspace/evaluation/methods2test_runnable/output:rw \
+  --mount type=bind,source="$(pwd)"/output/,target=/workspace/evaluation/methods2test_runnable/output \
   methods2test_runnable python validate_runnable.py
 ```
 
+Apptainer:
+```bash
+apptainer run \
+  --compat \
+  --cwd "/workspace/evaluation/methods2test_runnable/"  \
+  --mount type=bind,source="$(pwd)"/output/,target=/workspace/data/methods2test_runnable/output \
+  docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/methods2test_runnable:main bash
+```
+
+
+After obtaining the image, create a folder for storing the results of the evaluation:
+```bash
+mkdir ../../data/methods2test_runnable/coverage
+```
+
 
 Start a container using the following command:
 
 ```bash
 docker run \
   -it \
-  -v "$(pwd)"/../../data/methods2test_runnable/coverage/:/workspace/data/methods2test_runnable/coverage:rw \
-  -v "$(pwd)"/../../data/methods2test_runnable/fixed/:/workspace/data/methods2test_runnable/fixed:ro \
+  --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/coverage/,target=/workspace/data/methods2test_runnable/coverage \
+  --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/fixed/,target=/workspace/data/methods2test_runnable/fixed,readonly \
   methods2test_runnable python evaluate_tests.py
 ```
 
+Apptainer:
+```bash
+apptainer run \
+  --compat \
+  --cwd "/workspace/evaluation/methods2test_runnable/"  \
+  --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/coverage/,target=/workspace/data/methods2test_runnable/coverage \
+  --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/fixed/,target=/workspace/data/methods2test_runnable/fixed,readonly \
+  docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/methods2test_runnable:main bash
+```
 
 
 

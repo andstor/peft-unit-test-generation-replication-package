@@ -16,21 +16,37 @@ Build the image from evaluation/docker/Dockerfile from this directory.
 docker build -t humaneval-x .
 ```
 
-<!--
+
 After obtaining the image, create a folder for storing the results of the evaluation:
 ```bash
-mkdir ../data/humaneval-x/coverage
+mkdir ../../data/humaneval-x/coverage
 ```
--->
 
 Start a container using the following command:
 
 ```bash
 docker run \
   -it \
-  -v "$(pwd)"/../../data/humaneval-x/coverage/:/workspace/data/humaneval-x/coverage:rw \
-  -v "$(pwd)"/../../data/humaneval-x/fixed/:/workspace/data/humaneval-x/fixed:ro \
+  --mount type=bind,source="$(pwd)"/../../data/humaneval-x/coverage/,target=/workspace/data/humaneval-x/coverage \
+  --mount type=bind,source="$(pwd)"/../../data/humaneval-x/fixed/,target=/workspace/data/humaneval-x/fixed,readonly \
   humaneval-x python evaluate_tests.py
+```
+
+Apptainer:
+```bash
+apptainer run \
+  --compat \
+  --cwd "/workspace/evaluation/humaneval-x/"  \
+  --mount type=bind,source="$(pwd)"/../../data/humaneval-x/coverage/,target=/workspace/data/humaneval-x/coverage \
+  --mount type=bind,source="$(pwd)"/../../data/humaneval-x/fixed/,target=/workspace/data/humaneval-x/fixed,readonly \
+  docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/humaneval-x:main bash
+```
+
+
+To run the evaluation, run the following script from the root of the workspace directory (please execute with caution, the generated codes might have unexpected behaviors though with very low possibility. Execute at your own risk:
+
+```bash
+python evaluate_humaneval-x.py
 ```
 
 To run the evaluation, run the following script from the root of the workspace directory (please execute with caution, the generated codes might have unexpected behaviors though with very low possibility). Execute at your own risk:
