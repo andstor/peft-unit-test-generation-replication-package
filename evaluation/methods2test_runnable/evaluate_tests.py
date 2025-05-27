@@ -8,7 +8,7 @@ from pathlib import Path
 
 SCRIPT_PATH: str = Path(os.path.abspath(__file__))
 SCRIPT_DIR: Path = SCRIPT_PATH.parent
-DATA_DIR = SCRIPT_DIR.parents[1] / "data" / "humaneval-x" / "fixed"
+DATA_DIR = SCRIPT_DIR.parents[1] / "data" / "methods2test_runnable-x" / "fixed"
 SAVE_DIR = SCRIPT_DIR.parents[1] / "data" / "methods2test_runnable" / "coverage"
 
 
