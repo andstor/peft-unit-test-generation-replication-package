@@ -8,3 +8,4 @@ evaluate
 scikit-learn
 peft
 deepspeed
+hf_xet
