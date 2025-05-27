@@ -25,13 +25,15 @@ jobs:
 
     strategy:
       matrix:
-        build-dir:
-          - "evaluation/methods2test_runnable"
-          - "evaluation/humaneval-x"
+        include:
+          - name: methods2test_runnable
+            build-dir: evaluation/methods2test_runnable
+          - name: humaneval-x
+            build-dir: evaluation/humaneval-x
 
     env:
       REGISTRY: ghcr.io
-      IMAGE_NAME: ${{ github.repository }}/${{ matrix.build-dir.split('/')[1] }}
+      IMAGE_NAME: ${{ github.repository }}/${{ matrix.name }}
 
     steps:
       - name: Checkout repository
