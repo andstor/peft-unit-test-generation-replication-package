@@ -38,13 +38,17 @@ def constrained_iterator(sem: BoundedSemaphore, data: iter):
 
 def progress_tracker_worker(progressq: Queue, total: int):
     from tqdm import tqdm
+    import queue
     
     pbar = tqdm(desc="Executing tests", total=total, dynamic_ncols=True)
     while True:
-        item = progressq.get()
-        if item is None:
-            break
-        pbar.update(1)
+        try:
+            item = progressq.get()
+            if item is None:
+                break
+            pbar.update(1)
+        except queue.Empty:
+            continue   
 
 def initializer():
     global meta_ds_df, raw_ds_df, failed
@@ -66,25 +70,36 @@ def process_test(args):
         return
 
     with open(file_path, "r") as f:
-        df = pd.read_json(file_path, orient='records', lines=True, dtype=False)
-        gen_ds_df = df.set_index("id")
-        
         res_file_dir = SAVE_DIR / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
         os.makedirs(res_file_dir, exist_ok=True)
         output_file = res_file_dir / "jacoco.jsonl"
 
+        
+        gen_ds_df = pd.read_json(file_path, orient='records', lines=True, dtype=False)  
+        # Check if loaded json file is empty
+        if gen_ds_df.empty:
+            # Generate an empty output file if not exists
+            if not os.path.exists(output_file):
+                with open(output_file, "w") as f:
+                    pass
+            return
+        gen_ds_df = gen_ds_df.set_index("id")
+        
+        
         # --- Resume logic: collect already processed ids ---
         processed_ids = set()
         incomplete_ids = set()
         if os.path.exists(output_file):
-            out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False).set_index("id")
-            # Drop all entries with duplicated ids (keep only unique ids)
-            out_df_valid = out_df[~out_df.index.duplicated(keep=False)]
-            # Drop entries with status in ["exception", "skipped", "build error"]
-            out_df_valid = out_df_valid[~out_df_valid["status"].isin(["exception", "skipped", "build error"])]
-            incomplete_ids.update(out_df_valid.index)
-            # remove incomplete ids from processed_ids
-            processed_ids.update(set(out_df.index) - incomplete_ids)
+            out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False)
+            if not out_df.empty:
+                out_df.set_index("id")
+                # Drop all entries with duplicated ids (keep only unique ids)
+                out_df_valid = out_df[~out_df.index.duplicated(keep=False)]
+                # Drop entries with status in ["exception", "skipped", "build error"]
+                out_df_valid = out_df_valid[~out_df_valid["status"].isin(["exception", "skipped", "build error"])]
+                incomplete_ids.update(out_df_valid.index)
+                # remove incomplete ids from processed_ids
+                processed_ids.update(set(out_df.index) - incomplete_ids)
         # ---------------------------------------------------
 
         for id in gen_ds_df.index:
@@ -110,7 +125,9 @@ def process_test(args):
             repo_url = sample_raw[ "repository"]["url"]
             repo_name = repo_url.split('/')[-1]
 
-            local_dir = Path(".tmp") / "repos" / str(os.getpid())
+            from uuid import uuid4
+            tmp_id = uuid4().hex
+            local_dir = Path(".tmp") / "repos" / tmp_id
             os.makedirs(local_dir, exist_ok=True)
             repo_path = local_dir / repo_name
             try:
