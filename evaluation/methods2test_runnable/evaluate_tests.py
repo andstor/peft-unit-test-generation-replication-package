@@ -64,15 +64,34 @@ def process_test(args):
     if failed:
         # skip when initializer failed
         return
-    
+
     with open(file_path, "r") as f:
         df = pd.read_json(file_path, orient='records', lines=True, dtype=False)
         gen_ds_df = df.set_index("id")
         
         res_file_dir = SAVE_DIR / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
         os.makedirs(res_file_dir, exist_ok=True)
-        
+        output_file = res_file_dir / "jacoco.jsonl"
+
+        # --- Resume logic: collect already processed ids ---
+        processed_ids = set()
+        incomplete_ids = set()
+        if os.path.exists(output_file):
+            out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False).set_index("id")
+            # Drop all entries with duplicated ids (keep only unique ids)
+            out_df_valid = out_df[~out_df.index.duplicated(keep=False)]
+            # Drop entries with status in ["exception", "skipped", "build error"]
+            out_df_valid = out_df_valid[~out_df_valid["status"].isin(["exception", "skipped", "build error"])]
+            incomplete_ids.update(out_df_valid.index)
+            # remove incomplete ids from processed_ids
+            processed_ids.update(set(out_df.index) - incomplete_ids)
+        # ---------------------------------------------------
+
         for id in gen_ds_df.index:
+            if id in processed_ids and id not in incomplete_ids:
+                progressq.put(1)  # Signal progress for already processed ids
+                continue
+            
             from git import Repo
             sample_gen = gen_ds_df.loc[id]
             sample_raw = raw_ds_df.loc[id]
@@ -122,54 +141,55 @@ def process_test(args):
                 executor.register_focal_method(focal_method)
                 executor.install_coverage_tool()
 
-                # First try to compile the original code
-                executor.clean()
-                out, err, returncode = executor.execute()
-                logger.debug(out)
-                logger.debug(err)
-                logger.debug(returncode)
-                
-                
-                results = executor.get_results()
-                status = None
-                if results is None:
-                    logger.info("BUILD ERROR")
-                    status = "build error"
-                elif results["skipped"] > 0:
-                    logger.info("TEST SKIPPED")
-                    status = "skipped"
-                elif results["failures"] > 0:
-                    logger.info("TEST FAILED")
-                    status = "failed"
-                elif results["errors"] > 0:
-                    logger.info("TEST ERROR")
-                    status = "error"
-                else:
-                    status = "success"
-                    logger.info("TEST PASSED")
-                
-                
-                coverage = None
-                if results is not None:
-                    coverage = executor.get_coverage_report()
-                    logger.info(pd.Series(coverage).to_frame().T)
+                if id not in incomplete_ids:
+                    # First try to compile the original code
+                    executor.clean()
+                    out, err, returncode = executor.execute()
+                    logger.debug(out)
+                    logger.debug(err)
+                    logger.debug(returncode)
+                    
+                    
+                    results = executor.get_results()
+                    status = None
+                    if results is None:
+                        logger.info("BUILD ERROR")
+                        status = "build error"
+                    elif results["skipped"] > 0:
+                        logger.info("TEST SKIPPED")
+                        status = "skipped"
+                    elif results["failures"] > 0:
+                        logger.info("TEST FAILED")
+                        status = "failed"
+                    elif results["errors"] > 0:
+                        logger.info("TEST ERROR")
+                        status = "error"
+                    else:
+                        status = "success"
+                        logger.info("TEST PASSED")
+                    
+                    
+                    coverage = None
+                    if results is not None:
+                        coverage = executor.get_coverage_report()
+                        logger.info(pd.Series(coverage).to_frame().T)
 
-                data = {}
-                data["id"] = id
-                data["status"] = status
-                data["generated"] = 0
-                # add coverage to data without knowing the keys
-                if coverage is not None:
-                    data.update(coverage)
-                with open(res_file_dir / "jacoco.jsonl", "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
-                
-                if status == "build error":
-                    logger.info("Build error in original code")
-                    continue
-                if status == "skipped":
-                    logger.info("Test skipped in original code")
-                    continue
+                    data = {}
+                    data["id"] = id
+                    data["status"] = status
+                    data["generated"] = 0
+                    # add coverage to data without knowing the keys
+                    if coverage is not None:
+                        data.update(coverage)
+                    with open(res_file_dir / "jacoco.jsonl", "a") as jacoco_file:
+                        jacoco_file.write(json.dumps(data) + "\n")
+                    
+                    if status == "build error":
+                        logger.info("Build error in original code")
+                        continue
+                    if status == "skipped":
+                        logger.info("Test skipped in original code")
+                        continue
                 
                 
                 
