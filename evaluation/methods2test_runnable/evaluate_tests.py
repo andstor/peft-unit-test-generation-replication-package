@@ -236,6 +236,9 @@ def process_test(args):
                 try:
                     if os.path.exists(repo_path):
                         shutil.rmtree(repo_path, ignore_errors=True)
+                    # Also cleanup the temp dir for this process id if empty
+                    if os.path.exists(local_dir) and not os.listdir(local_dir):
+                        shutil.rmtree(local_dir, ignore_errors=True)
                 except BaseException:
                     pass
 
@@ -249,8 +252,8 @@ def find_file_paths():
     return file_paths
 
     
-def main():
-    
+def main(args):
+    num_proc = args.num_proc
     file_paths = find_file_paths()
     total_tests = sum([sum(1 for line in open(filename)) for filename in file_paths])
     logger.info(f"Total number of test cases: {total_tests}")
@@ -261,11 +264,7 @@ def main():
     progress_tracker = Process(target=progress_tracker_worker, args=(progressq,total_tests))
     progress_tracker.start()
     
-    
-    num_proc = 2
-    
     with mp.Pool(processes=num_proc, initializer=initializer) as pool:
-        
         sem = mp.BoundedSemaphore(num_proc)
         data_tuples = ((file_path, progressq) for file_path in file_paths)
         for _ in pool.imap_unordered(process_test, constrained_iterator(sem, data_tuples)):
@@ -276,9 +275,15 @@ def main():
 
 
 if __name__ == "__main__":
+    import argparse
     logging.basicConfig(
         level=logging.WARNING,  # Or DEBUG for more verbosity
         format="%(asctime)s [%(levelname)s] %(message)s",
         datefmt="%H:%M:%S",
     )
-    main()
+    
+    parser = argparse.ArgumentParser(description="Evaluate tests with optional multiprocessing.")
+    parser.add_argument("--num-proc", type=int, default=1, help="Number of processes to use (default: 1)")
+    args = parser.parse_args()
+    
+    main(args)
