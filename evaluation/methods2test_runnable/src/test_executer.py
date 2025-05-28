@@ -7,6 +7,9 @@ import abc
 import os
 from .java_utils import extract_java_info
 
+import logging
+logger = logging.getLogger(__name__)
+
 
 @dataclass
 class TestCandidateDescriptor:
@@ -62,7 +65,7 @@ class JacocoCoverageTool(CoverageTool):
         coverage_file = self.get_coverage_report_file()
 
         if coverage_file is None:
-            print("No coverage file found")
+            logger.warning("No coverage file found")
             return None
 
         with open(coverage_file) as f:
@@ -200,12 +203,12 @@ class MavenBuildSystem(BuildSystem):
     
     def execute(self, test_class_identifier: Dict, test_function_identifier: Dict) -> List[str]:
         cmd = ["mvn", "test", "-Dmaven.test.failure.ignore=true", f"-Dtest={test_class_identifier}#{test_function_identifier}"]
-        print(f"Executing command: {' '.join(cmd)}")
-        print(f"Working directory: {self.build_working_dir}")
-        print(f"Test class identifier: {test_class_identifier}")
-        print(f"Test function identifier: {test_function_identifier}")
-        print(f"Build file: {self.build_file}")
-        print(f"Build working directory: {self.build_working_dir}")
+        logger.debug(f"Executing command: {' '.join(cmd)}")
+        logger.debug(f"Working directory: {self.build_working_dir}")
+        logger.debug(f"Test class identifier: {test_class_identifier}")
+        logger.debug(f"Test function identifier: {test_function_identifier}")
+        logger.debug(f"Build file: {self.build_file}")
+        logger.debug(f"Build working directory: {self.build_working_dir}")
 
         try:
             result = subprocess.run(
@@ -308,7 +311,7 @@ class MavenBuildSystem(BuildSystem):
                             plugins.remove(plugin)
             tree.write(pom_file, encoding='utf-8', xml_declaration=True)
         except ET.ParseError as e:
-            print(f"Error parsing POM file: {e}")
+            logger.error(f"Error parsing POM file: {e}")
 
     @staticmethod
     def _add_plugin(pom_file_path: Path, plugin_def: Dict):
@@ -358,9 +361,9 @@ class MavenBuildSystem(BuildSystem):
             plugins.append(new_plugin)
             tree.write(pom_file_path, encoding='utf-8', xml_declaration=True)
         except ET.ParseError as e:
-            print(f"Error parsing POM file: {e}")
+            logger.error(f"Error parsing POM file: {e}")
         except ValueError as e:
-            print(f"Error adding plugin: {e}")
+            logger.error(f"Error adding plugin: {e}")
 
 
 
@@ -501,7 +504,7 @@ class TestExecutor:
         if self.build_system:
             return self.build_system.get_results(self.unit_test)
         else:
-            print("Build system has not been installed.")
+            logger.warning("Build system has not been installed.")
             return None
 
     def get_coverage_report(self) -> Optional[Dict]:
@@ -510,7 +513,7 @@ class TestExecutor:
         if self.coverage_tool:
             return self.coverage_tool.get_coverage_report(self.focal_method)
         else:
-            print("Coverage tool has not been installed.")
+            logger.warning("Coverage tool has not been installed.")
             return None
 
     def install_coverage_tool(self, coverage_tool: Optional[CoverageTool] = None):
@@ -528,7 +531,7 @@ class TestExecutor:
 
     
     def replace_test_case(self, old_body, new_body) -> None:
-        print("replacing test case")
+        logger.info("Replacing test case")
         
         # open file and read content
         file = self.test_class_code
@@ -543,9 +546,8 @@ class TestExecutor:
             f.write(file2)
         
     def reset_test_class(self) -> None:
-        print("resetting test class")        
+        logger.info("Resetting test class")        
         # overwrite the file
         path = Path(self.repo.working_dir) / self.unit_test.file
         with open(path, "w") as f:
             f.write(self.test_class_code)
-        

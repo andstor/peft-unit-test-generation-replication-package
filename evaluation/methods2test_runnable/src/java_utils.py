@@ -1,4 +1,7 @@
 import os
+import logging
+
+logger = logging.getLogger(__name__)
 
 def extract_java_info(file_path):
     """
@@ -51,11 +54,9 @@ def extract_java_info(file_path):
         return None, None  # handles the case where the file doesn't end with .java
 
     return package_name, class_name
-def test_extract_java_info():
-    """
-    Tests the extract_java_info function with various file paths,
-    including test file paths.
-    """
+
+
+if __name__ == "__main__":
     test_cases = [
         ("beanmother-core/src/main/java/io/beanmother/core/util/PrimitiveTypeUtils.java", ("io.beanmother.core.util", "PrimitiveTypeUtils")),
         ("src/main/java/com/example/MyClass.java", ("com.example", "MyClass")),
@@ -92,14 +93,11 @@ def test_extract_java_info():
 
     for file_path, expected_output in test_cases:
         output = extract_java_info(file_path)
-        print(f"File: {file_path}")
-        print(f"  Expected: {expected_output}")
-        print(f"  Actual:   {output}")
+        logger.info(f"File: {file_path}")
+        logger.info(f"  Expected: {expected_output}")
+        logger.info(f"  Actual:   {output}")
         if output == expected_output:
-            print("  Result: PASS")
+            logger.info("  Result: PASS")
         else:
-            print("  Result: FAIL")
-        print("-" * 20)
-
-if __name__ == "__main__":
-    test_extract_java_info()
+            logger.info("  Result: FAIL")
+        logger.info("-" * 20)

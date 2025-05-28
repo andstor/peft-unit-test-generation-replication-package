@@ -1,5 +1,8 @@
 import os
 import xml.etree.ElementTree as ET
+import logging
+
+logger = logging.getLogger(__name__)
 
 class SurefireReportParser:
     """
@@ -31,12 +34,12 @@ class SurefireReportParser:
             for the specified testsuite. Returns None if the report file is not found
             or cannot be parsed.
         """
-        print(testsuite_name)
+        logger.info(testsuite_name)
         filename = f"TEST-{testsuite_name}.xml"
         report_path = os.path.join(self.reports_dir, filename)
 
         if not os.path.exists(report_path):
-            print(f"Error: Report file not found at {report_path}")
+            logger.error(f"Report file not found at {report_path}")
             return None
 
         try:
@@ -50,24 +53,26 @@ class SurefireReportParser:
                 'time': float(root.get('time', 0.0))
             }
         except ET.ParseError:
-            print(f"Error: Could not parse XML file at {report_path}")
+            logger.error(f"Could not parse XML file at {report_path}")
             return None
         except Exception as e:
-            print(f"An unexpected error occurred while parsing {report_path}: {e}")
+            logger.error(f"An unexpected error occurred while parsing {report_path}: {e}")
             return None
 
-# Example usage:
-parser = SurefireReportParser()
-testsuite = "csv.converter.IgnoreMissingValuesConverterTest"
-testsuite_results = parser.get_testsuite_results_by_name(testsuite)
 
-if testsuite_results:
-    print(f"Testsuite Results for {testsuite}:")
-    print(testsuite_results)
-    print(f"Tests: {testsuite_results['tests']}")
-    print(f"Failures: {testsuite_results['failures']}")
-    print(f"Errors: {testsuite_results['errors']}")
-    print(f"Skipped: {testsuite_results['skipped']}")
-    print(f"Time: {testsuite_results['time']}")
-else:
-    print(f"Could not retrieve testsuite results for {testsuite}")
+if __name__ == "__main__":
+    # Example usage:
+    parser = SurefireReportParser()
+    testsuite = "csv.converter.IgnoreMissingValuesConverterTest"
+    testsuite_results = parser.get_testsuite_results_by_name(testsuite)
+
+    if testsuite_results:
+        logger.info(f"Testsuite Results for {testsuite}:")
+        logger.info(testsuite_results)
+        logger.info(f"Tests: {testsuite_results['tests']}")
+        logger.info(f"Failures: {testsuite_results['failures']}")
+        logger.info(f"Errors: {testsuite_results['errors']}")
+        logger.info(f"Skipped: {testsuite_results['skipped']}")
+        logger.info(f"Time: {testsuite_results['time']}")
+    else:
+        logger.error(f"Could not retrieve testsuite results for {testsuite}")
