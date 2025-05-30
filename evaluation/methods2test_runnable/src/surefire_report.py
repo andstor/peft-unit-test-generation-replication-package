@@ -39,7 +39,7 @@ class SurefireReportParser:
         report_path = os.path.join(self.reports_dir, filename)
 
         if not os.path.exists(report_path):
-            logger.error(f"Report file not found at {report_path}")
+            logger.warning(f"Report file not found at {report_path}")
             return None
 
         try:
