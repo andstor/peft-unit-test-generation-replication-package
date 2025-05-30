@@ -272,7 +272,7 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
             for id in test_ids:
                 data = {}
                 data["id"] = id
-                data["status"] = "exception2"
+                data["status"] = "exception"
                 with open(output_file, "a") as exception_file:
                     exception_file.write(json.dumps(data) + "\n")
         finally:
@@ -364,7 +364,7 @@ def main(args):
                 incomplete_ids.update(out_df_valid.index)
                 # remove incomplete ids from processed_ids
                 processed_ids.update(set(out_df.index) - incomplete_ids)
-        
+        progressq.put(len(processed_ids))
         
         gen_ds_df["repo_id"] = gen_ds_df["id"].str.split("_").str[0]
         gen_ds_df.set_index("repo_id", inplace=True)
@@ -378,7 +378,7 @@ def main(args):
                 continue
             inc_gen_ids = test_ids.intersection(incomplete_ids)
             test_ids = test_ids - processed_ids
-            progressq.put(len(processed_ids))
+            
             if len(test_ids) == 0:
                 logger.info(f"All test cases for repo_id {repo_id} already processed.")
                 sem.release()
