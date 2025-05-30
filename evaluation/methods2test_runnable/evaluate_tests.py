@@ -92,7 +92,7 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                 break
             test_ids, inc_gen_ids, file_path, output_file = item
         except queue.Empty:
-            logger.warning("No more items to process, exiting worker")
+            logger.info("No more items to process, exiting worker")
             continue
         
         
@@ -270,7 +270,6 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                 with open(output_file, "a") as exception_file:
                     exception_file.write(json.dumps(data) + "\n")
         finally:
-            logger.warning(f"Releasing semaphore for repo_id: {str(os.getpid())}")
             sem.release()
             # Signal progress
             try:
@@ -374,7 +373,7 @@ def main(args):
             test_ids = test_ids - processed_ids
             progressq.put(len(processed_ids))
             if len(test_ids) == 0:
-                logger.warning(f"All test cases for repo_id {repo_id} already processed.")
+                logger.info(f"All test cases for repo_id {repo_id} already processed.")
                 sem.release()
                 continue
             
