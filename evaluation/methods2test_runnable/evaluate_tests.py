@@ -5,9 +5,9 @@ from pathlib import Path
 from datasets import load_dataset
 import pandas as pd
 import multiprocessing as mp
-from multiprocessing import Queue, Process, Manager
-from threading import BoundedSemaphore
+from multiprocessing import Queue, Process, Manager, BoundedSemaphore
 from src.test_executer import TestExecutor, TestCandidateDescriptor, FocalMethodDescriptor
+import queue
 
 import logging
 logger = logging.getLogger(__name__)
@@ -38,130 +38,185 @@ def constrained_iterator(sem: BoundedSemaphore, data: iter):
 
 def progress_tracker_worker(progressq: Queue, total: int):
     from tqdm import tqdm
-    import queue
+    
     
     pbar = tqdm(desc="Executing tests", total=total, dynamic_ncols=True)
     while True:
         try:
             item = progressq.get()
             if item is None:
+                pbar.close()
                 break
-            pbar.update(1)
+            pbar.update(item)
         except queue.Empty:
             continue   
 
-def initializer():
-    global meta_ds_df, raw_ds_df, failed
-    try:
-        failed = False
-        meta_ds = load_dataset("andstor/methods2test_meta", "golden_commit", split="test", cache_dir=".tmp/cache")
-        meta_ds_df = meta_ds.to_pandas().set_index("id")
-        raw_ds = load_dataset("andstor/methods2test_raw", split="test", cache_dir=".tmp/cache")
-        raw_ds_df = raw_ds.to_pandas().set_index("id")
-    except:
-        failed = True
+# Worker to write data into different shard files
+def jsonl_writer_worker(writeq: Queue):
+    while True:
+        try:
+            item = writeq.get()
+            if item is None:
+                break
+
+            try:
+                # Get data and its respective file from the queue
+                data, file_path = item
+                with open(file_path, "a") as jacoco_file:
+                    jacoco_file.write(json.dumps(data) + "\n")
+                    
+            except Exception as e:
+                print(f"Error writing data: {e}")
+        except queue.Empty:
+            continue  
     
-
-def process_test(args):
-    global meta_ds_df, raw_ds_df, failed
-    file_path, progressq = args
-    if failed:
-        # skip when initializer failed
-        return
-
-    with open(file_path, "r") as f:
-        res_file_dir = SAVE_DIR / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
-        os.makedirs(res_file_dir, exist_ok=True)
-        output_file = res_file_dir / "jacoco.jsonl"
-
+def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSemaphore):
+    logger.info("Starting worker process")
+    meta_ds = load_dataset("andstor/methods2test_meta", "golden_commit", split="test", cache_dir=".tmp/cache")
+    logger.info("Loaded meta dataset")
+    meta_ds_df = meta_ds.to_pandas().set_index("id")
+    logger.info("Converted meta dataset to DataFrame")
+    raw_ds = load_dataset("andstor/methods2test_raw", split="test", cache_dir=".tmp/cache")
+    logger.info("Loaded raw dataset")
+    raw_ds_df = raw_ds.to_pandas().set_index("id")
+    logger.info("Converted raw dataset to DataFrame")
+    
+    logger.info("Loaded meta and raw datasets")
+    
+    
+    while True:
+        try:
+            item = dataq.get()
+            if item is None:
+                logger.info("No more items to process, exiting worker")
+                break
+            test_ids, inc_gen_ids, file_path, output_file = item
+        except queue.Empty:
+            logger.warning("No more items to process, exiting worker")
+            continue
+        
         
         gen_ds_df = pd.read_json(file_path, orient='records', lines=True, dtype=False)  
-        # Check if loaded json file is empty
-        if gen_ds_df.empty:
-            # Generate an empty output file if not exists
-            if not os.path.exists(output_file):
-                with open(output_file, "w") as f:
-                    pass
-            return
         gen_ds_df = gen_ds_df.set_index("id")
+
+        from git import Repo
+        first_id = next(iter(test_ids))
+        sample_raw = raw_ds_df.loc[first_id]
+        sample_commit = meta_ds_df.loc[first_id]
+        if sample_commit is None:
+            logger.warning("No commit found for id:", first_id)
+            sem.release()
+            continue
+        else:
+            sample_commit = sample_commit["commit"]
         
         
-        # --- Resume logic: collect already processed ids ---
-        processed_ids = set()
-        incomplete_ids = set()
-        if os.path.exists(output_file):
-            out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False)
-            if not out_df.empty:
-                out_df.set_index("id")
-                # Drop all entries with duplicated ids (keep only unique ids)
-                out_df_valid = out_df[~out_df.index.duplicated(keep=False)]
-                # Drop entries with status in ["exception", "skipped", "build error"]
-                out_df_valid = out_df_valid[~out_df_valid["status"].isin(["exception", "skipped", "build error"])]
-                incomplete_ids.update(out_df_valid.index)
-                # remove incomplete ids from processed_ids
-                processed_ids.update(set(out_df.index) - incomplete_ids)
-        # ---------------------------------------------------
+        repo_url = sample_raw[ "repository"]["url"]
+        repo_name = repo_url.split('/')[-1]
 
-        for id in gen_ds_df.index:
-            if id in processed_ids and id not in incomplete_ids:
-                progressq.put(1)  # Signal progress for already processed ids
-                continue
+        local_dir = Path(".tmp") / "repos" / str(os.getpid())
+        os.makedirs(local_dir, exist_ok=True)
+        repo_path = local_dir / repo_name
             
-            from git import Repo
-            sample_gen = gen_ds_df.loc[id]
-            sample_raw = raw_ds_df.loc[id]
-            try:
-                sample_commit = meta_ds_df.loc[id]
-                if sample_commit is None:
-                    #TODO: log failure
-                    logger.warning("No commit found for id:", id)
-                    continue
-                else:
-                    sample_commit = sample_commit["commit"]
-            except KeyError:
-                logger.warning("No commit found for id:", id)
-                continue
+        try:
+            #check if the repo is already cloned
+            if os.path.exists(repo_path):
+                repo = Repo(repo_path)
+                logger.info(f"Using existing repo at {repo_path}")
+            else:
+                logger.info(f"Cloning {repo_url} into {repo_path}")
+                repo = Repo.init(repo_path)
+                repo.create_remote("origin", repo_url)
+                repo.git.fetch("--depth", "1", "origin", sample_commit)
+                repo.git.checkout("FETCH_HEAD")
             
-            repo_url = sample_raw[ "repository"]["url"]
-            repo_name = repo_url.split('/')[-1]
+            repo.git.reset("--hard")
+                
+                
+                
+                
+            # Main loop to run tests
+            for id in test_ids:
+                try:
+                    sample_raw = raw_ds_df.loc[id]
+                    sample_gen = gen_ds_df.loc[id]
 
-            from uuid import uuid4
-            tmp_id = uuid4().hex
-            local_dir = Path(".tmp") / "repos" / tmp_id
-            os.makedirs(local_dir, exist_ok=True)
-            repo_path = local_dir / repo_name
-            try:
-                #check if the repo is already cloned
-                if os.path.exists(repo_path):
-                    repo = Repo(repo_path)
-                else:
-                    repo = Repo.clone_from(repo_url, repo_path)
-                
-                repo.git.reset("--hard")
-                repo.git.checkout(sample_commit)
-                
-                testCandidate = TestCandidateDescriptor(
-                    function_identifier=sample_raw["test_case"]["identifier"],
-                    class_identifier=sample_raw["test_class"]["identifier"],
-                    file=sample_raw["test_class"]["file"]
-                )
-                
-                focal_method = FocalMethodDescriptor(
-                    function_identifier=sample_raw["focal_method"]["identifier"],
-                    class_identifier=sample_raw["focal_class"]["identifier"],
-                    signature=sample_raw["focal_method"]["signature"],
-                    file=sample_raw["focal_class"]["file"],
-                )
-                
-                executor = TestExecutor(repo)
-                executor.register_unit_test(testCandidate)
-                executor.register_focal_method(focal_method)
-                executor.install_coverage_tool()
-
-                if id not in incomplete_ids:
-                    # First try to compile the original code
-                    executor.clean()
+                    testCandidate = TestCandidateDescriptor(
+                        function_identifier=sample_raw["test_case"]["identifier"],
+                        class_identifier=sample_raw["test_class"]["identifier"],
+                        file=sample_raw["test_class"]["file"]
+                    )
+                    
+                    focal_method = FocalMethodDescriptor(
+                        function_identifier=sample_raw["focal_method"]["identifier"],
+                        class_identifier=sample_raw["focal_class"]["identifier"],
+                        signature=sample_raw["focal_method"]["signature"],
+                        file=sample_raw["focal_class"]["file"],
+                    )
+                    
+                    executor = TestExecutor(repo)
+                    executor.register_unit_test(testCandidate)
+                    executor.register_focal_method(focal_method)
+                    executor.install_coverage_tool()
+                    if id not in inc_gen_ids:
+                        # First try to compile the original code
+                        #executor.clean()
+                        out, err, returncode = executor.execute()
+                        logger.debug(out)
+                        logger.debug(err)
+                        logger.debug(returncode)
+                        
+                        
+                        results = executor.get_results()
+                        status = None
+                        if results is None:
+                            logger.info("BUILD ERROR")
+                            status = "build error"
+                        elif results["skipped"] > 0:
+                            logger.info("TEST SKIPPED")
+                            status = "skipped"
+                        elif results["failures"] > 0:
+                            logger.info("TEST FAILED")
+                            status = "failed"
+                        elif results["errors"] > 0:
+                            logger.info("TEST ERROR")
+                            status = "error"
+                        else:
+                            status = "success"
+                            logger.info("TEST PASSED")
+                        
+                        
+                        coverage = None
+                        if results is not None:
+                            coverage = executor.get_coverage_report()
+                            logger.info(pd.Series(coverage).to_frame().T)
+                        data = {}
+                        data["id"] = id
+                        data["status"] = status
+                        data["generated"] = 0
+                        # add coverage to data without knowing the keys
+                        if coverage is not None:
+                            data.update(coverage)
+                        writeq.put((data, output_file))
+                        
+                        if status == "build error":
+                            logger.info("Build error in original code")
+                            continue
+                        if status == "skipped":
+                            logger.info("Test skipped in original code")
+                            continue
+                    
+                    
+                    
+                    ### GENERATED CODE ###
+                    # Now try to compile the generated code
+                    gen_body = trim_end_brac(sample_gen["fixed_prediction"]).rstrip()
+                    orig_body = trim_end_brac(sample_gen["reference"]).rstrip()
+                    
+                    #executor.clean()
+                    executor.replace_test_case(orig_body, gen_body)
                     out, err, returncode = executor.execute()
+                    executor.reset_test_class() # Reset the test class to the original state !IMPORTANT!
                     logger.debug(out)
                     logger.debug(err)
                     logger.debug(returncode)
@@ -170,8 +225,8 @@ def process_test(args):
                     results = executor.get_results()
                     status = None
                     if results is None:
-                        logger.info("BUILD ERROR")
-                        status = "build error"
+                        logger.info("COMPILATION ERROR")
+                        status = "compilation error"
                     elif results["skipped"] > 0:
                         logger.info("TEST SKIPPED")
                         status = "skipped"
@@ -185,99 +240,52 @@ def process_test(args):
                         status = "success"
                         logger.info("TEST PASSED")
                     
-                    
                     coverage = None
                     if results is not None:
                         coverage = executor.get_coverage_report()
                         logger.info(pd.Series(coverage).to_frame().T)
-
                     data = {}
                     data["id"] = id
                     data["status"] = status
-                    data["generated"] = 0
+                    data["generated"] = 1
                     # add coverage to data without knowing the keys
                     if coverage is not None:
                         data.update(coverage)
-                    with open(res_file_dir / "jacoco.jsonl", "a") as jacoco_file:
-                        jacoco_file.write(json.dumps(data) + "\n")
-                    
-                    if status == "build error":
-                        logger.info("Build error in original code")
-                        continue
-                    if status == "skipped":
-                        logger.info("Test skipped in original code")
-                        continue
-                
-                
-                
-                ### GENERATED CODE ###
-                # Now try to compile the generated code
-                gen_body = trim_end_brac(sample_gen["fixed_prediction"]).rstrip()
-                orig_body = trim_end_brac(sample_gen["reference"]).rstrip()
-                
-                executor.clean()
-                executor.replace_test_case(orig_body, gen_body)
-                out, err, returncode = executor.execute()
-                executor.reset_test_class() # Reset the test class to the original state
-
-                #print(out)
-                #print(err)
-                #print(returncode)
-                
-                
-                results = executor.get_results()
-                status = None
-                if results is None:
-                    logger.info("COMPILATION ERROR")
-                    status = "compilation error"
-                elif results["skipped"] > 0:
-                    logger.info("TEST SKIPPED")
-                    status = "skipped"
-                elif results["failures"] > 0:
-                    logger.info("TEST FAILED")
-                    status = "failed"
-                elif results["errors"] > 0:
-                    logger.info("TEST ERROR")
-                    status = "error"
-                else:
-                    status = "success"
-                    logger.info("TEST PASSED")
-                
-                coverage = None
-                if results is not None:
-                    coverage = executor.get_coverage_report()
-                    logger.info(pd.Series(coverage).to_frame().T)
-
-
-                data = {}
-                data["id"] = id
-                data["status"] = status
-                data["generated"] = 1
-                # add coverage to data without knowing the keys
-                if coverage is not None:
-                    data.update(coverage)
-                with open(res_file_dir / "jacoco.jsonl", "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
-                
+                        
+                    writeq.put((data, output_file))
+                    progressq.put(1) 
             
-            except Exception as e:
+                except Exception as e:
+                    data = {}
+                    data["id"] = id
+                    data["status"] = "exception"
+                    with open(output_file, "a") as exception_file:
+                        exception_file.write(json.dumps(data) + "\n")
+
+        except Exception as e:
+            for id in test_ids:
                 data = {}
                 data["id"] = id
-                data["status"] = "exception"
-
-                with open(res_file_dir / "jacoco.jsonl", "a") as exception_file:
+                data["status"] = "exception2"
+                with open(output_file, "a") as exception_file:
                     exception_file.write(json.dumps(data) + "\n")
+        finally:
+            logger.warning(f"Releasing semaphore for repo_id: {str(os.getpid())}")
+            sem.release()
+            # Signal progress
+            try:
+                if os.path.exists(repo_path):
+                    shutil.rmtree(repo_path, ignore_errors=True)
+                # Also cleanup the temp dir for this process id if empty
+                if os.path.exists(local_dir) and not os.listdir(local_dir):
+                    shutil.rmtree(local_dir, ignore_errors=True)
                 
-            finally:
-                progressq.put(1)  # Signal progress
-                try:
-                    if os.path.exists(repo_path):
-                        shutil.rmtree(repo_path, ignore_errors=True)
-                    # Also cleanup the temp dir for this process id if empty
-                    if os.path.exists(local_dir) and not os.listdir(local_dir):
-                        shutil.rmtree(local_dir, ignore_errors=True)
-                except BaseException:
-                    pass
+            except BaseException:
+                pass
+
+        
+        
+    
 
 def find_file_paths():
     file_paths = []
@@ -290,22 +298,100 @@ def find_file_paths():
 
     
 def main(args):
+    
     num_proc = args.num_proc
+    
     file_paths = find_file_paths()
     total_tests = sum([sum(1 for line in open(filename)) for filename in file_paths])
     logger.info(f"Total number of test cases: {total_tests}")
     
-    m = Manager()
     
-    progressq = m.Queue()
+    progressq = Queue()
     progress_tracker = Process(target=progress_tracker_worker, args=(progressq,total_tests))
     progress_tracker.start()
     
-    with mp.Pool(processes=num_proc, initializer=initializer) as pool:
-        sem = mp.BoundedSemaphore(num_proc)
-        data_tuples = ((file_path, progressq) for file_path in file_paths)
-        for _ in pool.imap_unordered(process_test, constrained_iterator(sem, data_tuples)):
-            sem.release()
+    
+    
+    # Number of shards (write processes)
+    writeq = Queue()
+    jsonl_writer = Process(target=jsonl_writer_worker, args=(writeq,))
+    jsonl_writer.start()
+    
+    
+    sem = BoundedSemaphore(num_proc)
+    dataq = Queue()
+    process_test_workers = [
+        Process(target=process_test, args=(dataq, writeq, progressq, sem), daemon=True)
+        for _ in range(num_proc)
+    ]
+    for p in process_test_workers:
+        p.start()
+    
+    
+    
+    
+    for file_path in file_paths:
+        res_file_dir = SAVE_DIR / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
+        os.makedirs(res_file_dir, exist_ok=True)
+        output_file = res_file_dir / "jacoco.jsonl"
+        
+        
+        gen_ds_df = pd.read_json(file_path, orient='records', lines=True, dtype=False)  
+        # Check if loaded json file is empty
+        if gen_ds_df.empty:
+            # Generate an empty output file if not exists
+            if not os.path.exists(output_file):
+                with open(output_file, "w") as f:
+                    pass
+            return
+        
+        # Resume logic: collect already processed ids
+        processed_ids = set()
+        incomplete_ids = set()
+        if os.path.exists(output_file):
+            out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False)
+            if not out_df.empty:
+                out_df = out_df.set_index("id")
+                # Drop all entries with duplicated ids (keep only unique ids)
+                out_df_valid = out_df[~out_df.index.duplicated(keep=False)]
+                # Drop entries with status in ["exception", "skipped", "build error"]
+                out_df_valid = out_df_valid[~out_df_valid["status"].isin(["exception", "skipped", "build error"])]
+                incomplete_ids.update(out_df_valid.index)
+                # remove incomplete ids from processed_ids
+                processed_ids.update(set(out_df.index) - incomplete_ids)
+        
+        gen_ds_df["repo_id"] = gen_ds_df["id"].str.split("_").str[0]
+        gen_ds_df.set_index("repo_id", inplace=True)
+        repo_ids = sorted(gen_ds_df.index.unique(), key=int)
+        
+        for repo_id in constrained_iterator(sem, repo_ids):
+            test_ids = set(gen_ds_df.loc[[repo_id]]["id"].tolist())
+            if not test_ids:
+                logger.warning(f"No test cases found for repo_id: {repo_id}")
+                sem.release()
+                continue
+            inc_gen_ids = test_ids.intersection(incomplete_ids)
+            test_ids = test_ids - processed_ids
+            progressq.put(len(processed_ids))
+            if len(test_ids) == 0:
+                logger.warning(f"All test cases for repo_id {repo_id} already processed.")
+                sem.release()
+                continue
+            
+            # Sort test_ids to ensure consistent order
+            test_ids = sorted(test_ids, key=lambda s: tuple(map(int, s.split('_'))))
+            inc_gen_ids = sorted(list(inc_gen_ids), key=lambda s: tuple(map(int, s.split('_'))))
+            dataq.put((test_ids, inc_gen_ids, file_path, output_file))
+
+        
+    for _ in range(num_proc):
+        dataq.put(None)
+    for p in process_test_workers:
+        p.join()
+
+    
+    writeq.put(None)
+    jsonl_writer.join()
 
     progressq.put(None)
     progress_tracker.join()
