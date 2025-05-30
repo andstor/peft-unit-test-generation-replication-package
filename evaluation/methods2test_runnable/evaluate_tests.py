@@ -348,7 +348,7 @@ def main(args):
             if not os.path.exists(output_file):
                 with open(output_file, "w") as f:
                     pass
-            return
+            continue
         
         # Resume logic: collect already processed ids
         processed_ids = set()
