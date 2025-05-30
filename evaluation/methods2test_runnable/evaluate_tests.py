@@ -253,7 +253,6 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                         data.update(coverage)
                         
                     writeq.put((data, output_file))
-                    progressq.put(1) 
             
                 except Exception as e:
                     data = {}
@@ -261,6 +260,9 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                     data["status"] = "exception"
                     with open(output_file, "a") as exception_file:
                         exception_file.write(json.dumps(data) + "\n")
+                finally:
+                    # Ensure we release the semaphore even if an exception occurs
+                    progressq.put(1) 
 
         except Exception as e:
             for id in test_ids:
