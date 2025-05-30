@@ -505,7 +505,6 @@ class TestExecutor:
             return self.build_system.get_results(self.unit_test)
         else:
             raise Exception("Build system has not been detected.")
-            return None
 
     def get_coverage_report(self) -> Optional[Dict]:
         if not self.focal_method:

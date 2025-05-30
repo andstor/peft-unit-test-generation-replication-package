@@ -39,8 +39,12 @@ def constrained_iterator(sem: BoundedSemaphore, data: iter):
 def progress_tracker_worker(progressq: Queue, total: int):
     from tqdm import tqdm
     
-    
-    pbar = tqdm(desc="Executing tests", total=total, dynamic_ncols=True)
+    def smoothing_for_window(total_iterations, window_fraction=0.05):
+        N = max(1, int(window_fraction * total_iterations))
+        smoothing = 2 / (N + 1)
+        return min(max(smoothing, 0), 1)
+
+    pbar = tqdm(desc="Executing tests", total=total, smoothing=smoothing_for_window(total), dynamic_ncols=True)
     while True:
         try:
             item = progressq.get()
@@ -360,6 +364,7 @@ def main(args):
                 incomplete_ids.update(out_df_valid.index)
                 # remove incomplete ids from processed_ids
                 processed_ids.update(set(out_df.index) - incomplete_ids)
+        
         
         gen_ds_df["repo_id"] = gen_ds_df["id"].str.split("_").str[0]
         gen_ds_df.set_index("repo_id", inplace=True)
