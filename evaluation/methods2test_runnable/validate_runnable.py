@@ -250,7 +250,6 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
 
 def main(args):
     
-    num_proc = args.num_proc
     tmp_dir = SCRIPT_DIR / args.tmp_dir
     save_path = SCRIPT_DIR / Path(args.output_dir) / f"runnable_{args.split}.jsonl"
     
@@ -277,11 +276,11 @@ def main(args):
     jsonl_writer.start()
     
     
-    sem = BoundedSemaphore(num_proc)
+    sem = BoundedSemaphore(args.num_proc)
     dataq = Queue()
     process_test_workers = [
         Process(target=process_test, args=(dataq, writeq, progressq, sem, save_path, tmp_dir), daemon=True)
-        for _ in range(num_proc)
+        for _ in range(args.num_proc)
     ]
     for p in process_test_workers:
         p.start()
@@ -321,7 +320,7 @@ def main(args):
         dataq.put(test_ids)
 
         
-    for _ in range(num_proc):
+    for _ in range(args.num_proc):
         dataq.put(None)
     for p in process_test_workers:
         p.join()
