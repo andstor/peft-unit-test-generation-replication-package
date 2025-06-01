@@ -24,8 +24,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Validate buildable test repositories.")
     parser.add_argument("--split", type=str, default="test", help="Dataset split")
     parser.add_argument("--output_dir", type=str, default="output", help="Directory to store results. Relative to script directory.")
-    parser.add_argument("--num-proc", type=int, default=5, help="Number of parallel threads")
-    parser.add_argument("--push_to_hub", type=bool, default=False, help="Whether to push results to Hugging Face Hub")
+    parser.add_argument("--num_proc", type=int, default=5, help="Number of parallel threads")
+    parser.add_argument("--push_to_hub", action='store_true', help="Whether to push results to Hugging Face Hub")
     parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos. Relative to script directory.")
 
     return parser.parse_args()

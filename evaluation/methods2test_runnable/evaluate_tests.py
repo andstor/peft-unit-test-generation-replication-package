@@ -412,7 +412,7 @@ if __name__ == "__main__":
     )
     
     parser = argparse.ArgumentParser(description="Evaluate tests with optional multiprocessing.")
-    parser.add_argument("--num-proc", type=int, default=1, help="Number of processes to use (default: 1)")
+    parser.add_argument("--num_proc", type=int, default=1, help="Number of processes to use (default: 1)")
     args = parser.parse_args()
     
     main(args)
