@@ -12,13 +12,18 @@ from threading import Lock
 import time
 import multiprocessing
 
+SCRIPT_PATH: Path = Path(os.path.abspath(__file__))
+SCRIPT_DIR: Path = SCRIPT_PATH.parent
+
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description="Find matching commits for test cases.")
     parser.add_argument("--split", type=str, default="test", help="Dataset split")
-    parser.add_argument("--local_dir", type=str, default=".tmp", help="Local directory for repositories")
     parser.add_argument("--output_dir", type=str, default="output", help="Directory to store results")
-    parser.add_argument("--max_workers", type=int, default=5, help="Number of parallel threads")
+    parser.add_argument("--num-proc", type=int, default=5, help="Number of parallel threads")
+    parser.add_argument("--push_to_hub", type=bool, default=False, help="Whether to push results to Hugging Face Hub")
+    parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos")
+
     return parser.parse_args()
 
 def get_file_existence_spans(repo, file_path):
@@ -83,11 +88,11 @@ def get_candidates(repo, file_path, upper_datetime):
 
 def process_group(task):
     """Process a group of test cases with the same mainnumber."""
-    records, args, upper_datetime = task
+    records, upper_datetime, tmp_dir = task
 
     repo_url = records[0]["repository"]["url"]
     repo_name = repo_url.split('/')[-1]
-    repo_path = os.path.join(args.local_dir, repo_name)
+    repo_path = tmp_dir / repo_name
     
     try:
         # Clone repository
@@ -114,16 +119,14 @@ def process_group(task):
                 if test_match and focal_match:
                     result = {
                         "id": example_id,
-                        "commit": candidate,
-                        "candidates": list(candidates)
+                        "commit": candidate
                     }
                     found = True
                     break
             if not found:
                 result = {
                     "id": example_id,
-                    "commit": None,
-                    "candidates": list(candidates)
+                    "commit": None
                 }
             results.append(result)
         return results
@@ -139,16 +142,30 @@ def process_group(task):
         except BaseException:
             pass
 
-def main():
-    """Main function to process data8set using multiprocessing.Pool."""
-    args = parse_args()
+def main(args):
+    """Main function to process dataset using multiprocessing.Pool."""
+    
+    tmp_dir = SCRIPT_DIR / args.tmp_dir
+    save_path = SCRIPT_DIR / Path(args.output_dir) / f"commits_{args.split}.jsonl"
     
     # Initialize output directory
-    os.makedirs(args.output_dir, exist_ok=True)
-    os.makedirs(args.local_dir, exist_ok=True)
+    os.makedirs(save_path.parent, exist_ok=True)
+    os.makedirs(tmp_dir, exist_ok=True)
     
     # Load dataset
     ds = load_dataset("andstor/methods2test_raw")[args.split]
+
+    # Resume: collect already processed IDs
+    processed_ids = set()
+    if os.path.exists(save_path):
+        with open(save_path, "r") as f:
+            for line in f:
+                try:
+                    obj = json.loads(line)
+                    if obj and "id" in obj:
+                        processed_ids.add(obj["id"])
+                except Exception:
+                    continue
 
     # Group records by mainnumber
     grouped_records = {}
@@ -156,23 +173,22 @@ def main():
         mainnumber = example["id"].split("_")[0]
         grouped_records.setdefault(mainnumber, []).append(example)
     
-    # Desired number of processes
-    num_processes = args.max_workers
-    
-    # Prepare tasks
+    # Prepare tasks, skipping already processed IDs
     tasks = []
     upper_datetime = datetime.strptime("2021-05-18T23:18:51.000Z", 
                                      "%Y-%m-%dT%H:%M:%S.%fZ").replace(tzinfo=timezone.utc)
     for mainnumber, records in grouped_records.items():
-        tasks.append((records, args, upper_datetime))
+        # Only include records with unprocessed IDs
+        unprocessed = [ex for ex in records if ex["id"] not in processed_ids]
+        if unprocessed:
+            tasks.append((unprocessed, upper_datetime, tmp_dir))
     
     # Initialize progress bar
     with tqdm(total=len(tasks), desc="Processing", unit="repo") as progress_bar:
-        # Initialize output file
-        output_path = os.path.join(args.output_dir, f"commits_{args.split}.jsonl")
-        with open(output_path, "w") as output_file:
+        # Open output file in append mode
+        with open(save_path, "a") as output_file:
             # Use multiprocessing.Pool to distribute tasks
-            with multiprocessing.Pool(processes=num_processes) as pool:
+            with multiprocessing.Pool(processes=args.num_proc) as pool:
                 # Use imap to lazily supply the tasks
                 for results in pool.imap(process_group, tasks):
                     # Write results to output file
@@ -181,8 +197,40 @@ def main():
                     for result in results:
                         output_file.write(json.dumps(result) + "\n")
                         output_file.flush()
-                        # Update progress bar
                     progress_bar.update(1)
 
+
+def upload_to_hub(output_dir, split):
+    """Upload results to Hugging Face Hub."""
+    from datasets import Dataset
+    import json
+    import pandas as pd
+    from datasets import DatasetDict, Features, Sequence, Value
+    
+    ddict = DatasetDict()
+    feat = Features(
+        {
+            "id": Value(dtype="string"),
+            "commit": Value(dtype="string")
+        }
+    )
+    data_path = output_dir / f"commits_{split}.jsonl"
+    def gen_ds():
+        with open(data_path, "r") as f:
+            for line in f:
+                yield json.loads(line)
+            
+    ds = Dataset.from_generator(generator=gen_ds, features=feat)
+    ddict[split] = ds
+    ddict.push_to_hub("andstor/methods2test_meta", config_name="golden_commit", private=False, max_shard_size="250MB")
+
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    
+    main(args)
+    
+    if args.push_to_hub:
+        upload_to_hub(
+            output_dir=SCRIPT_DIR / args.output_dir,
+            split=args.split
+        )
