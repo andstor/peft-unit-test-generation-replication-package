@@ -3,12 +3,11 @@ import os
 import json
 from pathlib import Path
 import pandas as pd
-import multiprocessing as mp
-from multiprocessing import Queue, Process, Manager, BoundedSemaphore
+from multiprocessing import Queue, Process, BoundedSemaphore
 from src.test_executer import TestExecutor, TestCandidateDescriptor, FocalMethodDescriptor
 import queue
-from datasets import DatasetDict, Features, Sequence, Value, load_dataset, Dataset
-
+from datasets import load_dataset
+import argparse
 import logging
 logger = logging.getLogger(__name__)
 
@@ -24,10 +23,10 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description="Validate runnable test cases.")
     parser.add_argument("--split", type=str, default="test", help="Dataset split")
-    parser.add_argument("--output_dir", type=str, default="../../data/methods2test_runnable/coverage", help="Directory to store results")
+    parser.add_argument("--output_dir", type=str, default="../../data/methods2test_runnable/coverage", help="Directory to store results. Relative to script directory.")
     parser.add_argument("--num-proc", type=int, default=5, help="Number of parallel threads")
     parser.add_argument("--push_to_hub", type=bool, default=False, help="Whether to push results to Hugging Face Hub")
-    parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos")
+    parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos. Relative to script directory.")
 
     return parser.parse_args()
 
@@ -383,7 +382,7 @@ def upload_to_hub(output_dir, split, tmp_dir):
 
 
 if __name__ == "__main__":
-    import argparse
+
     logging.basicConfig(
         level=logging.WARNING,  # Or DEBUG for more verbosity
         format="%(asctime)s [%(levelname)s] %(message)s",
