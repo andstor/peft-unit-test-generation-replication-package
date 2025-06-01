@@ -1,0 +1,1017 @@
+{"id": "206632_0", "status": "build error", "build_tool": "Maven"}
+{"id": "145875_47", "status": "build error", "build_tool": "Maven"}
+{"id": "440622_6", "status": "build error", "build_tool": "Maven"}
+{"id": "206482_17", "status": "build error", "build_tool": "Maven"}
+{"id": "526150_13", "status": "build error", "build_tool": "Maven"}
+{"id": "466142_72", "status": "build error", "build_tool": "Maven"}
+{"id": "643499_10", "status": "exception", "build_tool": null}
+{"id": "537800_230", "status": "exception", "build_tool": null}
+{"id": "552448_19", "status": "build error", "build_tool": "Maven"}
+{"id": "772158_1", "status": "exception", "build_tool": null}
+{"id": "671892_0", "status": "build error", "build_tool": "Maven"}
+{"id": "660443_2221", "status": "build error", "build_tool": "Maven"}
+{"id": "777444_210", "status": "build error", "build_tool": "Maven"}
+{"id": "486214_0", "status": "success", "build_tool": "Maven", "PACKAGE": "se/l4/dust/core/internal/expression", "CLASS": "se/l4/dust/core/internal/expression/CommonSource", "METHOD_NAME": "emit", "METHOD_DESC": "()Ljava/lang/Object;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 2, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "781084_0", "status": "success", "build_tool": "Maven", "PACKAGE": "mailjimp/webhook", "CLASS": "mailjimp/webhook/WebHookSecurityInterceptor", "METHOD_NAME": "preHandle", "METHOD_DESC": "(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljava/lang/Object;)Z", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 5, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "854559_8", "status": "build error", "build_tool": "Maven"}
+{"id": "930571_4", "status": "exception", "build_tool": null}
+{"id": "128294_7", "status": "build error", "build_tool": "Maven"}
+{"id": "793164_35", "status": "build error", "build_tool": "Maven"}
+{"id": "854893_29", "status": "success", "build_tool": "Maven", "PACKAGE": "org/codehaus/preon/channel", "CLASS": "org/codehaus/preon/channel/OutputStreamBitChannel", "METHOD_NAME": "write", "METHOD_DESC": "(Z)V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 44, "BRANCH_MISSED": 0, "BRANCH_COVERED": 4, "LINE_MISSED": 0, "LINE_COVERED": 8, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "1027501_6", "status": "build error", "build_tool": "Maven"}
+{"id": "1045976_24", "status": "exception", "build_tool": null}
+{"id": "1088796_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "1144623_6", "status": "build error", "build_tool": "Maven"}
+{"id": "1270309_6", "status": "exception", "build_tool": null}
+{"id": "1025030_30", "status": "exception", "build_tool": null}
+{"id": "1089149_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "1332011_1", "status": "build error", "build_tool": "Maven"}
+{"id": "1302095_4", "status": "build error", "build_tool": "Maven"}
+{"id": "1361792_10", "status": "build error", "build_tool": "Maven"}
+{"id": "1244027_533", "status": "build error", "build_tool": "Maven"}
+{"id": "1424783_42", "status": "exception", "build_tool": "Gradle"}
+{"id": "1348716_166", "status": "build error", "build_tool": "Maven"}
+{"id": "1467919_0", "status": "build error", "build_tool": "Maven"}
+{"id": "1513115_4", "status": "exception", "build_tool": "Maven"}
+{"id": "1473579_2", "status": "exception", "build_tool": null}
+{"id": "1547148_17", "status": "exception", "build_tool": "Gradle"}
+{"id": "1337797_0", "status": "exception", "build_tool": "Maven"}
+{"id": "1556938_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/tobedevoured/modelcitizen", "CLASS": "com/tobedevoured/modelcitizen/Erector", "METHOD_NAME": "getTemplate", "METHOD_DESC": "()Lcom/tobedevoured/modelcitizen/template/BlueprintTemplate;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "1579610_0", "status": "build error", "build_tool": "Maven"}
+{"id": "1601209_87", "status": "exception", "build_tool": null}
+{"id": "1552601_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/crsh/auth", "CLASS": "org/crsh/auth/FilePublicKeyProvider", "METHOD_NAME": "loadKeys", "METHOD_DESC": "()Ljava/lang/Iterable;", "INSTRUCTION_MISSED": 56, "INSTRUCTION_COVERED": 61, "BRANCH_MISSED": 5, "BRANCH_COVERED": 7, "LINE_MISSED": 8, "LINE_COVERED": 13, "COMPLEXITY_MISSED": 5, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.5213675213675214, "branch_coverage": 0.5833333333333334}
+{"id": "1641128_5", "status": "exception", "build_tool": "Maven"}
+{"id": "1603277_6", "status": "build error", "build_tool": "Maven"}
+{"id": "1644710_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/theoryinpractise/restbuilder/parser", "CLASS": "com/theoryinpractise/restbuilder/parser/RestBuilder", "METHOD_NAME": "buildModel", "METHOD_DESC": "(Ljava/lang/Iterable;)Lcom/theoryinpractise/restbuilder/parser/model/Model;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 27, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "1767898_29", "status": "exception", "build_tool": "Gradle"}
+{"id": "1830414_3", "status": "exception", "build_tool": null}
+{"id": "1654390_2", "status": "build error", "build_tool": "Maven"}
+{"id": "1906557_2", "status": "build error", "build_tool": "Maven"}
+{"id": "1973010_6", "status": "exception", "build_tool": "Maven"}
+{"id": "1616402_3", "status": "build error", "build_tool": "Maven"}
+{"id": "1889544_26", "status": "exception", "build_tool": "Gradle"}
+{"id": "2017533_6", "status": "success", "build_tool": "Maven", "PACKAGE": "org/jflac/sound/spi", "CLASS": "org/jflac/sound/spi/FlacAudioFileReader", "METHOD_NAME": "getAudioInputStream", "METHOD_DESC": "(Ljava/io/File;)Ljavax/sound/sampled/AudioInputStream;", "INSTRUCTION_MISSED": 19, "INSTRUCTION_COVERED": 11, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 9, "LINE_COVERED": 5, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.36666666666666664, "branch_coverage": 0}
+{"id": "1381673_840", "status": "exception", "build_tool": "Maven"}
+{"id": "2045140_24", "status": "exception", "build_tool": "Maven"}
+{"id": "2155214_44", "status": "build error", "build_tool": "Maven"}
+{"id": "2198510_161", "status": "build error", "build_tool": "Maven"}
+{"id": "2119234_0", "status": "build error", "build_tool": "Maven"}
+{"id": "2199098_75", "status": "build error", "build_tool": "Maven"}
+{"id": "2108481_1", "status": "exception", "build_tool": "Maven"}
+{"id": "2310387_46", "status": "build error", "build_tool": "Maven"}
+{"id": "2280644_8", "status": "success", "build_tool": "Maven", "PACKAGE": "org/aesh/util/graal", "CLASS": "org/aesh/util/graal/GraalReflectionFileGenerator", "METHOD_NAME": "generateReflection", "METHOD_DESC": "(Lorg/aesh/command/impl/parser/CommandLineParser;Ljava/io/Writer;)V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 20, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 5, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "2329961_32", "status": "build error", "build_tool": "Maven"}
+{"id": "2424377_25", "status": "exception", "build_tool": "Gradle"}
+{"id": "2408807_4", "status": "build error", "build_tool": "Maven"}
+{"id": "2480222_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "2193717_3", "status": "exception", "build_tool": "Maven"}
+{"id": "2641714_123", "status": "build error", "build_tool": "Maven"}
+{"id": "2595446_0", "status": "build error", "build_tool": "Maven"}
+{"id": "2684727_358", "status": "exception", "build_tool": null}
+{"id": "2503314_13", "status": "build error", "build_tool": "Maven"}
+{"id": "2776400_0", "status": "build error", "build_tool": "Maven"}
+{"id": "2693213_5", "status": "skipped", "build_tool": "Maven", "PACKAGE": "net/magja/soap", "CLASS": "net/magja/soap/SoapCallFactory", "METHOD_NAME": "createCall", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/axiom/om/OMElement;", "INSTRUCTION_MISSED": 278, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 14, "BRANCH_COVERED": 0, "LINE_MISSED": 35, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 8, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "2792886_1", "status": "exception", "build_tool": "Maven"}
+{"id": "2254581_8", "status": "exception", "build_tool": "Maven"}
+{"id": "2819986_0", "status": "exception", "build_tool": "Maven"}
+{"id": "2846293_39", "status": "build error", "build_tool": "Maven"}
+{"id": "2827764_0", "status": "success", "build_tool": "Maven", "PACKAGE": "net/gfu/seminar/maven", "CLASS": "net/gfu/seminar/maven/App", "METHOD_NAME": "getMessage", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "2916228_22", "status": "exception", "build_tool": "Gradle"}
+{"id": "2666698_73", "status": "build error", "build_tool": "Maven"}
+{"id": "2911132_0", "status": "build error", "build_tool": "Maven"}
+{"id": "1196095_0", "status": "build error", "build_tool": "Maven"}
+{"id": "3052688_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/github/kevinsawicki/stocks", "CLASS": "com/github/kevinsawicki/stocks/DateUtils", "METHOD_NAME": "yearStart", "METHOD_DESC": "()Ljava/util/Date;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "3005042_25", "status": "error", "build_tool": "Maven", "PACKAGE": "org/pcap4j/core", "CLASS": "org/pcap4j/core/Pcaps", "METHOD_NAME": "strError", "METHOD_DESC": "(I)Ljava/lang/String;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "3041887_12", "status": "build error", "build_tool": "Maven"}
+{"id": "3145735_8", "status": "build error", "build_tool": "Maven"}
+{"id": "3223269_0", "status": "build error", "build_tool": "Maven"}
+{"id": "3173086_42", "status": "exception", "build_tool": "Gradle"}
+{"id": "3415463_22", "status": "exception", "build_tool": "Gradle"}
+{"id": "3384018_43", "status": "build error", "build_tool": "Maven"}
+{"id": "3480699_31", "status": "exception", "build_tool": null}
+{"id": "3604591_7", "status": "exception", "build_tool": null}
+{"id": "3458429_56", "status": "build error", "build_tool": "Maven"}
+{"id": "3514413_0", "status": "build error", "build_tool": "Maven"}
+{"id": "2836228_31", "status": "exception", "build_tool": "Maven"}
+{"id": "3865446_27", "status": "build error", "build_tool": "Maven"}
+{"id": "3716960_0", "status": "exception", "build_tool": null}
+{"id": "3926525_1", "status": "success", "build_tool": "Maven", "PACKAGE": "com/sjl/dsl4xml/support", "CLASS": "com/sjl/dsl4xml/support/ValueSetter", "METHOD_NAME": "invoke", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V", "INSTRUCTION_MISSED": 72, "INSTRUCTION_COVERED": 19, "BRANCH_MISSED": 3, "BRANCH_COVERED": 1, "LINE_MISSED": 8, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.2087912087912088, "branch_coverage": 0.25}
+{"id": "3933719_1", "status": "build error", "build_tool": "Maven"}
+{"id": "3986627_52", "status": "build error", "build_tool": "Maven"}
+{"id": "4084995_0", "status": "exception", "build_tool": null}
+{"id": "3937799_15", "status": "build error", "build_tool": "Maven"}
+{"id": "4089097_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "3943387_3", "status": "build error", "build_tool": "Maven"}
+{"id": "4086423_8", "status": "build error", "build_tool": "Maven"}
+{"id": "4157021_33", "status": "build error", "build_tool": "Maven"}
+{"id": "4226126_0", "status": "build error", "build_tool": "Maven"}
+{"id": "4260851_21", "status": "exception", "build_tool": "Gradle"}
+{"id": "4166277_38", "status": "build error", "build_tool": "Maven"}
+{"id": "4263930_0", "status": "build error", "build_tool": "Maven"}
+{"id": "4242398_4", "status": "exception", "build_tool": "Maven"}
+{"id": "4269155_325", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apache/tiles/request/portlet/delegate", "CLASS": "org/apache/tiles/request/portlet/delegate/StateAwareParameterMap", "METHOD_NAME": "size", "METHOD_DESC": "()I", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 4, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "4384653_28", "status": "exception", "build_tool": "Maven"}
+{"id": "4354801_2", "status": "build error", "build_tool": "Maven"}
+{"id": "4085998_299", "status": "build error", "build_tool": "Maven"}
+{"id": "4114800_10", "status": "exception", "build_tool": null}
+{"id": "4654729_5", "status": "exception", "build_tool": null}
+{"id": "4671935_62", "status": "exception", "build_tool": "Gradle"}
+{"id": "4597349_8", "status": "build error", "build_tool": "Maven"}
+{"id": "4705783_5", "status": "build error", "build_tool": "Maven"}
+{"id": "4622542_24", "status": "build error", "build_tool": "Maven"}
+{"id": "4470435_39", "status": "build error", "build_tool": "Maven"}
+{"id": "4713588_6", "status": "build error", "build_tool": "Maven"}
+{"id": "4718003_0", "status": "build error", "build_tool": "Maven"}
+{"id": "4459604_20", "status": "exception", "build_tool": "Maven"}
+{"id": "4797319_38", "status": "build error", "build_tool": "Maven"}
+{"id": "4710920_884", "status": "build error", "build_tool": "Maven"}
+{"id": "5012085_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "4735878_12", "status": "build error", "build_tool": "Maven"}
+{"id": "4802269_26", "status": "build error", "build_tool": "Maven"}
+{"id": "5184704_9", "status": "exception", "build_tool": null}
+{"id": "5104614_0", "status": "build error", "build_tool": "Maven"}
+{"id": "5264970_4", "status": "build error", "build_tool": "Maven"}
+{"id": "5426789_20", "status": "exception", "build_tool": "Gradle"}
+{"id": "5155211_6", "status": "success", "build_tool": "Maven", "PACKAGE": "org/nargila/robostroke/param", "CLASS": "org/nargila/robostroke/param/ParameterService", "METHOD_NAME": "setParam", "METHOD_DESC": "(Lorg/nargila/robostroke/param/Parameter;Ljava/lang/Object;)V", "INSTRUCTION_MISSED": 13, "INSTRUCTION_COVERED": 23, "BRANCH_MISSED": 3, "BRANCH_COVERED": 3, "LINE_MISSED": 2, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6388888888888888, "branch_coverage": 0.5}
+{"id": "5459107_5", "status": "build error", "build_tool": "Maven"}
+{"id": "5495723_13", "status": "exception", "build_tool": "Gradle"}
+{"id": "5622726_23", "status": "build error", "build_tool": "Maven"}
+{"id": "5239065_27", "status": "build error", "build_tool": "Maven"}
+{"id": "5749899_1", "status": "exception", "build_tool": null}
+{"id": "5734199_1", "status": "exception", "build_tool": "Maven"}
+{"id": "5869462_7", "status": "build error", "build_tool": "Maven"}
+{"id": "5518934_16", "status": "success", "build_tool": "Maven", "PACKAGE": "de/kopis/glacier/printers", "CLASS": "de/kopis/glacier/printers/HumanReadableSize", "METHOD_NAME": "parse", "METHOD_DESC": "(Ljava/math/BigDecimal;)Ljava/lang/String;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "5915204_0", "status": "build error", "build_tool": "Maven"}
+{"id": "5900702_20", "status": "build error", "build_tool": "Maven"}
+{"id": "5925560_63", "status": "exception", "build_tool": "Gradle"}
+{"id": "4750321_632", "status": "build error", "build_tool": "Maven"}
+{"id": "6157458_70", "status": "build error", "build_tool": "Maven"}
+{"id": "6035195_3", "status": "build error", "build_tool": "Maven"}
+{"id": "6426667_8", "status": "build error", "build_tool": "Maven"}
+{"id": "6354623_4", "status": "exception", "build_tool": "Maven"}
+{"id": "6488635_23", "status": "build error", "build_tool": "Maven"}
+{"id": "6311816_0", "status": "build error", "build_tool": "Maven"}
+{"id": "5342001_1", "status": "exception", "build_tool": "Maven"}
+{"id": "6509909_17", "status": "exception", "build_tool": "Gradle"}
+{"id": "6621718_0", "status": "build error", "build_tool": "Maven"}
+{"id": "6602723_14", "status": "build error", "build_tool": "Maven"}
+{"id": "6627230_65", "status": "build error", "build_tool": "Maven"}
+{"id": "6888625_27", "status": "exception", "build_tool": null}
+{"id": "6766558_64", "status": "exception", "build_tool": "Gradle"}
+{"id": "7023911_12", "status": "build error", "build_tool": "Maven"}
+{"id": "7113288_1", "status": "build error", "build_tool": "Maven"}
+{"id": "6639766_0", "status": "exception", "build_tool": "Maven"}
+{"id": "7209229_19", "status": "exception", "build_tool": "Gradle"}
+{"id": "7184464_8", "status": "build error", "build_tool": "Maven"}
+{"id": "7164335_0", "status": "exception", "build_tool": "Maven"}
+{"id": "6935442_164", "status": "exception", "build_tool": null}
+{"id": "7243760_25", "status": "build error", "build_tool": "Maven"}
+{"id": "7283919_65", "status": "exception", "build_tool": "Gradle"}
+{"id": "7249073_3", "status": "build error", "build_tool": "Maven"}
+{"id": "7700244_0", "status": "exception", "build_tool": null}
+{"id": "7292204_6", "status": "success", "build_tool": "Maven", "PACKAGE": "org/aeonbits/owner/util", "CLASS": "org/aeonbits/owner/util/Base64", "METHOD_NAME": "encode", "METHOD_DESC": "([B)Ljava/lang/String;", "INSTRUCTION_MISSED": 11, "INSTRUCTION_COVERED": 13, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 2, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.5416666666666666, "branch_coverage": 0.5}
+{"id": "7859424_68", "status": "exception", "build_tool": null}
+{"id": "7687890_24", "status": "exception", "build_tool": "Maven"}
+{"id": "7735632_2", "status": "build error", "build_tool": "Maven"}
+{"id": "8023268_13", "status": "exception", "build_tool": "Gradle"}
+{"id": "6861229_2", "status": "exception", "build_tool": "Maven"}
+{"id": "8064341_14", "status": "exception", "build_tool": "Maven"}
+{"id": "8103494_8", "status": "success", "build_tool": "Maven", "PACKAGE": "com/arcbees/github", "CLASS": "com/arcbees/github/PullNotification", "METHOD_NAME": "main", "METHOD_DESC": "([Ljava/lang/String;)V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 4, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "8108578_8", "status": "build error", "build_tool": "Maven"}
+{"id": "8175611_310", "status": "exception", "build_tool": null}
+{"id": "7914484_242", "status": "build error", "build_tool": "Maven"}
+{"id": "8475355_0", "status": "exception", "build_tool": null}
+{"id": "8091481_3", "status": "build error", "build_tool": "Maven"}
+{"id": "8397753_10", "status": "error", "build_tool": "Maven", "PACKAGE": "edu/nyu/cs/javagit/api/commands", "CLASS": "edu/nyu/cs/javagit/api/commands/GitCheckout", "METHOD_NAME": "checkout", "METHOD_DESC": "(Ljava/io/File;Ledu/nyu/cs/javagit/api/commands/GitCheckoutOptions;Ledu/nyu/cs/javagit/api/Ref;)Ledu/nyu/cs/javagit/api/commands/GitCheckoutResponse;", "INSTRUCTION_MISSED": 18, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 5, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "8608977_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "8488249_10", "status": "exception", "build_tool": "Maven"}
+{"id": "7218024_14", "status": "build error", "build_tool": "Maven"}
+{"id": "8849911_0", "status": "build error", "build_tool": "Maven"}
+{"id": "8896307_1", "status": "build error", "build_tool": "Maven"}
+{"id": "9132656_1", "status": "build error", "build_tool": "Maven"}
+{"id": "9149127_10", "status": "build error", "build_tool": "Maven"}
+{"id": "8927606_155", "status": "exception", "build_tool": null}
+{"id": "8771890_2", "status": "build error", "build_tool": "Maven"}
+{"id": "9198697_1", "status": "success", "build_tool": "Maven", "PACKAGE": "com/shopzilla/hadoop/repl/commands", "CLASS": "com/shopzilla/hadoop/repl/commands/Call", "METHOD_NAME": "equals", "METHOD_DESC": "(Ljava/lang/Object;)Z", "INSTRUCTION_MISSED": 1, "INSTRUCTION_COVERED": 13, "BRANCH_MISSED": 2, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.9285714285714286, "branch_coverage": 0.5}
+{"id": "9248683_186", "status": "build error", "build_tool": "Maven"}
+{"id": "8121707_15", "status": "success", "build_tool": "Maven", "PACKAGE": "org/mybatis/generator/api/dom/java", "CLASS": "org/mybatis/generator/api/dom/java/JavaDomUtils", "METHOD_NAME": "calculateTypeName", "METHOD_DESC": "(Lorg/mybatis/generator/api/dom/java/CompilationUnit;Lorg/mybatis/generator/api/dom/java/FullyQualifiedJavaType;)Ljava/lang/String;", "INSTRUCTION_MISSED": 31, "INSTRUCTION_COVERED": 27, "BRANCH_MISSED": 5, "BRANCH_COVERED": 7, "LINE_MISSED": 5, "LINE_COVERED": 8, "COMPLEXITY_MISSED": 5, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.46551724137931033, "branch_coverage": 0.5833333333333334}
+{"id": "9623064_30", "status": "exception", "build_tool": "Maven"}
+{"id": "9714608_580", "status": "build error", "build_tool": "Maven"}
+{"id": "9836604_9", "status": "build error", "build_tool": "Maven"}
+{"id": "9580168_2", "status": "build error", "build_tool": "Maven"}
+{"id": "10275891_1", "status": "success", "build_tool": "Maven", "PACKAGE": "org/eluder/coverage/sample", "CLASS": "org/eluder/coverage/sample/InnerClassCoverage", "METHOD_NAME": "delegate", "METHOD_DESC": "()Z", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 5, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "10306448_0", "status": "exception", "build_tool": null}
+{"id": "9836833_41", "status": "exception", "build_tool": "Maven"}
+{"id": "9278888_694", "status": "build error", "build_tool": "Maven"}
+{"id": "10585052_3", "status": "success", "build_tool": "Maven", "PACKAGE": "itc4j", "CLASS": "itc4j/Stamp", "METHOD_NAME": "join", "METHOD_DESC": "(Litc4j/Stamp;)Litc4j/Stamp;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 18, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "10459637_4", "status": "exception", "build_tool": null}
+{"id": "10981994_42", "status": "build error", "build_tool": "Maven"}
+{"id": "10566148_28", "status": "build error", "build_tool": "Maven"}
+{"id": "11136641_144", "status": "exception", "build_tool": "Gradle"}
+{"id": "9221446_15", "status": "build error", "build_tool": "Maven"}
+{"id": "11362688_0", "status": "build error", "build_tool": "Maven"}
+{"id": "11461895_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "10984947_0", "status": "build error", "build_tool": "Maven"}
+{"id": "11556529_9", "status": "build error", "build_tool": "Maven"}
+{"id": "11799031_108", "status": "exception", "build_tool": null}
+{"id": "11585818_8", "status": "success", "build_tool": "Maven", "PACKAGE": "com/yammer/telemetry/tracing/logging", "CLASS": "com/yammer/telemetry/tracing/logging/LogJobFactory", "METHOD_NAME": "withWriter", "METHOD_DESC": "(Ljava/io/Writer;)Lcom/yammer/telemetry/tracing/logging/LogJobFactory;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6153846153846154, "branch_coverage": 0.5}
+{"id": "11845993_155", "status": "exception", "build_tool": "Gradle"}
+{"id": "11383343_0", "status": "success", "build_tool": "Maven", "PACKAGE": "actions", "CLASS": "actions/MyAction", "METHOD_NAME": "view", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "11614244_58", "status": "success", "build_tool": "Maven", "PACKAGE": "at/ac/tuwien/photohawk/evaluation/qa", "CLASS": "at/ac/tuwien/photohawk/evaluation/qa/EqualQa", "METHOD_NAME": "evaluate", "METHOD_DESC": "(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Lat/ac/tuwien/photohawk/evaluation/operation/TransientOperation;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 55, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "11919447_1", "status": "success", "build_tool": "Maven", "PACKAGE": "at/porscheinformatik/cucumber/formatter", "CLASS": "at/porscheinformatik/cucumber/formatter/MimeTypeToExtensionsUtil", "METHOD_NAME": "getExtension", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 1, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.7058823529411765, "branch_coverage": 0.5}
+{"id": "12061606_111", "status": "success", "build_tool": "Maven", "PACKAGE": "uk/ac/ebi/beam", "CLASS": "uk/ac/ebi/beam/Parser", "METHOD_NAME": "strict", "METHOD_DESC": "(Ljava/lang/String;)Luk/ac/ebi/beam/Graph;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "11985762_9", "status": "build error", "build_tool": "Maven"}
+{"id": "12481904_3", "status": "build error", "build_tool": "Maven"}
+{"id": "12504536_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "12666574_0", "status": "build error", "build_tool": "Maven"}
+{"id": "12483976_0", "status": "exception", "build_tool": "Maven"}
+{"id": "11997640_0", "status": "build error", "build_tool": "Maven"}
+{"id": "12849994_97", "status": "build error", "build_tool": "Maven"}
+{"id": "12925113_6", "status": "build error", "build_tool": "Maven"}
+{"id": "13040953_38", "status": "success", "build_tool": "Maven", "PACKAGE": "com/rometools/utils", "CLASS": "com/rometools/utils/Strings", "METHOD_NAME": "toLowerCase", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "13218559_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "13185812_4", "status": "build error", "build_tool": "Maven"}
+{"id": "13146848_37", "status": "build error", "build_tool": "Maven"}
+{"id": "13736359_36", "status": "exception", "build_tool": null}
+{"id": "12652963_1", "status": "build error", "build_tool": "Maven"}
+{"id": "13505122_6", "status": "build error", "build_tool": "Maven"}
+{"id": "11334016_0", "status": "exception", "build_tool": "Maven"}
+{"id": "14043412_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "13933675_15", "status": "build error", "build_tool": "Maven"}
+{"id": "13770184_0", "status": "build error", "build_tool": "Maven"}
+{"id": "14117014_2", "status": "exception", "build_tool": null}
+{"id": "14029306_32", "status": "build error", "build_tool": "Maven"}
+{"id": "14247776_14", "status": "exception", "build_tool": "Maven"}
+{"id": "14109623_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "14505280_5", "status": "build error", "build_tool": "Maven"}
+{"id": "14145875_3", "status": "build error", "build_tool": "Maven"}
+{"id": "14550159_467", "status": "exception", "build_tool": null}
+{"id": "14714017_30", "status": "build error", "build_tool": "Maven"}
+{"id": "14858974_357", "status": "build error", "build_tool": "Maven"}
+{"id": "14509169_17", "status": "exception", "build_tool": "Maven"}
+{"id": "14989619_32", "status": "exception", "build_tool": "Gradle"}
+{"id": "14960307_335", "status": "success", "build_tool": "Maven", "PACKAGE": "com/cloudhopper/commons/util", "CLASS": "com/cloudhopper/commons/util/CompressionUtil", "METHOD_NAME": "isAlgorithmSupported", "METHOD_DESC": "(Ljava/lang/String;)Z", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 7, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "15008570_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "15012247_2", "status": "build error", "build_tool": "Maven"}
+{"id": "15026183_1", "status": "build error", "build_tool": "Maven"}
+{"id": "15197084_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "15566188_15", "status": "build error", "build_tool": "Maven"}
+{"id": "15057951_111", "status": "success", "build_tool": "Maven", "PACKAGE": "org/smartparam/engine/matchers/type", "CLASS": "org/smartparam/engine/matchers/type/SimpleMatcherType", "METHOD_NAME": "encode", "METHOD_DESC": "(Ljava/lang/Object;Lorg/smartparam/engine/core/type/Type;Lorg/smartparam/engine/core/matcher/Matcher;)Ljava/lang/String;", "INSTRUCTION_MISSED": 22, "INSTRUCTION_COVERED": 5, "BRANCH_MISSED": 7, "BRANCH_COVERED": 1, "LINE_MISSED": 4, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 4, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.18518518518518517, "branch_coverage": 0.125}
+{"id": "15592774_1", "status": "success", "build_tool": "Maven", "PACKAGE": "com/indeed/status/core", "CLASS": "com/indeed/status/core/ComparableDependency", "METHOD_NAME": "call", "METHOD_DESC": "()Lcom/indeed/status/core/CheckResult;", "INSTRUCTION_MISSED": 34, "INSTRUCTION_COVERED": 75, "BRANCH_MISSED": 5, "BRANCH_COVERED": 9, "LINE_MISSED": 8, "LINE_COVERED": 19, "COMPLEXITY_MISSED": 4, "COMPLEXITY_COVERED": 4, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6880733944954128, "branch_coverage": 0.6428571428571429}
+{"id": "14611005_43", "status": "exception", "build_tool": "Maven"}
+{"id": "15870646_7", "status": "build error", "build_tool": "Maven"}
+{"id": "14892248_72", "status": "exception", "build_tool": "Maven"}
+{"id": "15758326_0", "status": "error", "build_tool": "Maven", "PACKAGE": "com/github/perlundq/yajsync/internal/session", "CLASS": "com/github/perlundq/yajsync/internal/session/IntegerCoder", "METHOD_NAME": "encodeLong", "METHOD_DESC": "(JI)Ljava/nio/ByteBuffer;", "INSTRUCTION_MISSED": 90, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 12, "BRANCH_COVERED": 0, "LINE_MISSED": 14, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 7, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "15939233_1", "status": "exception", "build_tool": null}
+{"id": "15950995_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "16201889_25", "status": "build error", "build_tool": "Maven"}
+{"id": "16261234_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "16144428_60", "status": "success", "build_tool": "Maven", "PACKAGE": "org/wikidata/wdtk/storage/datastructures", "CLASS": "org/wikidata/wdtk/storage/datastructures/BitVectorIterator", "METHOD_NAME": "next", "METHOD_DESC": "()Ljava/lang/Boolean;", "INSTRUCTION_MISSED": 13, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 1, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.48, "branch_coverage": 0.5}
+{"id": "16362479_546", "status": "exception", "build_tool": null}
+{"id": "16368712_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "16362494_0", "status": "build error", "build_tool": "Maven"}
+{"id": "16336212_163", "status": "build error", "build_tool": "Maven"}
+{"id": "16597144_10", "status": "error", "build_tool": "Maven", "PACKAGE": "com/bitsinharmony/recognito/distances", "CLASS": "com/bitsinharmony/recognito/distances/ChebyshevDistanceCalculator", "METHOD_NAME": "getDistance", "METHOD_DESC": "([D[D)D", "INSTRUCTION_MISSED": 63, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 8, "BRANCH_COVERED": 0, "LINE_MISSED": 9, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 5, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "16021499_69", "status": "exception", "build_tool": "Maven"}
+{"id": "16611556_178", "status": "build error", "build_tool": "Maven"}
+{"id": "16630721_2", "status": "build error", "build_tool": "Maven"}
+{"id": "16462032_69", "status": "exception", "build_tool": "Gradle"}
+{"id": "16896558_1", "status": "build error", "build_tool": "Maven"}
+{"id": "17146973_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "17203543_4", "status": "exception", "build_tool": null}
+{"id": "17272993_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "16945217_19", "status": "build error", "build_tool": "Maven"}
+{"id": "16885508_1", "status": "build error", "build_tool": "Maven"}
+{"id": "17432029_1", "status": "build error", "build_tool": "Maven"}
+{"id": "17537838_1", "status": "build error", "build_tool": "Maven"}
+{"id": "17586846_36", "status": "success", "build_tool": "Maven", "PACKAGE": "com/ajjpj/afoundation/collection/immutable", "CLASS": "com/ajjpj/afoundation/collection/immutable/AHashSet", "METHOD_NAME": "empty", "METHOD_DESC": "()Lcom/ajjpj/afoundation/collection/immutable/AHashSet;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "17537835_9", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apache/cxf/dosgi/common/httpservice", "CLASS": "org/apache/cxf/dosgi/common/httpservice/HttpServiceManager", "METHOD_NAME": "getAbsoluteAddress", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 2, "INSTRUCTION_COVERED": 23, "BRANCH_MISSED": 1, "BRANCH_COVERED": 3, "LINE_MISSED": 1, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.92, "branch_coverage": 0.75}
+{"id": "17353005_0", "status": "exception", "build_tool": "Maven"}
+{"id": "18097626_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "18203743_1", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apache/servicemix/logging/jms", "CLASS": "org/apache/servicemix/logging/jms/LogstashEventFormat", "METHOD_NAME": "toString", "METHOD_DESC": "(Lorg/ops4j/pax/logging/spi/PaxLoggingEvent;)Ljava/lang/String;", "INSTRUCTION_MISSED": 13, "INSTRUCTION_COVERED": 74, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 2, "LINE_COVERED": 15, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8505747126436781, "branch_coverage": 1.0}
+{"id": "17898911_105", "status": "exception", "build_tool": "Maven"}
+{"id": "18311299_15", "status": "build error", "build_tool": "Maven"}
+{"id": "18242149_0", "status": "success", "build_tool": "Maven", "PACKAGE": "net/sf/cglib/core", "CLASS": "net/sf/cglib/core/AsmApi", "METHOD_NAME": "value", "METHOD_DESC": "()I", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 2, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "17960746_113", "status": "exception", "build_tool": "Gradle"}
+{"id": "18749200_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "17627031_46", "status": "success", "build_tool": "Maven", "PACKAGE": "edu/harvard/hul/ois/jhove/handler", "CLASS": "edu/harvard/hul/ois/jhove/handler/JsonHandler", "METHOD_NAME": "showArray", "METHOD_DESC": "([I)Ljavax/json/JsonArrayBuilder;", "INSTRUCTION_MISSED": 24, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 2, "BRANCH_COVERED": 0, "LINE_MISSED": 4, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "18467626_23", "status": "success", "build_tool": "Maven", "PACKAGE": "com/github/devnied/emvnfccard/utils", "CLASS": "com/github/devnied/emvnfccard/utils/CPLCUtils", "METHOD_NAME": "parse", "METHOD_DESC": "([B)Lcom/github/devnied/emvnfccard/model/CPLC;", "INSTRUCTION_MISSED": 8, "INSTRUCTION_COVERED": 34, "BRANCH_MISSED": 3, "BRANCH_COVERED": 3, "LINE_MISSED": 3, "LINE_COVERED": 9, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8095238095238095, "branch_coverage": 0.5}
+{"id": "18788616_0", "status": "build error", "build_tool": "Maven"}
+{"id": "19492803_20", "status": "exception", "build_tool": "Gradle"}
+{"id": "19730456_168", "status": "exception", "build_tool": "Gradle"}
+{"id": "19684359_187", "status": "build error", "build_tool": "Maven"}
+{"id": "19937094_56", "status": "build error", "build_tool": "Maven"}
+{"id": "19147361_36", "status": "error", "build_tool": "Maven", "PACKAGE": "org/apache/hadoop/hbase/master", "CLASS": "org/apache/hadoop/hbase/master/ThemisMasterObserver", "METHOD_NAME": "createLockFamily", "METHOD_DESC": "()Lorg/apache/hadoop/hbase/HColumnDescriptor;", "INSTRUCTION_MISSED": 19, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 5, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "20043683_8", "status": "success", "build_tool": "Maven", "PACKAGE": "org/t3as/metamap", "CLASS": "org/t3as/metamap/JaxbLoader", "METHOD_NAME": "loadXml", "METHOD_DESC": "(Ljava/io/File;)Lorg/t3as/metamap/jaxb/MMOs;", "INSTRUCTION_MISSED": 19, "INSTRUCTION_COVERED": 25, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 3, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.5681818181818182, "branch_coverage": 0}
+{"id": "20126854_34", "status": "exception", "build_tool": "Gradle"}
+{"id": "20129608_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "20186852_7", "status": "success", "build_tool": "Maven", "PACKAGE": "org/tinygroup/jsqlparser/parser", "CLASS": "org/tinygroup/jsqlparser/parser/CCJSqlParserUtil", "METHOD_NAME": "parseCondExpression", "METHOD_DESC": "(Ljava/lang/String;)Lorg/tinygroup/jsqlparser/expression/Expression;", "INSTRUCTION_MISSED": 6, "INSTRUCTION_COVERED": 11, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 2, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6470588235294118, "branch_coverage": 0}
+{"id": "19270555_0", "status": "exception", "build_tool": "Maven"}
+{"id": "20433978_0", "status": "build error", "build_tool": "Maven"}
+{"id": "20498194_7", "status": "build error", "build_tool": "Maven"}
+{"id": "19980663_4", "status": "exception", "build_tool": "Maven"}
+{"id": "20323152_0", "status": "build error", "build_tool": "Maven"}
+{"id": "20051204_6", "status": "exception", "build_tool": "Maven"}
+{"id": "20701467_91", "status": "build error", "build_tool": "Maven"}
+{"id": "20570214_46", "status": "exception", "build_tool": null}
+{"id": "20893448_21", "status": "build error", "build_tool": "Maven"}
+{"id": "21032193_0", "status": "build error", "build_tool": "Maven"}
+{"id": "21187043_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "21267129_1", "status": "success", "build_tool": "Maven", "PACKAGE": "org/openestate/is24/restapi/utils", "CLASS": "org/openestate/is24/restapi/utils/RandomStringUtils", "METHOD_NAME": "random", "METHOD_DESC": "(I)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 18, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "20521495_26", "status": "build error", "build_tool": "Maven"}
+{"id": "20936653_0", "status": "build error", "build_tool": "Maven"}
+{"id": "21867111_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "20551894_10", "status": "exception", "build_tool": "Maven"}
+{"id": "22165604_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "21894018_13", "status": "build error", "build_tool": "Maven"}
+{"id": "21427154_1", "status": "build error", "build_tool": "Maven"}
+{"id": "21859706_0", "status": "exception", "build_tool": "Maven"}
+{"id": "22430702_6", "status": "success", "build_tool": "Maven", "PACKAGE": "science/atlarge/graphalytics/util/io", "CLASS": "science/atlarge/graphalytics/util/io/VertexListStreamWriter", "METHOD_NAME": "writeAll", "METHOD_DESC": "()V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 11, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "22256861_268", "status": "exception", "build_tool": null}
+{"id": "22441114_3", "status": "build error", "build_tool": "Maven"}
+{"id": "22460817_0", "status": "success", "build_tool": "Maven", "PACKAGE": "xyz/vsl/mybatis/generator/pluginsplus", "CLASS": "xyz/vsl/mybatis/generator/pluginsplus/Str", "METHOD_NAME": "trim", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 14, "BRANCH_MISSED": 0, "BRANCH_COVERED": 4, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "22648109_0", "status": "build error", "build_tool": "Maven"}
+{"id": "22809141_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "22876447_1", "status": "build error", "build_tool": "Maven"}
+{"id": "23086156_28", "status": "build error", "build_tool": "Maven"}
+{"id": "23310687_6", "status": "exception", "build_tool": null}
+{"id": "22169673_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/simpligility/maven/provisioner", "CLASS": "com/simpligility/maven/provisioner/ProxyHelper", "METHOD_NAME": "isHostMatchesNonProxyHostsPattern", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;)Z", "INSTRUCTION_MISSED": 16, "INSTRUCTION_COVERED": 32, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 4, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6666666666666666, "branch_coverage": 0.5}
+{"id": "23237318_30", "status": "build error", "build_tool": "Maven"}
+{"id": "23749387_4", "status": "exception", "build_tool": null}
+{"id": "23743671_1", "status": "exception", "build_tool": null}
+{"id": "23961325_6", "status": "build error", "build_tool": "Maven"}
+{"id": "23330642_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apache/camel/cdi", "CLASS": "org/apache/camel/cdi/Main", "METHOD_NAME": "getCamelContextMap", "METHOD_DESC": "()Ljava/util/Map;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 23, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "24048150_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "24095382_0", "status": "build error", "build_tool": "Maven"}
+{"id": "23783621_1", "status": "error", "build_tool": "Maven", "PACKAGE": "net/openhft/chronicle", "CLASS": "net/openhft/chronicle/VanillaDataCache", "METHOD_NAME": "findNextDataCount", "METHOD_DESC": "(II)I", "INSTRUCTION_MISSED": 75, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 8, "BRANCH_COVERED": 0, "LINE_MISSED": 12, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 5, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "24474053_3", "status": "exception", "build_tool": null}
+{"id": "24363680_21", "status": "exception", "build_tool": "Maven"}
+{"id": "24459625_5", "status": "exception", "build_tool": "Maven"}
+{"id": "24503275_118", "status": "success", "build_tool": "Maven", "PACKAGE": "org/ethereum/vm", "CLASS": "org/ethereum/vm/VM", "METHOD_NAME": "step", "METHOD_DESC": "(Lorg/ethereum/vm/Program;)V", "INSTRUCTION_MISSED": 2203, "INSTRUCTION_COVERED": 137, "BRANCH_MISSED": 230, "BRANCH_COVERED": 9, "LINE_MISSED": 526, "LINE_COVERED": 36, "COMPLEXITY_MISSED": 155, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.05854700854700855, "branch_coverage": 0.03765690376569038}
+{"id": "24729346_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/ebaysf/ostara/telemetry/mongodb", "CLASS": "org/ebaysf/ostara/telemetry/mongodb/TelemetryData", "METHOD_NAME": "getTotalDuration", "METHOD_DESC": "()J", "INSTRUCTION_MISSED": 3, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "25040346_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "25151720_5", "status": "exception", "build_tool": null}
+{"id": "24917019_37", "status": "error", "build_tool": "Maven", "PACKAGE": "com/amazonaws/services/dynamodbv2/json/demo/mars/worker", "CLASS": "com/amazonaws/services/dynamodbv2/json/demo/mars/worker/DynamoDBMissionWorker", "METHOD_NAME": "getSolJSON", "METHOD_DESC": "(Ljava/net/URL;I)Ljava/util/Map;", "INSTRUCTION_MISSED": 95, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 16, "BRANCH_COVERED": 0, "LINE_MISSED": 18, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 9, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "25259107_33", "status": "success", "build_tool": "Maven", "PACKAGE": "com/yubico/u2f", "CLASS": "com/yubico/u2f/U2fPrimitives", "METHOD_NAME": "finishRegistration", "METHOD_DESC": "(Lcom/yubico/u2f/data/messages/RegisterRequest;Lcom/yubico/u2f/data/messages/RegisterResponse;)Lcom/yubico/u2f/data/DeviceRegistration;", "INSTRUCTION_MISSED": 6, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "25434304_1", "status": "success", "build_tool": "Maven", "PACKAGE": "ru/yandex/qatools/processors/matcher/gen/processing", "CLASS": "ru/yandex/qatools/processors/matcher/gen/processing/Naming", "METHOD_NAME": "normalize", "METHOD_DESC": "(Ljava/lang/CharSequence;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 10, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "24750302_75", "status": "build error", "build_tool": "Maven"}
+{"id": "25434873_0", "status": "build error", "build_tool": "Maven"}
+{"id": "25881432_0", "status": "build error", "build_tool": "Maven"}
+{"id": "25467142_16", "status": "build error", "build_tool": "Maven"}
+{"id": "25884252_5", "status": "build error", "build_tool": "Maven"}
+{"id": "25927306_42", "status": "build error", "build_tool": "Maven"}
+{"id": "26170170_3", "status": "build error", "build_tool": "Maven"}
+{"id": "26644682_425", "status": "exception", "build_tool": null}
+{"id": "26593878_1", "status": "build error", "build_tool": "Maven"}
+{"id": "25359676_335", "status": "build error", "build_tool": "Maven"}
+{"id": "26722690_20", "status": "exception", "build_tool": null}
+{"id": "27030629_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "27062690_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/shai/xmodifier", "CLASS": "org/shai/xmodifier/XModifier", "METHOD_NAME": "create", "METHOD_DESC": "(Lorg/w3c/dom/Node;Lorg/shai/xmodifier/XModifyNode;)V", "INSTRUCTION_MISSED": 10, "INSTRUCTION_COVERED": 38, "BRANCH_MISSED": 2, "BRANCH_COVERED": 6, "LINE_MISSED": 2, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.7916666666666666, "branch_coverage": 0.75}
+{"id": "27147147_24", "status": "exception", "build_tool": "Gradle"}
+{"id": "27064201_0", "status": "build error", "build_tool": "Maven"}
+{"id": "27244573_56", "status": "exception", "build_tool": "Gradle"}
+{"id": "22589840_305", "status": "build error", "build_tool": "Maven"}
+{"id": "27323134_39", "status": "exception", "build_tool": null}
+{"id": "26951044_44", "status": "build error", "build_tool": "Maven"}
+{"id": "28214426_7", "status": "build error", "build_tool": "Maven"}
+{"id": "27187107_4", "status": "success", "build_tool": "Maven", "PACKAGE": "com/github/phantomthief/zookeeper", "CLASS": "com/github/phantomthief/zookeeper/ZkBasedTreeNodeResource", "METHOD_NAME": "close", "METHOD_DESC": "()V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 30, "BRANCH_MISSED": 3, "BRANCH_COVERED": 3, "LINE_MISSED": 0, "LINE_COVERED": 8, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0.5}
+{"id": "28505345_59", "status": "exception", "build_tool": "Gradle"}
+{"id": "28752850_14", "status": "exception", "build_tool": "Gradle"}
+{"id": "28835543_0", "status": "exception", "build_tool": null}
+{"id": "28394156_18", "status": "build error", "build_tool": "Maven"}
+{"id": "28896975_1", "status": "exception", "build_tool": null}
+{"id": "28649714_28", "status": "build error", "build_tool": "Maven"}
+{"id": "29397553_10", "status": "build error", "build_tool": "Maven"}
+{"id": "29383909_23", "status": "build error", "build_tool": "Maven"}
+{"id": "28178086_286", "status": "success", "build_tool": "Maven", "PACKAGE": "ec/tstoolkit/maths/matrices", "CLASS": "ec/tstoolkit/maths/matrices/Matrix", "METHOD_NAME": "copy", "METHOD_DESC": "(Lec/tstoolkit/maths/matrices/Matrix;)V", "INSTRUCTION_MISSED": 11, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 2, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "29186921_2", "status": "build error", "build_tool": "Maven"}
+{"id": "29603649_809", "status": "exception", "build_tool": "Gradle"}
+{"id": "29406271_0", "status": "exception", "build_tool": "Maven"}
+{"id": "29929519_5", "status": "build error", "build_tool": "Maven"}
+{"id": "30008535_0", "status": "build error", "build_tool": "Maven"}
+{"id": "30466015_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "30562287_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "30593072_11", "status": "exception", "build_tool": "Gradle"}
+{"id": "30616178_2", "status": "exception", "build_tool": "Maven"}
+{"id": "29774200_74", "status": "success", "build_tool": "Maven", "PACKAGE": "fr/norad/visuwall/plugin/teamcity", "CLASS": "fr/norad/visuwall/plugin/teamcity/TeamCityConnection", "METHOD_NAME": "getMavenId", "METHOD_DESC": "(Lfr/norad/visuwall/api/domain/SoftwareProjectId;)Ljava/lang/String;", "INSTRUCTION_MISSED": 14, "INSTRUCTION_COVERED": 13, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 2, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.48148148148148145, "branch_coverage": 0}
+{"id": "30619741_23", "status": "build error", "build_tool": "Maven"}
+{"id": "13385254_1", "status": "build error", "build_tool": "Maven"}
+{"id": "30644093_34", "status": "exception", "build_tool": "Gradle"}
+{"id": "29479059_81", "status": "build error", "build_tool": "Maven"}
+{"id": "30953541_1", "status": "build error", "build_tool": "Maven"}
+{"id": "31075855_16", "status": "exception", "build_tool": "Gradle"}
+{"id": "30956938_154", "status": "build error", "build_tool": "Maven"}
+{"id": "29952888_47", "status": "success", "build_tool": "Maven", "PACKAGE": "com/arcbees/gaestudio/server/service/visualizer", "CLASS": "com/arcbees/gaestudio/server/service/visualizer/BlobsServiceImpl", "METHOD_NAME": "extractEntitiesFromBlob", "METHOD_DESC": "(Lcom/google/appengine/api/blobstore/BlobKey;)Ljava/util/List;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 16, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "30956939_63", "status": "build error", "build_tool": "Maven"}
+{"id": "31208159_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "31234709_18", "status": "exception", "build_tool": "Gradle"}
+{"id": "31906424_2", "status": "build error", "build_tool": "Maven"}
+{"id": "31940141_17", "status": "build error", "build_tool": "Maven"}
+{"id": "32001142_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "32135981_10", "status": "build error", "build_tool": "Maven"}
+{"id": "31634402_0", "status": "build error", "build_tool": "Maven"}
+{"id": "32143635_14", "status": "build error", "build_tool": "Maven"}
+{"id": "31962976_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/hialan/findhouse/web/crawler/spider", "CLASS": "com/hialan/findhouse/web/crawler/spider/SpiderStarter", "METHOD_NAME": "action", "METHOD_DESC": "()V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 33, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 9, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "32139352_2", "status": "build error", "build_tool": "Maven"}
+{"id": "32177955_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "32446940_5", "status": "success", "build_tool": "Maven", "PACKAGE": "com/baselet/diagram/draw", "CLASS": "com/baselet/diagram/draw/TextSplitter", "METHOD_NAME": "splitStringAlgorithm", "METHOD_DESC": "(Ljava/lang/String;DLcom/baselet/diagram/draw/DrawHandler;)[Lcom/baselet/control/StringStyle;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 6, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "32498781_5", "status": "exception", "build_tool": null}
+{"id": "31758882_0", "status": "build error", "build_tool": "Maven"}
+{"id": "32796510_13", "status": "build error", "build_tool": "Maven"}
+{"id": "32651977_1", "status": "success", "build_tool": "Maven", "PACKAGE": "io/protostuff/compiler/parser", "CLASS": "io/protostuff/compiler/parser/CompositeFileReader", "METHOD_NAME": "read", "METHOD_DESC": "(Ljava/lang/String;)Lorg/antlr/v4/runtime/CharStream;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 22, "BRANCH_MISSED": 0, "BRANCH_COVERED": 4, "LINE_MISSED": 0, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "32866430_13", "status": "build error", "build_tool": "Maven"}
+{"id": "33015857_198", "status": "exception", "build_tool": "Gradle"}
+{"id": "32913234_8", "status": "build error", "build_tool": "Maven"}
+{"id": "32884360_98", "status": "build error", "build_tool": "Maven"}
+{"id": "33499067_5", "status": "exception", "build_tool": null}
+{"id": "33403291_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/minecraftly/core", "CLASS": "com/minecraftly/core/MinecraftlyUtil", "METHOD_NAME": "convertMillisToTicks", "METHOD_DESC": "(J)J", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "33329835_8", "status": "success", "build_tool": "Maven", "PACKAGE": "org/mitre/jet/ebts", "CLASS": "org/mitre/jet/ebts/EbtsBuilder", "METHOD_NAME": "build", "METHOD_DESC": "(Lorg/mitre/jet/ebts/Ebts;)[B", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 46, "BRANCH_MISSED": 1, "BRANCH_COVERED": 5, "LINE_MISSED": 0, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0.8333333333333334}
+{"id": "33683869_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "33821709_0", "status": "exception", "build_tool": null}
+{"id": "32357795_148", "status": "exception", "build_tool": "Maven"}
+{"id": "34531285_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "34533675_16", "status": "exception", "build_tool": null}
+{"id": "33297716_4", "status": "build error", "build_tool": "Maven"}
+{"id": "34164637_3", "status": "build error", "build_tool": "Maven"}
+{"id": "34706545_4", "status": "success", "build_tool": "Maven", "PACKAGE": "org/coniks/util", "CLASS": "org/coniks/util/Convert", "METHOD_NAME": "getNthBit", "METHOD_DESC": "([BI)Z", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 24, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "35126599_96", "status": "exception", "build_tool": "Gradle"}
+{"id": "34861263_54", "status": "build error", "build_tool": "Maven"}
+{"id": "33645537_540", "status": "build error", "build_tool": "Maven"}
+{"id": "35486799_0", "status": "build error", "build_tool": "Maven"}
+{"id": "33718145_7", "status": "build error", "build_tool": "Maven"}
+{"id": "35555582_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "35564219_13", "status": "exception", "build_tool": "Gradle"}
+{"id": "34599551_7", "status": "success", "build_tool": "Maven", "PACKAGE": "com/codenotfound/soap/http/cxf", "CLASS": "com/codenotfound/soap/http/cxf/HelloWorldEndpointImpl", "METHOD_NAME": "sayHello", "METHOD_DESC": "(Lcom/codenotfound/services/helloworld/Person;)Lcom/codenotfound/services/helloworld/Greeting;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 45, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "35689778_3", "status": "build error", "build_tool": "Maven"}
+{"id": "35844242_14", "status": "exception", "build_tool": null}
+{"id": "36372567_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "36725014_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "35627039_96", "status": "build error", "build_tool": "Maven"}
+{"id": "37208641_80", "status": "build error", "build_tool": "Maven"}
+{"id": "37717709_106", "status": "exception", "build_tool": "Gradle"}
+{"id": "37817790_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "36185854_15", "status": "build error", "build_tool": "Maven"}
+{"id": "38317187_68", "status": "build error", "build_tool": "Maven"}
+{"id": "37814227_6", "status": "build error", "build_tool": "Maven"}
+{"id": "38716513_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "35957836_1", "status": "exception", "build_tool": "Maven"}
+{"id": "38943889_27", "status": "success", "build_tool": "Maven", "PACKAGE": "com/thelastcheck/commons/buffer", "CLASS": "com/thelastcheck/commons/buffer/ByteArray", "METHOD_NAME": "clearBit", "METHOD_DESC": "(IB)Lcom/thelastcheck/commons/buffer/ByteArray;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 22, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "37813245_0", "status": "build error", "build_tool": "Maven"}
+{"id": "38092182_93", "status": "build error", "build_tool": "Maven"}
+{"id": "38781549_3", "status": "success", "build_tool": "Maven", "PACKAGE": "org/kopitubruk/util/json", "CLASS": "org/kopitubruk/util/json/JSONUtil", "METHOD_NAME": "toJSON", "METHOD_DESC": "(Ljava/lang/Object;)Ljava/lang/String;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "39228827_1", "status": "build error", "build_tool": "Maven"}
+{"id": "39215543_3", "status": "success", "build_tool": "Maven", "PACKAGE": "com/raskasa/metrics/okhttp", "CLASS": "com/raskasa/metrics/okhttp/InstrumentedOkHttpClients", "METHOD_NAME": "create", "METHOD_DESC": "(Lcom/codahale/metrics/MetricRegistry;)Lokhttp3/OkHttpClient;", "INSTRUCTION_MISSED": 9, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "39889599_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "40001904_44", "status": "exception", "build_tool": null}
+{"id": "39905754_12", "status": "success", "build_tool": "Maven", "PACKAGE": "game", "CLASS": "game/EightQueens", "METHOD_NAME": "isSolution", "METHOD_DESC": "(Ljava/util/List;)Z", "INSTRUCTION_MISSED": 4, "INSTRUCTION_COVERED": 20, "BRANCH_MISSED": 2, "BRANCH_COVERED": 2, "LINE_MISSED": 1, "LINE_COVERED": 5, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8333333333333334, "branch_coverage": 0.5}
+{"id": "40141672_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "40162365_29", "status": "exception", "build_tool": "Gradle"}
+{"id": "40492118_30", "status": "exception", "build_tool": "Gradle"}
+{"id": "40101342_3", "status": "build error", "build_tool": "Maven"}
+{"id": "38639709_4", "status": "build error", "build_tool": "Maven"}
+{"id": "40672250_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "41294846_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "41307987_12", "status": "build error", "build_tool": "Maven"}
+{"id": "39038703_232", "status": "build error", "build_tool": "Maven"}
+{"id": "39542036_0", "status": "error", "build_tool": "Maven", "PACKAGE": "com/github/dbunit/rules/example", "CLASS": "com/github/dbunit/rules/example/UserRepository", "METHOD_NAME": "find", "METHOD_DESC": "(J)Lcom/github/dbunit/rules/example/User;", "INSTRUCTION_MISSED": 8, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "41263775_123", "status": "success", "build_tool": "Maven", "PACKAGE": "com/googlecode/cqengine/codegen/support", "CLASS": "com/googlecode/cqengine/codegen/support/GeneratedAttributeSupport", "METHOD_NAME": "valueOf", "METHOD_DESC": "(B)Ljava/lang/Byte;", "INSTRUCTION_MISSED": 3, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "42112681_1", "status": "success", "build_tool": "Maven", "PACKAGE": "jde/juci", "CLASS": "jde/juci/Symbol", "METHOD_NAME": "java2Elisp", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 62, "BRANCH_MISSED": 2, "BRANCH_COVERED": 14, "LINE_MISSED": 0, "LINE_COVERED": 18, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 7, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0.875}
+{"id": "42557838_92", "status": "exception", "build_tool": "Gradle"}
+{"id": "42032884_56", "status": "exception", "build_tool": null}
+{"id": "40735368_644", "status": "build error", "build_tool": "Maven"}
+{"id": "42847560_12", "status": "build error", "build_tool": "Maven"}
+{"id": "42622157_136", "status": "build error", "build_tool": "Maven"}
+{"id": "43156715_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "43306906_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "41633567_2", "status": "exception", "build_tool": "Maven"}
+{"id": "43258821_3", "status": "exception", "build_tool": "Maven"}
+{"id": "43326581_119", "status": "build error", "build_tool": "Maven"}
+{"id": "44304666_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "43989661_0", "status": "build error", "build_tool": "Maven"}
+{"id": "44322761_17", "status": "exception", "build_tool": "Gradle"}
+{"id": "43748389_7", "status": "success", "build_tool": "Maven", "PACKAGE": "com/izettle/metrics/influxdb", "CLASS": "com/izettle/metrics/influxdb/InfluxDbHttpSender", "METHOD_NAME": "writeData", "METHOD_DESC": "([B)I", "INSTRUCTION_MISSED": 24, "INSTRUCTION_COVERED": 58, "BRANCH_MISSED": 3, "BRANCH_COVERED": 3, "LINE_MISSED": 2, "LINE_COVERED": 14, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.7073170731707317, "branch_coverage": 0.5}
+{"id": "44579325_0", "status": "error", "build_tool": "Maven", "PACKAGE": "net/unit8/moshas", "CLASS": "net/unit8/moshas/MoshasEngine", "METHOD_NAME": "describe", "METHOD_DESC": "(Ljava/lang/String;Lnet/unit8/moshas/ViewLogicDescriber;)Lnet/unit8/moshas/Template;", "INSTRUCTION_MISSED": 37, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 2, "BRANCH_COVERED": 0, "LINE_MISSED": 9, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "42949039_256", "status": "build error", "build_tool": "Maven"}
+{"id": "42585709_5", "status": "build error", "build_tool": "Maven"}
+{"id": "44977869_0", "status": "exception", "build_tool": null}
+{"id": "44442208_5", "status": "build error", "build_tool": "Maven"}
+{"id": "44835755_19", "status": "build error", "build_tool": "Maven"}
+{"id": "45098765_3", "status": "build error", "build_tool": "Maven"}
+{"id": "45926632_2", "status": "build error", "build_tool": "Maven"}
+{"id": "45889273_4", "status": "build error", "build_tool": "Maven"}
+{"id": "45991588_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "46134098_14", "status": "exception", "build_tool": "Maven"}
+{"id": "46524600_1", "status": "exception", "build_tool": null}
+{"id": "46789213_104", "status": "success", "build_tool": "Maven", "PACKAGE": "dk/alexandra/fresco/framework/configuration", "CLASS": "dk/alexandra/fresco/framework/configuration/NetworkConfigurationImpl", "METHOD_NAME": "getParty", "METHOD_DESC": "(I)Ldk/alexandra/fresco/framework/Party;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 7, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "46855694_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "44637917_4", "status": "build error", "build_tool": "Maven"}
+{"id": "45276846_213", "status": "build error", "build_tool": "Maven"}
+{"id": "47182929_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "47529369_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "47577389_15", "status": "exception", "build_tool": "Gradle"}
+{"id": "47802308_34", "status": "build error", "build_tool": "Maven"}
+{"id": "47846388_19", "status": "exception", "build_tool": "Gradle"}
+{"id": "47972099_112", "status": "exception", "build_tool": null}
+{"id": "48053234_46", "status": "exception", "build_tool": "Gradle"}
+{"id": "47017637_1", "status": "success", "build_tool": "Maven", "PACKAGE": "com/ewolff/user_registration/service", "CLASS": "com/ewolff/user_registration/service/RegistrationService", "METHOD_NAME": "register", "METHOD_DESC": "(Lcom/ewolff/user_registration/domain/User;)Z", "INSTRUCTION_MISSED": 57, "INSTRUCTION_COVERED": 27, "BRANCH_MISSED": 2, "BRANCH_COVERED": 2, "LINE_MISSED": 7, "LINE_COVERED": 5, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.32142857142857145, "branch_coverage": 0.5}
+{"id": "47752557_5", "status": "build error", "build_tool": "Maven"}
+{"id": "48122737_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "48175620_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "48161197_0", "status": "build error", "build_tool": "Maven"}
+{"id": "44512524_217", "status": "build error", "build_tool": "Maven"}
+{"id": "48337544_10", "status": "exception", "build_tool": null}
+{"id": "48321891_0", "status": "exception", "build_tool": null}
+{"id": "48199522_78", "status": "exception", "build_tool": "Maven"}
+{"id": "48366700_12", "status": "exception", "build_tool": null}
+{"id": "46396068_28", "status": "exception", "build_tool": "Maven"}
+{"id": "48544726_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "48609929_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "48638354_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "49236241_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "49475567_144", "status": "exception", "build_tool": "Gradle"}
+{"id": "48196746_35", "status": "build error", "build_tool": "Maven"}
+{"id": "49483698_18", "status": "exception", "build_tool": "Gradle"}
+{"id": "49679586_4", "status": "build error", "build_tool": "Maven"}
+{"id": "48337670_296", "status": "build error", "build_tool": "Maven"}
+{"id": "48562236_28", "status": "build error", "build_tool": "Maven"}
+{"id": "49652464_6", "status": "success", "build_tool": "Maven", "PACKAGE": "com/galerieslafayette/analyzer", "CLASS": "com/galerieslafayette/analyzer/Encoder", "METHOD_NAME": "substring", "METHOD_DESC": "(Ljava/lang/String;II)Ljava/lang/String;", "INSTRUCTION_MISSED": 10, "INSTRUCTION_COVERED": 17, "BRANCH_MISSED": 3, "BRANCH_COVERED": 3, "LINE_MISSED": 3, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6296296296296297, "branch_coverage": 0.5}
+{"id": "49688312_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "49875177_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apidesign/demo/sieve/eratosthenes", "CLASS": "org/apidesign/demo/sieve/eratosthenes/Primes", "METHOD_NAME": "compute", "METHOD_DESC": "()I", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 44, "BRANCH_MISSED": 0, "BRANCH_COVERED": 4, "LINE_MISSED": 0, "LINE_COVERED": 11, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "49717672_54", "status": "exception", "build_tool": "Gradle"}
+{"id": "48880766_426", "status": "success", "build_tool": "Maven", "PACKAGE": "tech/tablesaw/index", "CLASS": "tech/tablesaw/index/IntIndex", "METHOD_NAME": "greaterThan", "METHOD_DESC": "(I)Ltech/tablesaw/selection/Selection;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 28, "BRANCH_MISSED": 0, "BRANCH_COVERED": 2, "LINE_MISSED": 0, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "50430650_26", "status": "build error", "build_tool": "Maven"}
+{"id": "49943894_350", "status": "build error", "build_tool": "Maven"}
+{"id": "50250915_64", "status": "build error", "build_tool": "Maven"}
+{"id": "50765065_32", "status": "exception", "build_tool": "Gradle"}
+{"id": "50866545_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "51344857_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "51269282_0", "status": "build error", "build_tool": "Maven"}
+{"id": "51772967_5", "status": "success", "build_tool": "Maven", "PACKAGE": "domain/filemanager/core", "CLASS": "domain/filemanager/core/FileAccessService", "METHOD_NAME": "isUserCanDelete", "METHOD_DESC": "(Ljava/lang/String;Ldomain/filemanager/api/entity/File;)Z", "INSTRUCTION_MISSED": 22, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 4, "BRANCH_COVERED": 0, "LINE_MISSED": 3, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "49945501_58", "status": "exception", "build_tool": "Maven"}
+{"id": "51700398_22", "status": "build error", "build_tool": "Maven"}
+{"id": "51843899_1", "status": "exception", "build_tool": "Maven"}
+{"id": "52316952_26", "status": "exception", "build_tool": "Gradle"}
+{"id": "52409237_1", "status": "build error", "build_tool": "Maven"}
+{"id": "52609528_163", "status": "exception", "build_tool": "Gradle"}
+{"id": "52850323_1", "status": "exception", "build_tool": null}
+{"id": "53297769_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "52435170_121", "status": "build error", "build_tool": "Maven"}
+{"id": "50205233_147", "status": "exception", "build_tool": "Maven"}
+{"id": "53501969_1", "status": "build error", "build_tool": "Maven"}
+{"id": "53528552_2", "status": "build error", "build_tool": "Maven"}
+{"id": "51400982_2", "status": "exception", "build_tool": "Maven"}
+{"id": "54110401_3", "status": "build error", "build_tool": "Maven"}
+{"id": "54138284_1", "status": "build error", "build_tool": "Maven"}
+{"id": "54455350_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "55138951_1", "status": "exception", "build_tool": null}
+{"id": "52972024_314", "status": "build error", "build_tool": "Maven"}
+{"id": "54854741_58", "status": "build error", "build_tool": "Maven"}
+{"id": "56089333_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "55955301_2", "status": "build error", "build_tool": "Maven"}
+{"id": "55954702_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "56533838_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "56342300_1", "status": "build error", "build_tool": "Maven"}
+{"id": "56585217_5", "status": "exception", "build_tool": null}
+{"id": "56359101_193", "status": "build error", "build_tool": "Maven"}
+{"id": "56736842_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "57061988_103", "status": "exception", "build_tool": "Gradle"}
+{"id": "53577396_11", "status": "success", "build_tool": "Maven", "PACKAGE": "org/mobicents/protocols/ss7/sccp/impl/oam", "CLASS": "org/mobicents/protocols/ss7/sccp/impl/oam/SccpExecutor", "METHOD_NAME": "execute", "METHOD_DESC": "([Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 72, "INSTRUCTION_COVERED": 52, "BRANCH_MISSED": 20, "BRANCH_COVERED": 8, "LINE_MISSED": 21, "LINE_COVERED": 12, "COMPLEXITY_MISSED": 14, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.41935483870967744, "branch_coverage": 0.2857142857142857}
+{"id": "56587374_22", "status": "success", "build_tool": "Maven", "PACKAGE": "fr/efl/chaine/xslt/config", "CLASS": "fr/efl/chaine/xslt/config/Output", "METHOD_NAME": "setOutputProperty", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;)V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 7, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "58628767_0", "status": "build error", "build_tool": "Maven"}
+{"id": "56582318_18", "status": "build error", "build_tool": "Maven"}
+{"id": "58892507_4", "status": "exception", "build_tool": null}
+{"id": "58314354_0", "status": "success", "build_tool": "Maven", "PACKAGE": "csv/converter", "CLASS": "csv/converter/IgnoreMissingValuesConverter", "METHOD_NAME": "convert", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/Float;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 20, "BRANCH_MISSED": 0, "BRANCH_COVERED": 4, "LINE_MISSED": 0, "LINE_COVERED": 8, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "59216067_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "54785866_1", "status": "exception", "build_tool": null}
+{"id": "59507570_144", "status": "exception", "build_tool": "Gradle"}
+{"id": "59801168_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "59288941_4", "status": "build error", "build_tool": "Maven"}
+{"id": "59952554_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "59021106_12", "status": "success", "build_tool": "Maven", "PACKAGE": "br/ufg/inf/es/saep/sandbox/dominio", "CLASS": "br/ufg/inf/es/saep/sandbox/dominio/Valor", "METHOD_NAME": "getString", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "57110085_0", "status": "build error", "build_tool": "Maven"}
+{"id": "60344998_18", "status": "build error", "build_tool": "Maven"}
+{"id": "60701247_130", "status": "exception", "build_tool": null}
+{"id": "60776569_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "60802987_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "60940117_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "60958121_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "60201162_10", "status": "build error", "build_tool": "Maven"}
+{"id": "61158193_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "61247013_20", "status": "exception", "build_tool": "Gradle"}
+{"id": "61250412_9", "status": "build error", "build_tool": "Maven"}
+{"id": "61879415_4", "status": "exception", "build_tool": null}
+{"id": "59995075_0", "status": "success", "build_tool": "Maven", "PACKAGE": "de/tudarmstadt/ukp/experiments/argumentation/convincingness/sampling", "CLASS": "de/tudarmstadt/ukp/experiments/argumentation/convincingness/sampling/Step6GraphTransitivityCleaner", "METHOD_NAME": "mergeClusters", "METHOD_DESC": "(Ljava/util/Set;)Ljava/util/Set;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 132, "BRANCH_MISSED": 0, "BRANCH_COVERED": 10, "LINE_MISSED": 0, "LINE_COVERED": 27, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 6, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 1.0}
+{"id": "61566208_137", "status": "build error", "build_tool": "Maven"}
+{"id": "59118773_26", "status": "build error", "build_tool": "Maven"}
+{"id": "62700410_9", "status": "exception", "build_tool": null}
+{"id": "63002081_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "62342369_64", "status": "build error", "build_tool": "Maven"}
+{"id": "62253355_138", "status": "build error", "build_tool": "Maven"}
+{"id": "63545071_4", "status": "exception", "build_tool": null}
+{"id": "64004196_13", "status": "exception", "build_tool": "Gradle"}
+{"id": "64247174_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "59970637_16", "status": "exception", "build_tool": "Maven"}
+{"id": "63543726_1", "status": "build error", "build_tool": "Maven"}
+{"id": "64865857_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "64733500_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "65088801_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "65541750_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "65987043_9", "status": "exception", "build_tool": "Gradle"}
+{"id": "66055507_6", "status": "exception", "build_tool": null}
+{"id": "66060256_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "64692993_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "66076162_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "65776167_4", "status": "build error", "build_tool": "Maven"}
+{"id": "66291451_3", "status": "exception", "build_tool": null}
+{"id": "66622989_36", "status": "exception", "build_tool": "Gradle"}
+{"id": "61996222_33", "status": "exception", "build_tool": "Maven"}
+{"id": "67832483_6", "status": "exception", "build_tool": null}
+{"id": "67588628_118", "status": "build error", "build_tool": "Maven"}
+{"id": "67869571_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "63689153_9", "status": "exception", "build_tool": "Maven"}
+{"id": "67999496_20", "status": "exception", "build_tool": null}
+{"id": "69031608_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "69356520_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "69645155_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "67913797_5", "status": "build error", "build_tool": "Maven"}
+{"id": "69660791_9", "status": "exception", "build_tool": null}
+{"id": "69711339_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "67030086_34", "status": "success", "build_tool": "Maven", "PACKAGE": "org/arquillian/algeron/pact/provider/core", "CLASS": "org/arquillian/algeron/pact/provider/core/ArgumentPatternMatcher", "METHOD_NAME": "arguments", "METHOD_DESC": "(Ljava/util/regex/Pattern;Ljava/lang/String;)Ljava/util/List;", "INSTRUCTION_MISSED": 26, "INSTRUCTION_COVERED": 13, "BRANCH_MISSED": 5, "BRANCH_COVERED": 1, "LINE_MISSED": 5, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.3333333333333333, "branch_coverage": 0.16666666666666666}
+{"id": "70374047_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "70515197_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "69858273_0", "status": "exception", "build_tool": "Maven"}
+{"id": "70856121_41", "status": "exception", "build_tool": null}
+{"id": "70932660_4", "status": "exception", "build_tool": null}
+{"id": "70996010_18", "status": "exception", "build_tool": "Gradle"}
+{"id": "71089550_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "70767609_3", "status": "success", "build_tool": "Maven", "PACKAGE": "com/codenotfound/ws/client", "CLASS": "com/codenotfound/ws/client/TicketAgentClient", "METHOD_NAME": "listFlights", "METHOD_DESC": "()Ljava/util/List;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 26, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "69946649_0", "status": "build error", "build_tool": "Maven"}
+{"id": "71127071_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "71779309_25", "status": "exception", "build_tool": null}
+{"id": "71792401_3", "status": "build error", "build_tool": "Maven"}
+{"id": "71268678_2", "status": "build error", "build_tool": "Maven"}
+{"id": "72159384_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "66940520_432", "status": "exception", "build_tool": "Maven"}
+{"id": "72189814_155", "status": "exception", "build_tool": "Gradle"}
+{"id": "72580689_14", "status": "exception", "build_tool": "Gradle"}
+{"id": "68935766_90", "status": "exception", "build_tool": "Maven"}
+{"id": "72299435_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "73785779_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "73354878_32", "status": "build error", "build_tool": "Maven"}
+{"id": "73767658_1", "status": "build error", "build_tool": "Maven"}
+{"id": "74042107_5", "status": "build error", "build_tool": "Maven"}
+{"id": "74059585_25", "status": "exception", "build_tool": "Maven"}
+{"id": "74458764_50", "status": "success", "build_tool": "Maven", "PACKAGE": "com/amadeus/session/repository/redis", "CLASS": "com/amadeus/session/repository/redis/JedisPoolFacade", "METHOD_NAME": "publish", "METHOD_DESC": "([B[B)Ljava/lang/Long;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 6, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "71328643_1", "status": "exception", "build_tool": "Maven"}
+{"id": "74730037_1", "status": "exception", "build_tool": null}
+{"id": "71972621_23", "status": "exception", "build_tool": "Maven"}
+{"id": "73948366_1790", "status": "build error", "build_tool": "Maven"}
+{"id": "75375279_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "74903768_6", "status": "exception", "build_tool": "Gradle"}
+{"id": "74649126_17", "status": "build error", "build_tool": "Maven"}
+{"id": "75865158_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "75960287_39", "status": "exception", "build_tool": "Gradle"}
+{"id": "74581177_26", "status": "success", "build_tool": "Maven", "PACKAGE": "com/bbva/kltt/apirest/core/ant", "CLASS": "com/bbva/kltt/apirest/core/ant/GlobalAntExecutor", "METHOD_NAME": "generateFullTemporaryDir", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 17, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "75941229_0", "status": "build error", "build_tool": "Maven"}
+{"id": "75955378_35", "status": "build error", "build_tool": "Maven"}
+{"id": "76279677_2", "status": "build error", "build_tool": "Maven"}
+{"id": "78464881_4", "status": "exception", "build_tool": null}
+{"id": "75793136_1", "status": "build error", "build_tool": "Maven"}
+{"id": "78797738_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "76773649_0", "status": "build error", "build_tool": "Maven"}
+{"id": "79296222_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "79497496_12", "status": "exception", "build_tool": null}
+{"id": "77110232_1", "status": "build error", "build_tool": "Maven"}
+{"id": "76505423_7", "status": "build error", "build_tool": "Maven"}
+{"id": "80497637_3", "status": "exception", "build_tool": null}
+{"id": "80398085_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "78699707_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/vladsch/ReverseRegEx/util", "CLASS": "com/vladsch/ReverseRegEx/util/ReversedCharSequence", "METHOD_NAME": "subSequence", "METHOD_DESC": "(II)Lcom/vladsch/ReverseRegEx/util/ReversedCharSequence;", "INSTRUCTION_MISSED": 29, "INSTRUCTION_COVERED": 28, "BRANCH_MISSED": 5, "BRANCH_COVERED": 3, "LINE_MISSED": 1, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 4, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.49122807017543857, "branch_coverage": 0.375}
+{"id": "81173322_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "80868140_26", "status": "success", "build_tool": "Maven", "PACKAGE": "com/github/servicenow/ds/stats/stl", "CLASS": "com/github/servicenow/ds/stats/stl/LoessInterpolator", "METHOD_NAME": "smoothOnePoint", "METHOD_DESC": "(DII)Ljava/lang/Double;", "INSTRUCTION_MISSED": 15, "INSTRUCTION_COVERED": 44, "BRANCH_MISSED": 5, "BRANCH_COVERED": 5, "LINE_MISSED": 2, "LINE_COVERED": 9, "COMPLEXITY_MISSED": 4, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.7457627118644068, "branch_coverage": 0.5}
+{"id": "81092547_0", "status": "build error", "build_tool": "Maven"}
+{"id": "79784019_49", "status": "success", "build_tool": "Maven", "PACKAGE": "io/stardog/stardao/validation", "CLASS": "io/stardog/stardao/validation/ModelValidator", "METHOD_NAME": "getCreateValidationErrors", "METHOD_DESC": "(Ljava/lang/Object;Lio/stardog/stardao/core/field/FieldData;)Ljava/util/List;", "INSTRUCTION_MISSED": 7, "INSTRUCTION_COVERED": 145, "BRANCH_MISSED": 3, "BRANCH_COVERED": 25, "LINE_MISSED": 1, "LINE_COVERED": 25, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 12, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.9539473684210527, "branch_coverage": 0.8928571428571429}
+{"id": "82291828_29", "status": "exception", "build_tool": null}
+{"id": "81745315_2", "status": "success", "build_tool": "Maven", "PACKAGE": "com/taobao/pamirs/schedule/zk", "CLASS": "com/taobao/pamirs/schedule/zk/ZKTools", "METHOD_NAME": "deleteTree", "METHOD_DESC": "(Lorg/apache/zookeeper/ZooKeeper;Ljava/lang/String;)V", "INSTRUCTION_MISSED": 20, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 2, "BRANCH_COVERED": 0, "LINE_MISSED": 4, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "82601803_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "78868092_36", "status": "success", "build_tool": "Maven", "PACKAGE": "com/vsct/supervision/notification/service", "CLASS": "com/vsct/supervision/notification/service/SubscriptionService", "METHOD_NAME": "addSubscription", "METHOD_DESC": "(Lcom/vsct/supervision/seyren/api/Subscription;Ljava/lang/String;)V", "INSTRUCTION_MISSED": 30, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 2, "BRANCH_COVERED": 0, "LINE_MISSED": 6, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0.0}
+{"id": "81226206_87", "status": "exception", "build_tool": "Maven"}
+{"id": "83193705_20", "status": "exception", "build_tool": "Gradle"}
+{"id": "81368488_180", "status": "exception", "build_tool": "Gradle"}
+{"id": "83838306_39", "status": "exception", "build_tool": "Gradle"}
+{"id": "82448747_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/sefaria/sefariaplugin/analysis", "CLASS": "org/sefaria/sefariaplugin/analysis/UncommonLetterMap", "METHOD_NAME": "getMinifiedWord", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 6, "INSTRUCTION_COVERED": 105, "BRANCH_MISSED": 4, "BRANCH_COVERED": 10, "LINE_MISSED": 0, "LINE_COVERED": 17, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 5, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.9459459459459459, "branch_coverage": 0.7142857142857143}
+{"id": "84286382_23", "status": "exception", "build_tool": "Gradle"}
+{"id": "83988988_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "84065080_6", "status": "success", "build_tool": "Maven", "PACKAGE": "org/plugface/core/internal", "CLASS": "org/plugface/core/internal/AnnotationProcessor", "METHOD_NAME": "getDependencies", "METHOD_DESC": "(Ljava/lang/Class;)Ljava/util/Collection;", "INSTRUCTION_MISSED": 25, "INSTRUCTION_COVERED": 59, "BRANCH_MISSED": 3, "BRANCH_COVERED": 5, "LINE_MISSED": 3, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 3, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.7023809523809523, "branch_coverage": 0.625}
+{"id": "83811108_1", "status": "build error", "build_tool": "Maven"}
+{"id": "84313991_60", "status": "exception", "build_tool": "Maven"}
+{"id": "84985373_1", "status": "exception", "build_tool": "Maven"}
+{"id": "86467203_3", "status": "success", "build_tool": "Maven", "PACKAGE": "com/github/swissquote/carnotzet/core/maven", "CLASS": "com/github/swissquote/carnotzet/core/maven/TopologicalSorter", "METHOD_NAME": "sort", "METHOD_DESC": "(Lcom/github/swissquote/carnotzet/core/maven/Node;Z)Ljava/util/List;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "86734489_1", "status": "success", "build_tool": "Maven", "PACKAGE": "fish/payara/cloud/connectors/kafka/tools", "CLASS": "fish/payara/cloud/connectors/kafka/tools/AdditionalPropertiesParser", "METHOD_NAME": "merge", "METHOD_DESC": "(Ljava/util/Properties;Ljava/util/Properties;)Ljava/util/Properties;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 30, "BRANCH_MISSED": 1, "BRANCH_COVERED": 3, "LINE_MISSED": 0, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 2, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0.75}
+{"id": "86897067_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "87583205_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "87432809_27", "status": "build error", "build_tool": "Maven"}
+{"id": "87972852_0", "status": "exception", "build_tool": null}
+{"id": "84487370_45", "status": "build error", "build_tool": "Maven"}
+{"id": "88115454_2", "status": "build error", "build_tool": "Maven"}
+{"id": "88676590_1", "status": "exception", "build_tool": null}
+{"id": "87849739_2058", "status": "exception", "build_tool": null}
+{"id": "89129558_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "89679757_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "89956253_0", "status": "build error", "build_tool": "Maven"}
+{"id": "85760629_1", "status": "exception", "build_tool": "Maven"}
+{"id": "90016934_2", "status": "exception", "build_tool": null}
+{"id": "87590916_4", "status": "build error", "build_tool": "Maven"}
+{"id": "91121306_29", "status": "exception", "build_tool": "Gradle"}
+{"id": "90501128_0", "status": "build error", "build_tool": "Maven"}
+{"id": "91375712_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "91779577_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "92798552_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "91855299_92", "status": "exception", "build_tool": null}
+{"id": "93611636_1", "status": "exception", "build_tool": null}
+{"id": "93714543_57", "status": "exception", "build_tool": "Gradle"}
+{"id": "91730068_9", "status": "build error", "build_tool": "Maven"}
+{"id": "93777628_22", "status": "exception", "build_tool": "Gradle"}
+{"id": "89322848_1", "status": "build error", "build_tool": "Maven"}
+{"id": "93310060_33", "status": "build error", "build_tool": "Maven"}
+{"id": "94255167_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "94076429_1", "status": "build error", "build_tool": "Maven"}
+{"id": "94549931_2", "status": "build error", "build_tool": "Maven"}
+{"id": "93984344_0", "status": "build error", "build_tool": "Maven"}
+{"id": "88319793_0", "status": "exception", "build_tool": "Maven"}
+{"id": "95594455_9", "status": "build error", "build_tool": "Maven"}
+{"id": "95467898_2", "status": "build error", "build_tool": "Maven"}
+{"id": "95800582_12", "status": "exception", "build_tool": "Gradle"}
+{"id": "96122408_14", "status": "build error", "build_tool": "Maven"}
+{"id": "96518561_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "95789248_0", "status": "success", "build_tool": "Maven", "PACKAGE": "io/opentracing/contrib/vertx/ext/web", "CLASS": "io/opentracing/contrib/vertx/ext/web/TracingHandler", "METHOD_NAME": "serverSpanContext", "METHOD_DESC": "(Lio/vertx/ext/web/RoutingContext;)Lio/opentracing/SpanContext;", "INSTRUCTION_MISSED": 3, "INSTRUCTION_COVERED": 18, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 1, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8571428571428571, "branch_coverage": 0.5}
+{"id": "97642523_19", "status": "exception", "build_tool": null}
+{"id": "95635499_116", "status": "exception", "build_tool": "Gradle"}
+{"id": "97669395_92", "status": "build error", "build_tool": "Maven"}
+{"id": "99149191_8", "status": "exception", "build_tool": null}
+{"id": "99569378_39", "status": "exception", "build_tool": "Gradle"}
+{"id": "99890719_56", "status": "build error", "build_tool": "Maven"}
+{"id": "95081481_1009", "status": "success", "build_tool": "Maven", "PACKAGE": "org/onosproject/ospf/controller/impl", "CLASS": "org/onosproject/ospf/controller/impl/OspfConfigUtil", "METHOD_NAME": "processes", "METHOD_DESC": "(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/util/List;", "INSTRUCTION_MISSED": 2, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 1, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8571428571428571, "branch_coverage": 0.5}
+{"id": "97776141_21", "status": "build error", "build_tool": "Maven"}
+{"id": "100069523_35", "status": "exception", "build_tool": null}
+{"id": "100366560_19", "status": "success", "build_tool": "Maven", "PACKAGE": "io/beanmother/core/util", "CLASS": "io/beanmother/core/util/PrimitiveTypeUtils", "METHOD_NAME": "toWrapper", "METHOD_DESC": "(Lcom/google/common/reflect/TypeToken;)Ljava/lang/Class;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "100394760_1", "status": "build error", "build_tool": "Maven"}
+{"id": "99997703_207", "status": "success", "build_tool": "Maven", "PACKAGE": "com/ocadotechnology/physics", "CLASS": "com/ocadotechnology/physics/ConstantSpeedTraversalSection", "METHOD_NAME": "getDuration", "METHOD_DESC": "()D", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "98203629_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/amqphub/spring/boot/jms/autoconfigure", "CLASS": "org/amqphub/spring/boot/jms/autoconfigure/AMQP10JMSProperties", "METHOD_NAME": "getRemoteUrl", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "100679870_30", "status": "build error", "build_tool": "Maven"}
+{"id": "101264271_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "100600744_6", "status": "build error", "build_tool": "Maven"}
+{"id": "102597994_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "102137829_24", "status": "exception", "build_tool": null}
+{"id": "102614080_4", "status": "build error", "build_tool": "Maven"}
+{"id": "103289349_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "102814088_13", "status": "exception", "build_tool": "Gradle"}
+{"id": "96120606_68", "status": "exception", "build_tool": "Maven"}
+{"id": "104078932_0", "status": "build error", "build_tool": "Maven"}
+{"id": "101035547_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/pivovarit/hamming/vavr", "CLASS": "com/pivovarit/hamming/vavr/VavrHammingEncoder", "METHOD_NAME": "encode", "METHOD_DESC": "(Lcom/pivovarit/hamming/vavr/BinaryString;)Lcom/pivovarit/hamming/vavr/EncodedString;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 17, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 4, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "104355653_4", "status": "exception", "build_tool": null}
+{"id": "104025215_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "104398040_192", "status": "exception", "build_tool": "Gradle"}
+{"id": "104691408_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "105081364_2", "status": "exception", "build_tool": null}
+{"id": "104787715_32", "status": "success", "build_tool": "Maven", "PACKAGE": "com/salesforce/dockerfileimageupdate/utils", "CLASS": "com/salesforce/dockerfileimageupdate/utils/GitHubUtil", "METHOD_NAME": "getMyself", "METHOD_DESC": "()Lorg/kohsuke/github/GHMyself;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 4, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "105284146_230", "status": "build error", "build_tool": "Maven"}
+{"id": "104141049_0", "status": "build error", "build_tool": "Maven"}
+{"id": "106042361_0", "status": "success", "build_tool": "Maven", "PACKAGE": "it/italia/developers/spid/integration/util", "CLASS": "it/italia/developers/spid/integration/util/SPIDIntegrationUtil", "METHOD_NAME": "xmlStringToElement", "METHOD_DESC": "(Ljava/lang/String;)Lorg/w3c/dom/Element;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 14, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "103437385_44", "status": "exception", "build_tool": "Maven"}
+{"id": "106979588_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "107330274_259", "status": "exception", "build_tool": "Gradle"}
+{"id": "107370456_0", "status": "build error", "build_tool": "Maven"}
+{"id": "104217624_49", "status": "exception", "build_tool": "Maven"}
+{"id": "107872025_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "107740230_11", "status": "exception", "build_tool": null}
+{"id": "108563514_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "108101992_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "108579191_9", "status": "exception", "build_tool": "Gradle"}
+{"id": "108833646_28", "status": "success", "build_tool": "Maven", "PACKAGE": "deepnetts/net/layers", "CLASS": "deepnetts/net/layers/ActivationFunctions", "METHOD_NAME": "linearPrime", "METHOD_DESC": "(F)F", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 2, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "106459277_1", "status": "exception", "build_tool": "Maven"}
+{"id": "109554428_28", "status": "exception", "build_tool": null}
+{"id": "109327955_12", "status": "exception", "build_tool": null}
+{"id": "109986674_101", "status": "exception", "build_tool": null}
+{"id": "109667968_43", "status": "exception", "build_tool": "Gradle"}
+{"id": "106082622_27", "status": "exception", "build_tool": "Maven"}
+{"id": "112121863_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "112115759_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "110417923_0", "status": "success", "build_tool": "Maven", "PACKAGE": "org/thoughts/on/java/coffee", "CLASS": "org/thoughts/on/java/coffee/CoffeeMachine", "METHOD_NAME": "brewCoffee", "METHOD_DESC": "(Lorg/thoughts/on/java/coffee/CoffeeSelection;)Lorg/thoughts/on/java/coffee/Coffee;", "INSTRUCTION_MISSED": 17, "INSTRUCTION_COVERED": 8, "BRANCH_MISSED": 2, "BRANCH_COVERED": 1, "LINE_MISSED": 2, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.32, "branch_coverage": 0.3333333333333333}
+{"id": "113878762_12", "status": "exception", "build_tool": null}
+{"id": "112947883_12", "status": "exception", "build_tool": "Gradle"}
+{"id": "112703947_0", "status": "build error", "build_tool": "Maven"}
+{"id": "106404296_77", "status": "exception", "build_tool": "Maven"}
+{"id": "115371169_20", "status": "exception", "build_tool": "Gradle"}
+{"id": "115276927_0", "status": "build error", "build_tool": "Maven"}
+{"id": "114777829_217", "status": "build error", "build_tool": "Maven"}
+{"id": "117845334_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "115379439_0", "status": "exception", "build_tool": "Maven"}
+{"id": "109116423_91", "status": "exception", "build_tool": null}
+{"id": "118132535_73", "status": "exception", "build_tool": "Gradle"}
+{"id": "118006325_0", "status": "build error", "build_tool": "Maven"}
+{"id": "117291995_2", "status": "success", "build_tool": "Maven", "PACKAGE": "jakarta/ws/rs/core", "CLASS": "jakarta/ws/rs/core/Cookie", "METHOD_NAME": "equals", "METHOD_DESC": "(Ljava/lang/Object;)Z", "INSTRUCTION_MISSED": 35, "INSTRUCTION_COVERED": 52, "BRANCH_MISSED": 18, "BRANCH_COVERED": 12, "LINE_MISSED": 4, "LINE_COVERED": 12, "COMPLEXITY_MISSED": 12, "COMPLEXITY_COVERED": 4, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.5977011494252874, "branch_coverage": 0.4}
+{"id": "119080111_49", "status": "exception", "build_tool": "Gradle"}
+{"id": "118570108_0", "status": "build error", "build_tool": "Maven"}
+{"id": "117949407_1", "status": "build error", "build_tool": "Maven"}
+{"id": "118253061_110", "status": "build error", "build_tool": "Maven"}
+{"id": "119930717_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "120205336_2", "status": "build error", "build_tool": "Maven"}
+{"id": "119170338_36", "status": "exception", "build_tool": "Maven"}
+{"id": "120310124_1", "status": "exception", "build_tool": "Maven"}
+{"id": "120829698_23", "status": "build error", "build_tool": "Maven"}
+{"id": "120580458_0", "status": "exception", "build_tool": "Maven"}
+{"id": "119258092_1", "status": "build error", "build_tool": "Maven"}
+{"id": "121694310_68", "status": "exception", "build_tool": "Gradle"}
+{"id": "122685352_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "122794079_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "122628585_1", "status": "build error", "build_tool": "Maven"}
+{"id": "115029573_1", "status": "exception", "build_tool": "Maven"}
+{"id": "120339465_12", "status": "build error", "build_tool": "Maven"}
+{"id": "124624258_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "124698942_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "123649054_2", "status": "build error", "build_tool": "Maven"}
+{"id": "125830136_6", "status": "build error", "build_tool": "Maven"}
+{"id": "122696956_1", "status": "build error", "build_tool": "Maven"}
+{"id": "123233499_8", "status": "build error", "build_tool": "Maven"}
+{"id": "125550262_32", "status": "success", "build_tool": "Maven", "PACKAGE": "com/vmware/ovsdb/protocol/operation", "CLASS": "com/vmware/ovsdb/protocol/operation/Delete", "METHOD_NAME": "equals", "METHOD_DESC": "(Ljava/lang/Object;)Z", "INSTRUCTION_MISSED": 1, "INSTRUCTION_COVERED": 28, "BRANCH_MISSED": 2, "BRANCH_COVERED": 6, "LINE_MISSED": 0, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 2, "COMPLEXITY_COVERED": 3, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.9655172413793104, "branch_coverage": 0.75}
+{"id": "128527927_17", "status": "exception", "build_tool": null}
+{"id": "128274093_472", "status": "exception", "build_tool": "Gradle"}
+{"id": "126354357_2", "status": "success", "build_tool": "Maven", "PACKAGE": "cheese/yun/lombok", "CLASS": "cheese/yun/lombok/Member", "METHOD_NAME": "setCoupons", "METHOD_DESC": "(Ljava/util/List;)V", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 4, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 2, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "128915122_0", "status": "exception", "build_tool": null}
+{"id": "128709824_200", "status": "build error", "build_tool": "Maven"}
+{"id": "128830029_7", "status": "build error", "build_tool": "Maven"}
+{"id": "126875323_9", "status": "success", "build_tool": "Maven", "PACKAGE": "jakarta/enterprise/concurrent", "CLASS": "jakarta/enterprise/concurrent/ManagedExecutors", "METHOD_NAME": "managedTask", "METHOD_DESC": "(Ljava/lang/Runnable;Ljakarta/enterprise/concurrent/ManagedTaskListener;)Ljava/lang/Runnable;", "INSTRUCTION_MISSED": 5, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 1, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "129274227_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "129493743_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "125030262_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/packtpub/springboot2intro/properties", "CLASS": "com/packtpub/springboot2intro/properties/DemoApplicationProperties", "METHOD_NAME": "getEmailAddresses", "METHOD_DESC": "()Ljava/util/List;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "132102082_68", "status": "exception", "build_tool": null}
+{"id": "132454935_45", "status": "build error", "build_tool": "Maven"}
+{"id": "131678192_1", "status": "build error", "build_tool": "Maven"}
+{"id": "132759831_30", "status": "exception", "build_tool": "Gradle"}
+{"id": "132660065_22", "status": "build error", "build_tool": "Maven"}
+{"id": "133381280_49", "status": "build error", "build_tool": "Maven"}
+{"id": "133357466_126", "status": "build error", "build_tool": "Maven"}
+{"id": "134147639_29", "status": "exception", "build_tool": "Gradle"}
+{"id": "129125498_46", "status": "build error", "build_tool": "Maven"}
+{"id": "134616422_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "134901097_12", "status": "exception", "build_tool": null}
+{"id": "134164777_6", "status": "success", "build_tool": "Maven", "PACKAGE": "com/crossoverjie/cim/common/data/construct", "CLASS": "com/crossoverjie/cim/common/data/construct/TrieTree", "METHOD_NAME": "prefixSearch", "METHOD_DESC": "(Ljava/lang/String;)Ljava/util/List;", "INSTRUCTION_MISSED": 42, "INSTRUCTION_COVERED": 9, "BRANCH_MISSED": 7, "BRANCH_COVERED": 1, "LINE_MISSED": 8, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 4, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.17647058823529413, "branch_coverage": 0.125}
+{"id": "135978112_8", "status": "exception", "build_tool": "Gradle"}
+{"id": "136035670_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "136564461_61", "status": "exception", "build_tool": "Gradle"}
+{"id": "136310429_96", "status": "exception", "build_tool": "Gradle"}
+{"id": "136678045_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "133799133_50", "status": "build error", "build_tool": "Maven"}
+{"id": "137522340_0", "status": "build error", "build_tool": "Maven"}
+{"id": "137736536_4", "status": "exception", "build_tool": null}
+{"id": "129463208_1", "status": "build error", "build_tool": "Maven"}
+{"id": "129255460_21", "status": "exception", "build_tool": "Maven"}
+{"id": "139111229_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "140017338_178", "status": "exception", "build_tool": null}
+{"id": "139729058_9", "status": "build error", "build_tool": "Maven"}
+{"id": "140260316_0", "status": "build error", "build_tool": "Maven"}
+{"id": "141492069_19", "status": "exception", "build_tool": "Gradle"}
+{"id": "140631483_0", "status": "build error", "build_tool": "Maven"}
+{"id": "141680627_89", "status": "exception", "build_tool": "Gradle"}
+{"id": "141891951_11", "status": "build error", "build_tool": "Maven"}
+{"id": "142944814_232", "status": "exception", "build_tool": "Gradle"}
+{"id": "143054055_11", "status": "exception", "build_tool": "Gradle"}
+{"id": "143824400_1", "status": "exception", "build_tool": null}
+{"id": "143926791_39", "status": "exception", "build_tool": "Gradle"}
+{"id": "144251992_258", "status": "exception", "build_tool": "Gradle"}
+{"id": "144309611_105", "status": "build error", "build_tool": "Maven"}
+{"id": "143249569_36", "status": "success", "build_tool": "Maven", "PACKAGE": "com/amazon/ask/interaction/build", "CLASS": "com/amazon/ask/interaction/build/Generator", "METHOD_NAME": "getDestFile", "METHOD_DESC": "(Ljava/lang/String;)Ljava/io/File;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 7, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "139009007_65", "status": "exception", "build_tool": "Maven"}
+{"id": "142194679_0", "status": "build error", "build_tool": "Maven"}
+{"id": "144740389_18", "status": "exception", "build_tool": "Maven"}
+{"id": "146177746_35", "status": "exception", "build_tool": null}
+{"id": "145957544_46", "status": "success", "build_tool": "Maven", "PACKAGE": "de/poiu/kilt/facade/creation", "CLASS": "de/poiu/kilt/facade/creation/BundleNormalizer", "METHOD_NAME": "normalize", "METHOD_DESC": "(Ljava/lang/String;)Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 37, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 10, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "147378679_2", "status": "exception", "build_tool": "Maven"}
+{"id": "145424401_88", "status": "build error", "build_tool": "Maven"}
+{"id": "144712336_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/alibaba/boot/nacos/actuate/endpoint", "CLASS": "com/alibaba/boot/nacos/actuate/endpoint/NacosConfigEndpoint", "METHOD_NAME": "invoke", "METHOD_DESC": "()Ljava/util/Map;", "INSTRUCTION_MISSED": 17, "INSTRUCTION_COVERED": 32, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 2, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.6530612244897959, "branch_coverage": 0.5}
+{"id": "147673645_2", "status": "build error", "build_tool": "Maven"}
+{"id": "149694816_17", "status": "exception", "build_tool": "Gradle"}
+{"id": "147606002_1", "status": "build error", "build_tool": "Maven"}
+{"id": "149736342_247", "status": "exception", "build_tool": "Gradle"}
+{"id": "149647886_3", "status": "success", "build_tool": "Maven", "PACKAGE": "com/salesforce/centrifuge", "CLASS": "com/salesforce/centrifuge/CentrifugeConfig", "METHOD_NAME": "getWarmerConfigs", "METHOD_DESC": "()Ljava/util/List;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 4, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "151625754_0", "status": "exception", "build_tool": null}
+{"id": "149780295_33", "status": "success", "build_tool": "Maven", "PACKAGE": "coverage_metrics", "CLASS": "coverage_metrics/CoverageMetrics", "METHOD_NAME": "f", "METHOD_DESC": "(I)F", "INSTRUCTION_MISSED": 2, "INSTRUCTION_COVERED": 12, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 1, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.8571428571428571, "branch_coverage": 0.5}
+{"id": "142603842_63", "status": "exception", "build_tool": "Maven"}
+{"id": "152714817_8", "status": "build error", "build_tool": "Maven"}
+{"id": "152217753_8", "status": "exception", "build_tool": "Maven"}
+{"id": "153608306_1", "status": "exception", "build_tool": null}
+{"id": "154253610_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "150668624_2", "status": "build error", "build_tool": "Maven"}
+{"id": "153155267_8", "status": "exception", "build_tool": "Maven"}
+{"id": "155883728_446", "status": "build error", "build_tool": "Maven"}
+{"id": "155277206_0", "status": "build error", "build_tool": "Maven"}
+{"id": "150938406_239", "status": "exception", "build_tool": "Maven"}
+{"id": "156408389_11", "status": "exception", "build_tool": "Gradle"}
+{"id": "152814648_21", "status": "exception", "build_tool": "Maven"}
+{"id": "156416177_113", "status": "exception", "build_tool": "Gradle"}
+{"id": "156757718_5", "status": "build error", "build_tool": "Maven"}
+{"id": "154302277_67", "status": "build error", "build_tool": "Maven"}
+{"id": "158588129_26", "status": "build error", "build_tool": "Maven"}
+{"id": "157791342_6", "status": "success", "build_tool": "Maven", "PACKAGE": "cn/lijunkui/mail", "CLASS": "cn/lijunkui/mail/MailService", "METHOD_NAME": "sendInlineResourceMail", "METHOD_DESC": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "INSTRUCTION_MISSED": 60, "INSTRUCTION_COVERED": 20, "BRANCH_MISSED": 2, "BRANCH_COVERED": 0, "LINE_MISSED": 14, "LINE_COVERED": 7, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.25, "branch_coverage": 0.0}
+{"id": "159454491_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "160919607_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "159966756_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "159422409_0", "status": "success", "build_tool": "Maven", "PACKAGE": "github/javaguide/asyncmethodspringboot/service", "CLASS": "github/javaguide/asyncmethodspringboot/service/AsyncService", "METHOD_NAME": "completableFutureTask", "METHOD_DESC": "(Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;", "INSTRUCTION_MISSED": 3, "INSTRUCTION_COVERED": 27, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 2, "LINE_COVERED": 6, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.9, "branch_coverage": 0}
+{"id": "158126654_15", "status": "build error", "build_tool": "Maven"}
+{"id": "162548942_22", "status": "build error", "build_tool": "Maven"}
+{"id": "162610309_7", "status": "exception", "build_tool": null}
+{"id": "161133770_47", "status": "exception", "build_tool": null}
+{"id": "164392211_89", "status": "exception", "build_tool": null}
+{"id": "165868248_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "158975124_110", "status": "build error", "build_tool": "Maven"}
+{"id": "166324888_2", "status": "exception", "build_tool": "Gradle"}
+{"id": "166602376_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "165370485_20", "status": "build error", "build_tool": "Maven"}
+{"id": "166636413_16", "status": "exception", "build_tool": "Gradle"}
+{"id": "167169496_1", "status": "build error", "build_tool": "Maven"}
+{"id": "169301877_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "169146883_3", "status": "build error", "build_tool": "Maven"}
+{"id": "165012876_2", "status": "exception", "build_tool": null}
+{"id": "170412315_6", "status": "build error", "build_tool": "Maven"}
+{"id": "171326919_17", "status": "exception", "build_tool": "Gradle"}
+{"id": "169761438_10", "status": "build error", "build_tool": "Maven"}
+{"id": "171415041_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "171677657_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "164308818_0", "status": "exception", "build_tool": "Maven"}
+{"id": "166984581_1", "status": "build error", "build_tool": "Maven"}
+{"id": "173348603_25", "status": "exception", "build_tool": "Gradle"}
+{"id": "173355506_1", "status": "build error", "build_tool": "Maven"}
+{"id": "171409385_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/hellokoding/springboot/restful", "CLASS": "com/hellokoding/springboot/restful/StockAPI", "METHOD_NAME": "findAll", "METHOD_DESC": "()Lorg/springframework/http/ResponseEntity;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 5, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "173468970_16", "status": "exception", "build_tool": null}
+{"id": "173782146_8", "status": "exception", "build_tool": null}
+{"id": "173924701_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "170496871_191", "status": "build error", "build_tool": "Maven"}
+{"id": "175026830_6", "status": "exception", "build_tool": null}
+{"id": "174306645_82", "status": "exception", "build_tool": null}
+{"id": "175086428_1", "status": "build error", "build_tool": "Maven"}
+{"id": "174508778_0", "status": "build error", "build_tool": "Maven"}
+{"id": "175298978_25", "status": "exception", "build_tool": "Gradle"}
+{"id": "175358739_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "180337008_32", "status": "exception", "build_tool": null}
+{"id": "181071001_137", "status": "exception", "build_tool": null}
+{"id": "172448626_1073", "status": "exception", "build_tool": null}
+{"id": "175769409_0", "status": "build error", "build_tool": "Maven"}
+{"id": "181514613_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "181976854_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "183214896_1", "status": "build error", "build_tool": "Maven"}
+{"id": "172529766_21", "status": "success", "build_tool": "Maven", "PACKAGE": "com/sap/primetime/api", "CLASS": "com/sap/primetime/api/ScreenService", "METHOD_NAME": "getOnboardings", "METHOD_DESC": "()Ljava/util/List;", "INSTRUCTION_MISSED": 4, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 1, "BRANCH_COVERED": 1, "LINE_MISSED": 2, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 0.42857142857142855, "branch_coverage": 0.5}
+{"id": "183382310_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "183540010_2", "status": "build error", "build_tool": "Maven"}
+{"id": "184603374_4", "status": "build error", "build_tool": "Maven"}
+{"id": "181421086_38", "status": "build error", "build_tool": "Maven"}
+{"id": "184611677_5", "status": "exception", "build_tool": null}
+{"id": "187195345_62", "status": "build error", "build_tool": "Maven"}
+{"id": "188574042_0", "status": "success", "build_tool": "Maven", "PACKAGE": "io/github/qianxingchuan/framework/doraemon/bundle", "CLASS": "io/github/qianxingchuan/framework/doraemon/bundle/AsgardBundle", "METHOD_NAME": "getBundleName", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "190938308_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "176837289_44", "status": "build error", "build_tool": "Maven"}
+{"id": "192201753_7", "status": "exception", "build_tool": "Gradle"}
+{"id": "195232251_4", "status": "exception", "build_tool": null}
+{"id": "189562861_265", "status": "build error", "build_tool": "Maven"}
+{"id": "196205406_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/fishpro/helloworld/service", "CLASS": "com/fishpro/helloworld/service/MyService", "METHOD_NAME": "message", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 2, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "198884888_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "193537999_18", "status": "exception", "build_tool": null}
+{"id": "195808004_22", "status": "build error", "build_tool": "Maven"}
+{"id": "201050057_2", "status": "build error", "build_tool": "Maven"}
+{"id": "201843970_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "188705852_2", "status": "exception", "build_tool": "Maven"}
+{"id": "189453445_70", "status": "exception", "build_tool": "Maven"}
+{"id": "201420026_6", "status": "build error", "build_tool": "Maven"}
+{"id": "208320365_5", "status": "exception", "build_tool": "Gradle"}
+{"id": "209459144_14", "status": "exception", "build_tool": null}
+{"id": "206686299_0", "status": "build error", "build_tool": "Maven"}
+{"id": "209830490_7", "status": "exception", "build_tool": null}
+{"id": "212184596_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "214744362_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "206073932_9", "status": "build error", "build_tool": "Maven"}
+{"id": "204657216_31", "status": "build error", "build_tool": "Maven"}
+{"id": "217849614_41", "status": "build error", "build_tool": "Maven"}
+{"id": "224065909_0", "status": "exception", "build_tool": "Gradle"}
+{"id": "221147168_25", "status": "success", "build_tool": "Maven", "PACKAGE": "org/apache/winegrower/deployer", "CLASS": "org/apache/winegrower/deployer/BundleImpl", "METHOD_NAME": "getSymbolicName", "METHOD_DESC": "()Ljava/lang/String;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 3, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 1, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "224557146_3", "status": "exception", "build_tool": "Gradle"}
+{"id": "208270825_9", "status": "error", "build_tool": "Maven", "PACKAGE": "com/example/demo/controller", "CLASS": "com/example/demo/controller/CustomController", "METHOD_NAME": "send", "METHOD_DESC": "()V", "INSTRUCTION_MISSED": 6, "INSTRUCTION_COVERED": 0, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 2, "LINE_COVERED": 0, "COMPLEXITY_MISSED": 1, "COMPLEXITY_COVERED": 0, "METHOD_MISSED": 1, "METHOD_COVERED": 0, "instruction_coverage": 0.0, "branch_coverage": 0}
+{"id": "214933909_202", "status": "build error", "build_tool": "Maven"}
+{"id": "225164634_22", "status": "build error", "build_tool": "Maven"}
+{"id": "227543326_43", "status": "exception", "build_tool": "Maven"}
+{"id": "228579174_0", "status": "build error", "build_tool": "Maven"}
+{"id": "229560773_1", "status": "exception", "build_tool": "Gradle"}
+{"id": "230430206_173", "status": "exception", "build_tool": null}
+{"id": "232481703_8", "status": "build error", "build_tool": "Maven"}
+{"id": "227982692_2", "status": "build error", "build_tool": "Maven"}
+{"id": "224353263_4", "status": "build error", "build_tool": "Maven"}
+{"id": "235879795_2", "status": "exception", "build_tool": null}
+{"id": "249420621_48", "status": "exception", "build_tool": null}
+{"id": "221245123_6", "status": "exception", "build_tool": "Maven"}
+{"id": "234031371_2", "status": "build error", "build_tool": "Maven"}
+{"id": "253251724_4", "status": "exception", "build_tool": "Gradle"}
+{"id": "228294148_0", "status": "build error", "build_tool": "Maven"}
+{"id": "256981652_0", "status": "build error", "build_tool": "Maven"}
+{"id": "233552132_6", "status": "exception", "build_tool": "Maven"}
+{"id": "252293648_0", "status": "build error", "build_tool": "Maven"}
+{"id": "255292250_0", "status": "success", "build_tool": "Maven", "PACKAGE": "com/hibicode/prepaid/domain", "CLASS": "com/hibicode/prepaid/domain/Account", "METHOD_NAME": "balance", "METHOD_DESC": "()Ljava/math/BigDecimal;", "INSTRUCTION_MISSED": 0, "INSTRUCTION_COVERED": 11, "BRANCH_MISSED": 0, "BRANCH_COVERED": 0, "LINE_MISSED": 0, "LINE_COVERED": 3, "COMPLEXITY_MISSED": 0, "COMPLEXITY_COVERED": 1, "METHOD_MISSED": 0, "METHOD_COVERED": 1, "instruction_coverage": 1.0, "branch_coverage": 0}
+{"id": "257335962_37", "status": "exception", "build_tool": "Maven"}
+{"id": "272398615_61", "status": "build error", "build_tool": "Maven"}
