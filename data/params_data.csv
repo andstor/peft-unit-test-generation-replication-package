@@ -1,4 +1,4 @@
-model,pre-training,fine-tuning,prompt-tuning,lora,ia3
+model,pre-trained,fine-tuning,prompt-tuning,lora,ia3
 Salesforce/codegen-350M-multi,"356,712,448","356,712,448","20,480","1,310,720","143,360"
 Salesforce/codegen2-1B_P,"1,015,306,240","1,015,306,240","40,960","2,097,152","229,376"
 Salesforce/codegen2-3_7B_P,"3,641,174,016","3,641,174,016","81,920","4,194,304","458,752"

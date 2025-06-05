@@ -1,9 +1,0 @@
-{"test_id": "Java/10", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/139", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/141", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/15", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/153", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/23", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/68", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/80", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
-{"test_id": "Java/81", "reason": "compilation error", "method": "full_fine-tuning", "series": "Salesforce", "model": "codegen2-1B_P"}
