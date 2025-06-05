@@ -17,7 +17,9 @@ RUN apt-get clean
 WORKDIR /workspace/evaluation/humaneval-x/
 
 # Copy the local Java project folder into the Docker image
-COPY requirements.txt evaluate_tests.py
+
+COPY  __init__.py .
+COPY  src ./src
 COPY  evaluate_tests.py .
 COPY  pom.xml .
 
