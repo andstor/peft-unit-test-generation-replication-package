@@ -1,0 +1,11 @@
+model,pre-trained,fine-tuning,ia3,prompt-tuning,lora
+bigcode/starcoder2-3b,0.1447,0.5715,0.4085,0.1279,0.6122
+bigcode/starcoder2-7b,0.1557,0.6201,0.6455,0.5641,0.5851
+bigcode/starcoder2-15b,0.1799,0.5639,0.1747,0.6118,0.5889
+bigcode/starcoderbase,0.1529,0.6008,0.1537,0.21,0.1317
+Salesforce/codegen2-16B_P,0.5853,0.4934,0.5928,0.5886,0.5688
+Salesforce/codegen2-7B_P,0.6002,0.6033,0.6204,0.5693,0.6589
+Salesforce/codegen-350M-multi,0.4659,0.4971,0.4987,0.4323,0.4569
+meta-llama/CodeLlama-7b-hf,0.5746,0.6283,0.6445,0.6221,0.6378
+Salesforce/codegen2-3_7B_P,0.0,0.0908,0.0,0.0231,0.0525
+Salesforce/codegen2-1B_P,0.0,0.0861,0.0262,0.0506,0.0143
