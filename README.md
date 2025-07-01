@@ -107,7 +107,4 @@ Follow the setup instructions within each directory. To replicate the experiment
 6. Calculate the statistics of the coverage results using the `calc_coverage.ipynb` notebook.
 5. Analyze the data and generate the plots using the `plots.ipynb` notebook.
 
-Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. Metadata and links to the trained models can be found at [here](https://huggingface.co/datasets/andstor/peft-unit-test-generation-experiments). 
-
-
-evaluation/methods2test_runnable/src evaluation/methods2test_runnable/src/__pycache__ evaluation/methods2test_runnable/src/__init__.py evaluation/methods2test_runnable/src/evaluate_methods2test.py evaluation/methods2test_runnable/src/jacoco_report.py evaluation/methods2test_runnable/src/java_descriptor_converter.py evaluation/methods2test_runnable/src/java_utils.py evaluation/methods2test_runnable/src/surefire_report.py evaluation/methods2test_runnable/src/test_executer.py
+Due to the variability of deep learning, we provide both the trained models and the generated results. The results are available in the `data/` directory. Metadata and links to the trained models can be found at [here](https://huggingface.co/datasets/andstor/peft-unit-test-generation-experiments).
