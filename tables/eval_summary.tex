@@ -13,74 +13,74 @@
         & & \rotatebox[origin=l]{90}{Valid syntax} & \rotatebox[origin=l]{90}{CodeBLEU} & \rotatebox[origin=l]{90}{pass@1} & \rotatebox[origin=l]{90}{Instr Cov} & \rotatebox[origin=l]{90}{Branch Cov} & \rotatebox[origin=l]{90}{Valid syntax} & \rotatebox[origin=l]{90}{CodeBLEU} & \rotatebox[origin=l]{90}{pass@1} & \rotatebox[origin=l]{90}{Instr Cov} & \rotatebox[origin=l]{90}{Branch Cov}\\
         \hline
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeGen-350M-multi}}} \bigstrut \\*
-        None & 356,712,448 & 0.9455 & 0.231 & 0.2669 & 0.4659 & 0.3156 & \textbf{1.0} & 0.3603 & \textbf{0.0671} & 0.9733 & 0.8977 \\
-        Fine-tuning & 356,712,448 & \textbf{0.9769} & \textbf{0.2897} & (0.2107) & 0.4971 & 0.3992 & \textbf{1.0} & (0.3291) & (0.0366) & \textbf{1.0} & (0.8333) \\
-        LoRA & 1,310,720 & 0.953 & 0.257 & 0.2789 & (0.4569) & \textbf{0.4142} & \textbf{1.0} & \textbf{0.3906} & (0.0427) & (0.9656) & (0.8929) \\
-        (IA)\textsuperscript{3} & 143,360 & (0.942) & 0.2365 & \textbf{0.3087} & \textbf{0.4987} & 0.3887 & \textbf{1.0} & (0.3591) & \textbf{0.0671} & 0.9869 & \textbf{0.9432} \\
-        Prompt tuning & 20,480 & 0.9505 & (0.2286) & 0.3002 & (0.4323) & 0.3817 & \textbf{1.0} & (0.3274) & (0.0549) & 0.9769 & 0.9167 \\
+        None & 0 & 0.96 & 0.24 & 0.11 & \textbf{0.49} & 0.12 & \textbf{1.0} & 0.36 & \textbf{0.07} & 0.97 & 0.9 \\
+        Fine-tuning & 356,712,448 & \textbf{0.98} & \textbf{0.3} & 0.12 & (0.45) & \textbf{0.15} & \textbf{1.0} & (0.33) & (0.04) & \textbf{1.0} & (0.83) \\
+        LoRA & 1,310,720 & 0.96 & 0.26 & \textbf{0.16} & (0.41) & 0.14 & \textbf{1.0} & \textbf{0.39} & (0.04) & 0.97 & (0.89) \\
+        (IA)\textsuperscript{3} & 143,360 & (0.95) & 0.24 & 0.15 & \textbf{0.49} & 0.14 & \textbf{1.0} & 0.36 & \textbf{0.07} & 0.99 & \textbf{0.94} \\
+        Prompt tuning & 20,480 & 0.96 & (0.23) & 0.13 & (0.41) & 0.13 & \textbf{1.0} & (0.33) & (0.05) & 0.98 & 0.92 \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeGen2-1B}}} \bigstrut \\*
-        None & 1,015,306,240 & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        Fine-tuning & 1,015,306,240 & \textbf{0.7527} & 0.1434 & 0.0624 & \textbf{0.0861} & 0.0 & \cellcolor{red!10}{0.0549} & \cellcolor{red!10}{0.0359} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        LoRA & 2,097,152 & \cellcolor{red!10}{0.3694} & \cellcolor{red!10}{0.0368} & \cellcolor{red!10}{0.2135} & \cellcolor{red!10}{0.0143} & \cellcolor{red!10}{0.0153} & \cellcolor{red!10}{\textbf{0.0854}} & \cellcolor{red!10}{0.0117} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        (IA)\textsuperscript{3} & 229,376 & \cellcolor{red!10}{0.0194} & \cellcolor{red!10}{\textbf{0.2583}} & \cellcolor{red!10}{\textbf{1.1834}} & \cellcolor{red!10}{0.0262} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        Prompt tuning & 40,960 & 0.7167 & 0.2572 & 1.1094 & 0.0506 & \textbf{0.0411} & \cellcolor{red!10}{0.0793} & \cellcolor{red!10}{\textbf{0.2547}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        None & 0 & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        Fine-tuning & 1,015,306,240 & \textbf{0.75} & 0.15 & 0.03 & \textbf{0.06} & \textbf{0.0} & \cellcolor{red!10}{0.05} & \cellcolor{red!10}{0.04} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        LoRA & 2,097,152 & \cellcolor{red!10}{0.38} & \cellcolor{red!10}{0.04} & \cellcolor{red!10}{\textbf{0.12}} & \cellcolor{red!10}{0.01} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.09}} & \cellcolor{red!10}{0.01} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        (IA)\textsuperscript{3} & 229,376 & \cellcolor{red!10}{0.02} & \cellcolor{red!10}{\textbf{0.26}} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        Prompt tuning & 40,960 & 0.7 & \textbf{0.26} & 0.0 & 0.0 & \textbf{0.0} & \cellcolor{red!10}{0.08} & \cellcolor{red!10}{\textbf{0.25}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{StarCoder2-3B}}} \bigstrut \\*
-        None & 3,030,371,328 & 0.8592 & 0.1726 & \textbf{1.0645} & 0.1447 & 0.1407 & \textbf{1.0} & 0.4273 & 0.3415 & 0.9938 & 0.8515 \\
-        Fine-tuning & 3,030,371,328 & 0.9687 & 0.2958 & (0.3821) & 0.5715 & 0.4837 & \textbf{1.0} & \textbf{0.4974} & (0.311) & (0.9888) & \textbf{0.852} \\
-        LoRA & 4,546,560 & \textbf{0.9805} & \textbf{0.3106} & (0.3379) & \textbf{0.6122} & \textbf{0.4948} & \textbf{1.0} & (0.417) & (0.2378) & 0.9958 & (0.5673) \\
-        (IA)\textsuperscript{3} & 468,480 & 0.9022 & 0.2801 & (0.6376) & 0.4085 & 0.3532 & \textbf{1.0} & (0.4245) & \textbf{0.3598} & (0.9916) & (0.8327) \\
-        Prompt tuning & 61,440 & 0.8677 & 0.1742 & (1.012) & (0.1279) & (0.1232) & \textbf{1.0} & 0.4317 & (0.2744) & \textbf{0.9967} & (0.7585) \\
+        None & 0 & 0.93 & 0.17 & \textbf{0.57} & 0.13 & 0.06 & \textbf{1.0} & 0.43 & 0.34 & 0.99 & \textbf{0.85} \\
+        Fine-tuning & 3,030,371,328 & 0.96 & 0.3 & (0.2) & 0.52 & \textbf{0.18} & \textbf{1.0} & \textbf{0.5} & (0.31) & 0.99 & \textbf{0.85} \\
+        LoRA & 4,546,560 & \textbf{0.98} & \textbf{0.31} & (0.2) & \textbf{0.54} & \textbf{0.18} & \textbf{1.0} & (0.42) & (0.24) & \textbf{1.0} & (0.57) \\
+        (IA)\textsuperscript{3} & 468,480 & 0.94 & 0.29 & (0.3) & 0.39 & 0.13 & \textbf{1.0} & (0.42) & \textbf{0.36} & 0.99 & (0.83) \\
+        Prompt tuning & 61,440 & 0.93 & 0.17 & (0.56) & (0.11) & (0.05) & \textbf{1.0} & 0.43 & (0.27) & \textbf{1.0} & (0.76) \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeGen2-3.7B}}} \bigstrut \\*
-        None & 3,641,174,016 & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        Fine-tuning & 3,641,174,016 & \cellcolor{red!10}{\textbf{0.4145}} & \cellcolor{red!10}{0.102} & \cellcolor{red!10}{0.0832} & \cellcolor{red!10}{\textbf{0.0908}} & \cellcolor{red!10}{\textbf{0.0892}} & \textbf{0.7378} & \textbf{0.2621} & \textbf{0.0} & \textbf{0.0} & \textbf{0.0} \\
-        LoRA & 4,194,304 & \cellcolor{red!10}{0.4106} & \cellcolor{red!10}{0.1025} & \cellcolor{red!10}{0.3529} & \cellcolor{red!10}{0.0525} & \cellcolor{red!10}{0.0448} & \cellcolor{red!10}{0.4024} & \cellcolor{red!10}{0.1384} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        None & 0 & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        Fine-tuning & 3,641,174,016 & \cellcolor{red!10}{0.41} & \cellcolor{red!10}{0.11} & \cellcolor{red!10}{0.03} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \textbf{0.74} & \textbf{0.26} & \textbf{0.0} & \textbf{0.0} & \textbf{0.0} \\
+        LoRA & 4,194,304 & \cellcolor{red!10}{\textbf{0.42}} & \cellcolor{red!10}{0.11} & \cellcolor{red!10}{\textbf{0.11}} & \cellcolor{red!10}{\textbf{0.06}} & \cellcolor{red!10}{\textbf{0.03}} & \cellcolor{red!10}{0.4} & \cellcolor{red!10}{0.14} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
         (IA)\textsuperscript{3} & 458,752 & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
-        Prompt tuning & 81,920 & \cellcolor{red!10}{0.225} & \cellcolor{red!10}{\textbf{0.2571}} & \cellcolor{red!10}{\textbf{0.9663}} & \cellcolor{red!10}{0.0231} & \cellcolor{red!10}{0.0299} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
+        Prompt tuning & 81,920 & \cellcolor{red!10}{0.22} & \cellcolor{red!10}{\textbf{0.26}} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{0.0} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} & \cellcolor{red!10}{\textbf{0.0}} \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeLlama-7B}}} \bigstrut \\*
-        None & 6,738,546,688 & 0.9749 & 0.3157 & 0.4007 & 0.5746 & 0.5884 & 0.9939 & 0.487 & 0.3252 & 0.983 & 0.8417 \\
-        Fine-tuning & 6,738,546,688 & 0.9758 & (0.3151) & 0.4142 & 0.6283 & \textbf{0.6196} & \textbf{1.0} & \textbf{0.5002} & \textbf{0.3354} & 0.9893 & \textbf{0.8612} \\
-        LoRA & 8,388,608 & \textbf{0.9811} & \textbf{0.3342} & \textbf{0.4162} & 0.6378 & 0.6019 & 0.9939 & (0.4297) & (0.3129) & \textbf{0.9961} & (0.7247) \\
-        (IA)\textsuperscript{3} & 614,400 & 0.9769 & (0.307) & 0.4075 & \textbf{0.6445} & 0.6082 & \textbf{1.0} & (0.4807) & (0.3232) & 0.9877 & 0.8472 \\
-        Prompt tuning & 81,920 & (0.9661) & (0.2968) & (0.3974) & 0.6221 & (0.5748) & 0.9939 & (0.4623) & (0.2761) & 0.9838 & (0.8225) \\
+        None & 0 & \textbf{0.98} & 0.31 & 0.21 & 0.55 & 0.23 & 0.99 & 0.49 & 0.33 & 0.98 & 0.84 \\
+        Fine-tuning & 6,738,546,688 & \textbf{0.98} & 0.32 & 0.24 & 0.57 & (0.22) & \textbf{1.0} & \textbf{0.5} & \textbf{0.34} & 0.99 & \textbf{0.86} \\
+        LoRA & 8,388,608 & \textbf{0.98} & \textbf{0.34} & \textbf{0.25} & \textbf{0.58} & 0.23 & 0.99 & (0.43) & (0.31) & \textbf{1.0} & (0.72) \\
+        (IA)\textsuperscript{3} & 614,400 & \textbf{0.98} & 0.31 & 0.22 & 0.57 & \textbf{0.24} & \textbf{1.0} & (0.48) & (0.32) & 0.99 & 0.85 \\
+        Prompt tuning & 81,920 & (0.97) & (0.3) & (0.19) & \textbf{0.58} & (0.22) & 0.99 & (0.46) & (0.28) & 0.98 & (0.82) \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeGen2-7B}}} \bigstrut \\*
-        None & 6,862,858,240 & 0.9788 & 0.2776 & 0.3758 & 0.6002 & 0.6039 & \textbf{1.0} & 0.474 & \textbf{0.2256} & 0.9831 & \textbf{0.8145} \\
-        Fine-tuning & 6,862,858,240 & \textbf{0.9803} & 0.303 & (0.1769) & 0.6033 & \textbf{0.6681} & \textbf{1.0} & (0.4407) & (0.128) & \textbf{0.9975} & (0.7) \\
-        LoRA & 8,388,608 & 0.9795 & \textbf{0.3103} & (0.3112) & \textbf{0.6589} & 0.6197 & \textbf{1.0} & (0.4645) & (0.2012) & 0.991 & (0.7535) \\
-        (IA)\textsuperscript{3} & 917,504 & (0.9787) & 0.286 & (0.3686) & 0.6204 & 0.6045 & \textbf{1.0} & \textbf{0.4906} & (0.2073) & (0.9806) & (0.795) \\
-        Prompt tuning & 81,920 & (0.9784) & 0.2795 & \textbf{0.3767} & (0.5693) & (0.5679) & \textbf{1.0} & (0.4409) & (0.1829) & 0.9855 & (0.694) \\
+        None & 0 & \textbf{0.99} & 0.28 & \textbf{0.2} & 0.54 & 0.21 & \textbf{1.0} & 0.47 & \textbf{0.23} & 0.98 & \textbf{0.81} \\
+        Fine-tuning & 6,862,858,240 & (0.98) & \textbf{0.31} & (0.11) & \textbf{0.59} & \textbf{0.26} & \textbf{1.0} & (0.44) & (0.13) & \textbf{1.0} & (0.7) \\
+        LoRA & 8,388,608 & \textbf{0.99} & \textbf{0.31} & (0.19) & \textbf{0.59} & 0.22 & \textbf{1.0} & 0.47 & (0.2) & 0.99 & (0.75) \\
+        (IA)\textsuperscript{3} & 917,504 & (0.98) & 0.29 & (0.19) & 0.57 & 0.22 & \textbf{1.0} & \textbf{0.49} & (0.21) & 0.98 & (0.8) \\
+        Prompt tuning & 81,920 & (0.98) & 0.28 & \textbf{0.2} & (0.52) & (0.2) & \textbf{1.0} & (0.44) & (0.18) & 0.99 & (0.69) \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{StarCoder2-7B}}} \bigstrut \\*
-        None & 7,173,923,840 & 0.8473 & 0.1758 & \textbf{1.0413} & 0.1557 & 0.1559 & \textbf{1.0} & 0.403 & \textbf{0.372} & 0.9906 & 0.8289 \\
-        Fine-tuning & 7,173,923,840 & 0.9719 & 0.3045 & (0.42) & 0.6201 & 0.5563 & \textbf{1.0} & 0.4398 & (0.3598) & 0.9912 & \textbf{0.9049} \\
-        LoRA & 7,340,032 & \textbf{0.9741} & 0.3084 & (0.4022) & 0.5851 & 0.5102 & \textbf{1.0} & \textbf{0.5186} & (0.3476) & 0.9938 & 0.8706 \\
-        (IA)\textsuperscript{3} & 753,664 & 0.9509 & 0.3088 & (0.4348) & \textbf{0.6455} & \textbf{0.5773} & \textbf{1.0} & 0.4216 & (0.3354) & 0.9934 & 0.8818 \\
-        Prompt tuning & 92,160 & 0.8506 & \textbf{0.3236} & (0.4065) & 0.5641 & 0.4835 & \textbf{1.0} & 0.5058 & (0.3659) & \textbf{0.9939} & 0.8578 \\
+        None & 0 & 0.92 & 0.17 & \textbf{0.57} & 0.1 & 0.05 & \textbf{1.0} & 0.4 & \textbf{0.37} & \textbf{0.99} & 0.83 \\
+        Fine-tuning & 7,173,923,840 & \textbf{0.97} & 0.31 & (0.21) & 0.55 & 0.2 & \textbf{1.0} & 0.44 & (0.36) & \textbf{0.99} & \textbf{0.9} \\
+        LoRA & 7,340,032 & \textbf{0.97} & 0.31 & (0.23) & 0.53 & 0.19 & \textbf{1.0} & \textbf{0.52} & (0.35) & \textbf{0.99} & 0.87 \\
+        (IA)\textsuperscript{3} & 753,664 & 0.95 & 0.32 & (0.22) & \textbf{0.6} & \textbf{0.22} & \textbf{1.0} & 0.42 & (0.34) & \textbf{0.99} & 0.88 \\
+        Prompt tuning & 92,160 & 0.93 & \textbf{0.33} & (0.22) & 0.49 & 0.16 & \textbf{1.0} & 0.51 & \textbf{0.37} & \textbf{0.99} & 0.86 \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{StarCoderBase}}} \bigstrut \\*
-        None & 15,517,456,384 & 0.839 & 0.1748 & \textbf{1.1037} & 0.1529 & 0.1524 & 0.9878 & 0.4342 & 0.2963 & 0.9907 & \textbf{0.8148} \\
-        Fine-tuning & 15,517,456,384 & \textbf{0.9639} & \textbf{0.3357} & (0.3004) & \textbf{0.6008} & \textbf{0.5736} & \textbf{1.0} & \textbf{0.4832} & \textbf{0.3293} & 0.9916 & (0.752) \\
-        LoRA & 8,028,160 & 0.839 & 0.1748 & (0.8182) & (0.1317) & (0.139) & 0.9878 & (0.3911) & 0.3025 & \textbf{0.9976} & (0.7389) \\
-        (IA)\textsuperscript{3} & 1,239,040 & 0.839 & 0.1748 & (1.0339) & 0.1537 & (0.1464) & 0.9878 & 0.4343 & 0.2963 & 0.9907 & \textbf{0.8148} \\
-        Prompt tuning & 122,880 & (0.8363) & 0.1882 & (0.8324) & 0.21 & 0.1811 & (0.7805) & (0.2312) & (0.1562) & (0.9872) & (0.6762) \\
+        None & 0 & 0.92 & 0.17 & \textbf{0.52} & 0.15 & 0.06 & 0.99 & 0.43 & 0.3 & 0.99 & \textbf{0.81} \\
+        Fine-tuning & 15,517,456,384 & \textbf{0.97} & \textbf{0.34} & (0.19) & \textbf{0.55} & \textbf{0.21} & \textbf{1.0} & \textbf{0.48} & \textbf{0.33} & 0.99 & (0.75) \\
+        LoRA & 8,028,160 & 0.92 & 0.17 & (0.42) & (0.14) & 0.06 & 0.99 & (0.39) & 0.3 & \textbf{1.0} & (0.74) \\
+        (IA)\textsuperscript{3} & 1,239,040 & 0.92 & 0.17 & (0.49) & 0.15 & 0.06 & 0.99 & 0.43 & 0.3 & 0.99 & \textbf{0.81} \\
+        Prompt tuning & 122,880 & (0.91) & 0.19 & (0.34) & 0.18 & 0.08 & (0.78) & (0.23) & (0.16) & 0.99 & (0.68) \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{StarCoder2-15B}}} \bigstrut \\*
-        None & 15,655,899,136 & 0.853 & 0.1996 & 1.0089 & 0.1799 & 0.1702 & \textbf{1.0} & 0.3728 & 0.4085 & 0.9893 & 0.8769 \\
-        Fine-tuning & 15,655,899,136 & 0.98 & \textbf{0.332} & (0.2607) & 0.5639 & 0.4947 & (0.9939) & 0.4896 & (0.3681) & 0.995 & (0.8096) \\
-        LoRA & 12,124,160 & 0.9778 & 0.3316 & (0.3284) & 0.5889 & \textbf{0.5817} & \textbf{1.0} & 0.4646 & (0.3902) & 0.9931 & (0.8262) \\
-        (IA)\textsuperscript{3} & 1,249,280 & 0.853 & 0.1996 & \textbf{1.08} & (0.1747) & (0.1673) & \textbf{1.0} & 0.3729 & 0.4146 & 0.9895 & \textbf{0.8789} \\
-        Prompt tuning & 122,880 & \textbf{0.9802} & 0.3297 & (0.4059) & \textbf{0.6118} & 0.5634 & \textbf{1.0} & \textbf{0.5349} & \textbf{0.4512} & \textbf{0.9956} & (0.8266) \\
+        None & 0 & 0.93 & 0.2 & \textbf{0.57} & 0.16 & 0.07 & \textbf{1.0} & 0.37 & 0.41 & 0.99 & \textbf{0.88} \\
+        Fine-tuning & 15,655,899,136 & \textbf{0.98} & \textbf{0.34} & (0.16) & 0.48 & 0.18 & (0.99) & 0.49 & (0.37) & \textbf{1.0} & (0.81) \\
+        LoRA & 12,124,160 & \textbf{0.98} & \textbf{0.34} & (0.21) & \textbf{0.55} & \textbf{0.23} & \textbf{1.0} & 0.46 & (0.39) & 0.99 & (0.83) \\
+        (IA)\textsuperscript{3} & 1,249,280 & 0.93 & 0.2 & (0.56) & 0.16 & (0.06) & \textbf{1.0} & 0.37 & 0.41 & 0.99 & \textbf{0.88} \\
+        Prompt tuning & 122,880 & \textbf{0.98} & 0.33 & (0.22) & \textbf{0.55} & 0.21 & \textbf{1.0} & \textbf{0.54} & \textbf{0.45} & \textbf{1.0} & (0.83) \\
 
         \multicolumn{12}{l}{\cellcolor{gray!10}{\textbf{CodeGen2-16B}}} \bigstrut \\*
-        None & 16,032,155,648 & 0.9757 & 0.2953 & 0.4098 & 0.5853 & 0.5272 & \textbf{1.0} & 0.4793 & 0.2012 & 0.9866 & 0.8056 \\
-        Fine-tuning & 16,032,155,648 & \textbf{0.9815} & \textbf{0.3255} & (0.227) & (0.4934) & (0.3626) & (0.9817) & (0.3783) & (0.118) & \textbf{0.9952} & (0.7807) \\
-        LoRA & 13,369,344 & 0.9803 & 0.3248 & (0.3099) & (0.5688) & 0.5512 & \textbf{1.0} & (0.4714) & \textbf{0.2195} & (0.9862) & \textbf{0.8206} \\
-        (IA)\textsuperscript{3} & 1,462,272 & 0.9763 & (0.2922) & \textbf{0.4322} & \textbf{0.5928} & (0.5214) & \textbf{1.0} & \textbf{0.4795} & 0.2012 & 0.9866 & 0.8056 \\
-        Prompt tuning & 122,880 & 0.9788 & (0.2904) & (0.3811) & 0.5886 & \textbf{0.5969} & \textbf{1.0} & (0.4676) & 0.2134 & (0.9746) & (0.7107) \\
+        None & 0 & 0.98 & 0.3 & 0.2 & 0.54 & 0.2 & \textbf{1.0} & \textbf{0.48} & 0.2 & 0.99 & 0.81 \\
+        Fine-tuning & 16,032,155,648 & \textbf{0.99} & \textbf{0.33} & (0.13) & (0.45) & (0.13) & (0.98) & (0.38) & (0.12) & \textbf{1.0} & (0.78) \\
+        LoRA & 13,369,344 & \textbf{0.99} & \textbf{0.33} & (0.18) & (0.48) & (0.19) & \textbf{1.0} & (0.47) & \textbf{0.22} & 0.99 & \textbf{0.82} \\
+        (IA)\textsuperscript{3} & 1,462,272 & 0.98 & 0.3 & 0.2 & \textbf{0.55} & 0.2 & \textbf{1.0} & \textbf{0.48} & 0.2 & 0.99 & 0.81 \\
+        Prompt tuning & 122,880 & 0.98 & 0.3 & \textbf{0.21} & \textbf{0.55} & \textbf{0.23} & \textbf{1.0} & (0.47) & 0.21 & (0.97) & (0.71) \\
 
        \bottomrule
     \end{tabularx}

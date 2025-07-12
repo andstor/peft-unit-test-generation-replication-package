@@ -21,10 +21,13 @@
 %% Matplotlib used the following preamble
 %%   \def\mathdefault#1{#1}
 %%   \everymath=\expandafter{\the\everymath\displaystyle}
+%%   \IfFileExists{scrextend.sty}{
+%%     \usepackage[fontsize=9.000000pt]{scrextend}
+%%   }{
+%%     \renewcommand{\normalsize}{\fontsize{9.000000}{10.800000}\selectfont}
+%%     \normalsize
+%%   }
 %%   
-%%   \ifdefined\pdftexversion\else  % non-pdftex case.
-%%     \usepackage{fontspec}
-%%   \fi
 %%   \makeatletter\@ifpackageloaded{underscore}{}{\usepackage[strings]{underscore}}\makeatother
 %%
 \begingroup%
@@ -80,8 +83,8 @@
 \pgfsetstrokeopacity{0.000000}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{-226.701573in}{3.398684in}}%
-\pgfpathlineto{\pgfqpoint{2.450188in}{3.398684in}}%
-\pgfpathlineto{\pgfqpoint{2.450188in}{3.361235in}}%
+\pgfpathlineto{\pgfqpoint{2.468141in}{3.398684in}}%
+\pgfpathlineto{\pgfqpoint{2.468141in}{3.361235in}}%
 \pgfpathlineto{\pgfqpoint{-226.701573in}{3.361235in}}%
 \pgfusepath{fill}%
 \end{pgfscope}%
@@ -152,8 +155,8 @@
 \pgfsetstrokeopacity{0.000000}%
 \pgfsetdash{}{0pt}%
 \pgfpathmoveto{\pgfqpoint{-226.701573in}{2.200306in}}%
-\pgfpathlineto{\pgfqpoint{2.797457in}{2.200306in}}%
-\pgfpathlineto{\pgfqpoint{2.797457in}{2.162857in}}%
+\pgfpathlineto{\pgfqpoint{2.799674in}{2.200306in}}%
+\pgfpathlineto{\pgfqpoint{2.799674in}{2.162857in}}%
 \pgfpathlineto{\pgfqpoint{-226.701573in}{2.162857in}}%
 \pgfusepath{fill}%
 \end{pgfscope}%

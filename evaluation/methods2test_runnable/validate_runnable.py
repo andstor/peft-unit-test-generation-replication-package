@@ -352,23 +352,14 @@ def upload_to_hub(output_dir, split, tmp_dir):
         }
     )
     data_path = output_dir / f"runnable_{split}.jsonl"
-    runnable_data = []
-    with open(data_path) as f:
-        for line in f:
-            runnable_data.append(json.loads(line))
-                
-    runnable_df = pd.DataFrame(runnable_data).set_index("id")
-    runnable_df["repo_id"] = runnable_df.index.str.split("_").str[0]
-    runnable_df["test_id"] = runnable_df.index.str.split("_").str[1]
-    runnable_df = runnable_df.reset_index().set_index("repo_id")
+    runnable_df = pd.read_json(data_path, orient='records', lines=True, dtype=False)
+    runnable_df.set_index("id", inplace=True)
 
     dataset_meta = load_dataset("andstor/methods2test_meta", "golden_commit", split=split, cache_dir=tmp_dir / "cache")
     def gen_ds():
         for row in dataset_meta:
-            repo_id = row["id"].split("_")[0]
-        
-            if repo_id in runnable_df.index:
-                runnable_row = runnable_df.loc[repo_id]
+            if row["id"] in runnable_df.index:
+                runnable_row = runnable_df.loc[row["id"]]
                 row["build_tool"] = runnable_row["build_tool"]
                 row["status"] = runnable_row["status"]
                 yield row
