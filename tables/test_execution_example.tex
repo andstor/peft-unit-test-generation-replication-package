@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+    \newcolumntype{Y}{>{\centering\arraybackslash}X}
+    \centering
+    \caption{Test execution statuses for StarCode2-7B.}
+    \label{tab:test-statuses}
+    \small
+    \begin{tabularx}{\columnwidth}{lYYYYY}
+    \toprule
+    \textbf{Method} & \textbf{Succ.} & \textbf{Failed} & \textbf{Interrupt} & \textbf{CompErr} & \textbf{NoAssert} \\
+    \midrule
+    None & 56\% & 3\% & 2\% & 11\% & 27\% \\
+    Fine-tuning & 21\% & 15\% & 9\% & 48\% & 6\% \\
+    LoRA & 23\% & 16\% & 9\% & 49\% & 4\% \\
+    (IA)\textsuperscript{3} & 22\% & 15\% & 11\% & 45\% & 7\% \\
+    Prompt tuning & 22\% & 14\% & 7\% & 51\% & 5\% \\
+    \bottomrule
+    \end{tabularx}
+\end{table}
