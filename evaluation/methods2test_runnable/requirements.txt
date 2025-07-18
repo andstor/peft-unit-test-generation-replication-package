@@ -4,3 +4,4 @@ tqdm
 ipywidgets
 gitpython
 numpy
+hf_xet
