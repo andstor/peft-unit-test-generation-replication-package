@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument("--split", type=str, default="test", help="Dataset split")
     parser.add_argument("--data_dir", type=str, default="../../data/humaneval-x/fixed", help="Temporary directory for caching and repos. Relative to script directory.")
     parser.add_argument("--output_dir", type=str, default="../../data/humaneval-x/coverage", help="Directory to store results. Relative to script directory.")
-    parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos. Relative to script directory.")
+    parser.add_argument("--tmp_dir", type=str, default="tmp", help="Temporary directory for caching and repos. Relative to script directory.")
 
     return parser.parse_args()
 
