@@ -1,3 +1,4 @@
 pandas
 datasets
 tqdm
+hf_xet

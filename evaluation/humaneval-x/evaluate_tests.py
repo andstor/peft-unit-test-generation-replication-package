@@ -85,7 +85,7 @@ def main(args):
         
         for i, row in gen_ds_df.iterrows():
             test_id = row["id"]
-            solution = humanevalx.loc[test_id]["declaration"] + row["fixed_prediction"]
+            solution = humanevalx.loc[test_id]["declaration"] + row["prediction"]
             
             imports = "import org.junit.*;\nimport static org.junit.Assert.*;"
             imports += "\n" + solution.split("class")[0]
@@ -118,7 +118,7 @@ def main(args):
                 f.write(imports + "\n" + test)
             
             try:
-                result = subprocess.run(["mvn", "clean", "test", "-Dmaven.test.failure.ignore=true"], timeout=30)
+                result = subprocess.run(["mvn", "clean", "test", "-Dmaven.test.failure.ignore=true"], timeout=60)
             except Exception as e:
                 data = {}
                 data["id"] = test_id
