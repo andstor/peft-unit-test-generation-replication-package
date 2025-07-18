@@ -27,7 +27,7 @@ def parse_args():
     parser.add_argument("--data_dir", type=str, default="../../data/methods2test_runnable/fixed", help="Temporary directory for caching and repos. Relative to script directory.")
     parser.add_argument("--output_dir", type=str, default="../../data/methods2test_runnable/coverage", help="Directory to store results. Relative to script directory.")
     parser.add_argument("--num_proc", type=int, default=1, help="Number of parallel threads")
-    parser.add_argument("--tmp_dir", type=str, default=".tmp", help="Temporary directory for caching and repos. Relative to script directory.")
+    parser.add_argument("--tmp_dir", type=str, default="tmp", help="Temporary directory for caching and repos. Relative to script directory.")
 
     return parser.parse_args()
 
@@ -175,7 +175,7 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                     
                     ### GENERATED CODE ###
                     # Now try to compile the generated code
-                    gen_body = trim_end_brac(sample_gen["fixed_prediction"]).rstrip()
+                    gen_body = trim_end_brac(sample_gen["prediction"]).rstrip()
                     orig_body = trim_end_brac(sample_gen["reference"]).rstrip()
                     
                     #executor.clean()
