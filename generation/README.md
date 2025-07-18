@@ -35,22 +35,24 @@ usage: run_gen.py [-h] [--model_name_or_path MODEL_NAME_OR_PATH] [--model_type M
                   [--overwrite_output_dir [OVERWRITE_OUTPUT_DIR]] [--id_column_name ID_COLUMN_NAME]
                   [--keep_columns KEEP_COLUMNS [KEEP_COLUMNS ...]] [--seed SEED] [--max_new_tokens MAX_NEW_TOKENS]
                   [--max_window_size MAX_WINDOW_SIZE] [--block_size BLOCK_SIZE] [--use_brace_matching [USE_BRACE_MATCHING]]
-                  [--brace_matching_start_level BRACE_MATCHING_START_LEVEL] [--use_deepspeed_inference [USE_DEEPSPEED_INFERENCE]]
+                  [--brace_matching_start_level BRACE_MATCHING_START_LEVEL]
+                  [--use_deepspeed_inference [USE_DEEPSPEED_INFERENCE]]
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   --model_name_or_path MODEL_NAME_OR_PATH
                         The model checkpoint for weights initialization. Do not set if you want to train a model from scratch.
                         (default: None)
   --model_type MODEL_TYPE
                         If training from scratch, pass a model type from the list: bart, bert, bert-generation, big_bird,
-                        bigbird_pegasus, biogpt, blenderbot, blenderbot-small, bloom, camembert, llama, codegen, cohere, cpmant,
-                        ctrl, data2vec-text, dbrx, electra, ernie, falcon, fuyu, gemma, git, gpt2, gpt2, gpt_bigcode, gpt_neo,
-                        gpt_neox, gpt_neox_japanese, gptj, jamba, jetmoe, llama, mamba, marian, mbart, mega, megatron-bert,
-                        mistral, mixtral, mpt, musicgen, musicgen_melody, mvp, olmo, open-llama, openai-gpt, opt, pegasus,
-                        persimmon, phi, phi3, plbart, prophetnet, qdqbert, qwen2, qwen2_moe, recurrent_gemma, reformer, rembert,
-                        roberta, roberta-prelayernorm, roc_bert, roformer, rwkv, speech_to_text_2, stablelm, starcoder2, transfo-
-                        xl, trocr, whisper, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xmod (default: None)
+                        bigbird_pegasus, biogpt, blenderbot, blenderbot-small, bloom, camembert, llama, codegen, cohere,
+                        cpmant, ctrl, data2vec-text, dbrx, electra, ernie, falcon, fuyu, gemma, git, gpt2, gpt2, gpt_bigcode,
+                        gpt_neo, gpt_neox, gpt_neox_japanese, gptj, jamba, jetmoe, llama, mamba, marian, mbart, mega, megatron-
+                        bert, mistral, mixtral, mpt, musicgen, musicgen_melody, mvp, olmo, open-llama, openai-gpt, opt,
+                        pegasus, persimmon, phi, phi3, plbart, prophetnet, qdqbert, qwen2, qwen2_moe, recurrent_gemma,
+                        reformer, rembert, roberta, roberta-prelayernorm, roc_bert, roformer, rwkv, speech_to_text_2, stablelm,
+                        starcoder2, transfo-xl, trocr, whisper, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet,
+                        xmod (default: None)
   --config_name CONFIG_NAME
                         Pretrained config name or path if not the same as model_name (default: None)
   --tokenizer_name TOKENIZER_NAME
@@ -121,7 +123,12 @@ optional arguments:
 ```
 
 ### Complete generation
-Complete generation is done by providing both an input data column and a reference data column. This will make the model use the whole prompt as input. By setting `--max_new_tokens` to `auto`, all the unused embedding space is used to generate as much as possible. The maximum number of position embeddings allowed can also be manually specified by setting the `--block_size`. The maximum number of tokens in the input can be truncated (from the left) by setting `--max_window_size`, thus allowing for a longer output (`--max_new_tokens`).
+
+The script supports sequence to sequence objective within the causal language modeling paradigm. To use this, simply provide both a `--text_column_name` and a `--reference_column_name` argument. The `--text_column_name` argument should be the names of the column that contain the input text. The `--reference_column_name` argument should be the name of the column that contains the target text. 
+
+Any inputs, meaning `text_column_name` + `reference_column_name`, that are longer than the `--block_size` will be dropped. The `--block_size` argument is used to limit the model's maximum position embeddings.
+By setting `--max_new_tokens` to `auto`, all the unused embedding space is used to generate as much as possible up to the `--block_size`. The maximum number of tokens in the input can be truncated (from the left) by setting `--max_window_size`, thus allowing for a longer output (`--max_new_tokens`). 
+
 
 #### Example
 The following example will generate samples from the test split of the [humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x) dataset using the greedy decoding strategy. The output will be saved to the `output` directory.
@@ -136,11 +143,11 @@ accelerate launch run_gen.py \
 --text_column_name prompt \
 --reference_column_name canonical_solution \
 --id_column_name task_id \
---block_size 1024 \
+--block_size 768 \
 --per_device_batch_size 4 \
---output_dir .data/tmp/output \
+--output_dir .output \
 --seed 42 \
---max_new_tokens 20
+--max_new_tokens "auto"
 ```
 
 #### Early stopping

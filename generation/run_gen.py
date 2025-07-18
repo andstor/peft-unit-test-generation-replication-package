@@ -336,7 +336,6 @@ def main():
     def single_batch_function(examples, indices):
         new_examples = {
             "id": [],
-            "part": [],
             "input_ids": [],
             "attention_mask": [],
             "reference_input_ids": [],
@@ -351,7 +350,6 @@ def main():
             reference_input_ids = examples["reference_input_ids"][i]
 
             new_examples["id"].append(id)
-            new_examples["part"].append([1,1])
             new_examples["input_ids"].append(input_ids)
             new_examples["attention_mask"].append(mask)
             new_examples["reference_input_ids"].append(reference_input_ids)
@@ -462,14 +460,10 @@ def main():
 
         # save the data to disk
         for index in range(generated.shape[0]):
-            b_index = index//generation_config.num_return_sequences # original batch index
-
             entry = {}
-            entry["id"] = batch["id"][b_index]
-            entry["part"] = batch["part"][b_index]
-            entry["seq"] = [(index % generation_config.num_return_sequences) + 1, generation_config.num_return_sequences]
-            entry["prompt"] = decoded_prompts[b_index]
-            entry["reference"] = decoded_reference[b_index]
+            entry["id"] = batch["id"][index]
+            entry["prompt"] = decoded_prompts[index]
+            entry["reference"] = decoded_reference[index]
             entry["prediction"] = decoded_predictions[index]
 
             ended = None
@@ -488,7 +482,7 @@ def main():
             # keep all "keep_columns":
             if gen_args.keep_columns is not None:
                 for colname in gen_args.keep_columns:
-                    entry[colname] = batch[colname][b_index]
+                    entry[colname] = batch[colname][index]
 
             fp.write(json.dumps(entry) + "\n")
             fp.flush()
