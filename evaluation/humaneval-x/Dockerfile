@@ -22,10 +22,3 @@ COPY  __init__.py .
 COPY  src ./src
 COPY  evaluate_tests.py .
 COPY  pom.xml .
-
-#COPY . /workspace
-
-# Set the working directory inside the container
-
-#WORKDIR /workspace
-
