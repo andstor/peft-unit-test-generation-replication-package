@@ -6,13 +6,13 @@ This directory contains all scripts used for data analysis.
 ## Requirements
 
 ### Dependencies
-Install the Python dependencies defined in the requirements.txt.
+Install the Python dependencies defined in the `requirements.txt`.
 ```bash
 pip install -r requirements.txt
 ```
 
 #### Java parser
-Set up the java-universal-parser by following the instructions in the README.md file in the java-universal-parser directory.
+Set up the java-universal-parser by following the instructions in the `README.md` file in the `java-universal-parser` directory.
 
 ### Kernel setup
 #### Jupyter in the browser
