@@ -76,7 +76,7 @@ Evaluate the tests using the following command. This will run the tests and calc
 ```bash
 docker run \
   -it \
-  --mount type=bind,source="$(pwd)"/.tmp,target=/workspace/evaluation/methods2test_runnable/.tmp \
+  --mount type=bind,source="$(pwd)"/tmp,target=/workspace/evaluation/methods2test_runnable/tmp \
   --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/coverage/,target=/workspace/data/methods2test_runnable/coverage \
   --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/fixed/,target=/workspace/data/methods2test_runnable/fixed,readonly \
   methods2test_runnable python -u evaluate_tests.py --num_proc 1
@@ -103,7 +103,7 @@ apptainer run \
   --no-home \
   --overlay overlay.img \
   --cwd "/workspace/evaluation/methods2test_runnable/" \
-  --mount type=bind,source="$(pwd)"/.tmp/,target=/workspace/evaluation/methods2test_runnable/.tmp \
+  --mount type=bind,source="$(pwd)"/tmp/,target=/workspace/evaluation/methods2test_runnable/tmp \
   --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/coverage/,target=/workspace/data/methods2test_runnable/coverage \
   --mount type=bind,source="$(pwd)"/../../data/methods2test_runnable/fixed/,target=/workspace/data/methods2test_runnable/fixed,readonly \
   docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/methods2test_runnable:main python -u evaluate_tests.py --num_proc 20

@@ -62,7 +62,7 @@ apptainer run \
   --no-home \
   --overlay overlay.img \
   --cwd "/workspace/evaluation/humaneval-x/" \
-  --mount type=bind,source="$(pwd)"/.tmp/,target=/workspace/evaluation/humaneval-x/.tmp \
+  --mount type=bind,source="$(pwd)"/tmp/,target=/workspace/evaluation/humaneval-x/tmp \
   --mount type=bind,source="$(pwd)"/../../data/humaneval-x/coverage/,target=/workspace/data/humaneval-x/coverage \
   --mount type=bind,source="$(pwd)"/../../data/humaneval-x/fixed/,target=/workspace/data/humaneval-x/fixed,readonly \
   docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/humaneval-x:main python -u evaluate_tests.py --num_proc 20
