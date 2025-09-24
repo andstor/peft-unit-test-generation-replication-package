@@ -118,7 +118,7 @@ def main():
     # download the dataset.
     if data_args.dataset_name is not None:
         # Downloading and loading a dataset from the hub.
-        raw_dataset = load_dataset(data_args.dataset_name, data_args.dataset_config_name, split=data_args.dataset_split)#, revison=data_args.dataset_revision)
+        raw_dataset = load_dataset(data_args.dataset_name, data_args.dataset_config_name, split=data_args.dataset_split, revison=data_args.dataset_revision)
 
     # Load pretrained model and tokenizer
     #
