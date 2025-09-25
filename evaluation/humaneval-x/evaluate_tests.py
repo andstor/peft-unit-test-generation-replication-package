@@ -65,7 +65,7 @@ def main(args):
     save_dir = SCRIPT_DIR / args.output_dir
     data_dir = SCRIPT_DIR / args.data_dir
     
-    dataset = load_dataset("THUDM/humaneval-x", "java")
+    dataset = load_dataset("zai-org/humaneval-x", "java")
     humanevalx = dataset["test"].to_pandas().set_index("task_id")
     
     file_paths = find_file_paths(data_dir)
@@ -86,17 +86,19 @@ def main(args):
         for i, row in gen_ds_df.iterrows():
             test_id = row["id"]
             solution = humanevalx.loc[test_id]["declaration"] + row["prediction"]
-            
+
+            package = "package com.humaneval;\n"
+
             imports = "import org.junit.*;\nimport static org.junit.Assert.*;"
             imports += "\n" + solution.split("class")[0]
 
             new_classname = "Solution" + test_id.replace("/", "")
             solution = solution.replace("Solution", new_classname)
-            
-            main_path = Path("src") / "main" / "java" / (new_classname + ".java")
+
+            main_path = Path("src") / "main" / "java" / "com" / "humaneval" / (new_classname + ".java")
             os.makedirs(main_path.parent, exist_ok=True)
             with open(main_path, "w") as f:
-                f.write(solution)
+                f.write(package + "\n" + solution)
 
             test = humanevalx.loc[test_id]["test"]
             test = test.replace("Solution", new_classname)
@@ -112,10 +114,10 @@ def main(args):
             new_main_method_preamble = "@Test\n	public void test" + test_id.replace("/", "") + "()"
             test = test.replace(main_method_preamble, new_main_method_preamble)
 
-            test_path = Path("src") / "test" / "java" / (new_classname + "Test.java")
+            test_path = Path("src") / "test" / "java" / "com" / "humaneval" / (new_classname + "Test.java")
             os.makedirs(test_path.parent, exist_ok=True)
             with open(test_path, "w") as f:
-                f.write(imports + "\n" + test)
+                f.write(package + "\n" + imports + "\n" + test)
             
             try:
                 result = subprocess.run(["mvn", "clean", "test", "-Dmaven.test.failure.ignore=true"], timeout=60)
