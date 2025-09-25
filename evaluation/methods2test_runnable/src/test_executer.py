@@ -2,6 +2,7 @@ from typing import Optional, List, Dict
 from dataclasses import dataclass
 from pathlib import Path
 import subprocess
+import pandas as pd
 import xml.etree.ElementTree as ET
 import abc
 import os
@@ -38,31 +39,125 @@ class GradlePlugin(abc.ABC):
         raise NotImplementedError
 
 
-
-
-class CoverageTool(abc.ABC):
+class Tool(abc.ABC):
     def __init__(self, build_working_dir: Path):
         self.build_working_dir = build_working_dir
 
     @abc.abstractmethod
-    def get_coverage_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
+    def get_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
         raise NotImplementedError
     
     @abc.abstractmethod
-    def get_coverage_report_file(self) -> Path:
+    def get_report_file(self) -> Path:
+        raise NotImplementedError
+
+
+
+class MutationTool(Tool):
+    def __init__(self, build_working_dir: Path):
+        self.build_working_dir = build_working_dir
+        
+    @abc.abstractmethod
+    def get_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
+        raise NotImplementedError
+    
+    @abc.abstractmethod
+    def get_report_file(self) -> Path:
+        raise NotImplementedError
+
+class PITMutationTool(MutationTool):
+    
+    @abc.abstractmethod
+    def get_report_file(self) -> Path:
+        raise NotImplementedError
+
+    def get_report(self, focal_method: FocalMethodDescriptor, unit_test: TestCandidateDescriptor) -> Optional[Dict]:
+        from .pitester_report import PITesterReport
+        mutation_file = self.get_report_file()
+
+        if mutation_file is None:
+            logger.warning("No mutation file found")
+            return None
+
+        with open(mutation_file) as f:
+            
+            xml_string = f.read()
+            report = PITesterReport(xml_string)
+            
+            package, _ = extract_java_info(unit_test.file)
+
+            killed_mutants = report.get_mutations_by_test(".".join([package, unit_test.class_identifier, unit_test.function_identifier]), "KILLED")
+            killed_mutants = killed_mutants[killed_mutants['mutatedClass'] == ".".join([package, focal_method.class_identifier])]
+            killed_mutants = killed_mutants[killed_mutants['mutatedMethod'] == focal_method.function_identifier]
+
+            survived_mutants = report.get_mutations_by_test(".".join([package, unit_test.class_identifier, unit_test.function_identifier]), "SURVIVED")
+            survived_mutants = survived_mutants[survived_mutants['mutatedClass'] == ".".join([package, focal_method.class_identifier])]
+            survived_mutants = survived_mutants[survived_mutants['mutatedMethod'] == focal_method.function_identifier]
+
+            no_coverage_mutants = report.get_mutations_by_test(None, "NO_COVERAGE")
+            no_coverage_mutants = no_coverage_mutants[no_coverage_mutants['mutatedClass'] == ".".join([package, focal_method.class_identifier])]
+            no_coverage_mutants = no_coverage_mutants[no_coverage_mutants['mutatedMethod'] == focal_method.function_identifier]
+
+            relevant_mutations = pd.concat([killed_mutants, survived_mutants, no_coverage_mutants])
+
+            mutation_score = len(killed_mutants) / len(relevant_mutations) if len(relevant_mutations) > 0 else 0.0
+            return {
+                "killed_mutants": len(killed_mutants),
+                "survived_mutants": len(survived_mutants),
+                "no_coverage_mutants": len(no_coverage_mutants),
+                "mutation_score": mutation_score,
+            }
+
+
+class PITMavenMutationTool(PITMutationTool, MavenPlugin):
+    
+    def get_plugin_definition(self) -> Dict:
+        return {
+            'groupId': 'org.pitest',
+            'artifactId': 'pitest-maven',
+            'version': '1.16.0',
+            'executions': [
+                {
+                    'id': 'generate-mutation-report',
+                    'phase': 'test',
+                    'goals': ['mutationCoverage']
+                }
+            ],
+            'configuration': {
+                'outputFormats': { 'param': ['XML'] },
+                'fullMutationMatrix': 'true',
+            }
+        }
+
+    def get_report_file(self) -> Optional[Path]:
+        return self.build_working_dir / "target" / "pit-reports" / "mutations.xml"
+
+
+
+
+class CoverageTool(Tool):
+    def __init__(self, build_working_dir: Path):
+        self.build_working_dir = build_working_dir
+    
+    @abc.abstractmethod
+    def get_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
+        raise NotImplementedError
+    
+    @abc.abstractmethod
+    def get_report_file(self) -> Path:
         raise NotImplementedError
 
 
 class JacocoCoverageTool(CoverageTool):
     
     @abc.abstractmethod
-    def get_coverage_report_file(self) -> Path:
+    def get_report_file(self) -> Path:
         raise NotImplementedError
     
-    def get_coverage_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
+    def get_report(self, focal_method: FocalMethodDescriptor) -> Optional[Dict]:
         from .java_descriptor_converter import JavaDescriptorConverter
         from .jacoco_report import JaCoCoReport
-        coverage_file = self.get_coverage_report_file()
+        coverage_file = self.get_report_file()
 
         if coverage_file is None:
             logger.warning("No coverage file found")
@@ -112,7 +207,7 @@ class JacocoMavenCoverageTool(JacocoCoverageTool, MavenPlugin):
             ]
         }
 
-    def get_coverage_report_file(self) -> Optional[Path]:
+    def get_report_file(self) -> Optional[Path]:
         return self.build_working_dir / "target" / "site" / "jacoco" / "jacoco.xml"
 
 
@@ -139,20 +234,8 @@ class JacocoGradleCoverageTool(JacocoCoverageTool, GradlePlugin):
             f.write("    } \n")
             f.write("} \n")
 
-    def get_coverage_report_file(self) -> Optional[Path]:
+    def get_report_file(self) -> Optional[Path]:
         return self.build_working_dir / "build" / "reports" / "jacoco" / "jacoco.xml"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class BuildSystem(abc.ABC):
@@ -174,7 +257,7 @@ class BuildSystem(abc.ABC):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def install_coverage_tool(self, coverage_tool: 'CoverageTool'):
+    def install_tool(self, coverage_tool: 'CoverageTool'):
         raise NotImplementedError
     
     @abc.abstractmethod
@@ -190,7 +273,7 @@ class MavenBuildSystem(BuildSystem):
     def get_name(self) -> str:
         return "Maven"
 
-    def install_coverage_tool(self, coverage_tool: MavenPlugin):
+    def install_tool(self, coverage_tool: MavenPlugin):
         self.coverage_tool = coverage_tool
         
         pom_file = self._find_super_pom(self.build_file) or self.build_file
@@ -357,7 +440,28 @@ class MavenBuildSystem(BuildSystem):
                         goal_elem.text = goal
             else:
                 raise ValueError("No executions provided in the plugin definition.")
-
+            
+            def _add_configuration(parent, config):
+                if isinstance(config, dict):
+                    for key, value in config.items():
+                        child = ET.SubElement(parent, f'{{{namespace}}}{key}')
+                        
+                        # if is list, create multiple subelements
+                        if isinstance(value, list):
+                            for item in value:
+                                child.text = str(item)
+                        else:
+                            _add_configuration(child, value)
+                else:
+                    parent.text = str(config)
+                
+            if 'configuration' in plugin_def:
+                configuration = ET.SubElement(new_plugin, f'{{{namespace}}}configuration')
+                for key, value in plugin_def['configuration'].items():
+                    config_elem = ET.SubElement(configuration, f'{{{namespace}}}{key}')
+                    _add_configuration(config_elem, value)
+            
+            
             plugins.append(new_plugin)
             tree.write(pom_file_path, encoding='utf-8', xml_declaration=True)
         except ET.ParseError as e:
@@ -413,7 +517,7 @@ class GradleBuildSystem(BuildSystem):
         raise NotImplementedError
 
 
-    def install_coverage_tool(self, coverage_tool: 'CoverageTool'):
+    def install_tool(self, coverage_tool: 'CoverageTool'):
         raise NotImplementedError
         #self.coverage_tool = coverage_tool
         
@@ -438,6 +542,7 @@ class TestExecutor:
         
         self.build_system: Optional[BuildSystem] = None
         self.coverage_tool: Optional[CoverageTool] = None
+        self.mutation_tool: Optional[MutationTool] = None
 
     def register_unit_test(self, unit_test: TestCandidateDescriptor):
         self.unit_test = unit_test
@@ -510,7 +615,7 @@ class TestExecutor:
         if not self.focal_method:
             raise Exception("Focal method has not been registered.")
         if self.coverage_tool:
-            return self.coverage_tool.get_coverage_report(self.focal_method)
+            return self.coverage_tool.get_report(self.focal_method)
         else:
             logger.warning("Coverage tool has not been installed.")
             return None
@@ -526,7 +631,29 @@ class TestExecutor:
             self.coverage_tool = JacocoGradleCoverageTool(self.build_system.build_working_dir)
         else:
             raise Exception(f"No default coverage tool available for {self.build_system.__class__.__name__}")
-        self.build_system.install_coverage_tool(self.coverage_tool)
+        self.build_system.install_tool(self.coverage_tool)
+    
+    def get_mutation_report(self) -> Optional[Dict]:
+        if not self.focal_method:
+            raise Exception("Focal method has not been registered.")
+        if not self.unit_test:
+            raise Exception("Unit test has not been registered.")
+        if self.mutation_tool:
+            return self.mutation_tool.get_report(self.focal_method, self.unit_test)
+        else:
+            logger.warning("Mutation tool has not been installed.")
+            return None
+    
+    def install_mutation_tool(self, mutation_tool: Optional[MutationTool] = None):
+        if not self.build_system:
+            self.detect_build_tool()
+        if mutation_tool:
+            self.mutation_tool = mutation_tool
+        elif isinstance(self.build_system, MavenBuildSystem):
+            self.mutation_tool = PITMavenMutationTool(self.build_system.build_working_dir)
+        else:
+            raise Exception(f"No default mutation tool available for {self.build_system.__class__.__name__}")
+        self.build_system.install_tool(self.mutation_tool)
 
     
     def replace_test_case(self, old_body, new_body) -> None:

@@ -131,13 +131,13 @@ By setting `--max_new_tokens` to `auto`, all the unused embedding space is used 
 
 
 #### Example
-The following example will generate samples from the test split of the [humaneval-x](https://huggingface.co/datasets/THUDM/humaneval-x) dataset using the greedy decoding strategy. The output will be saved to the `output` directory.
+The following example will generate samples from the test split of the [humaneval-x](https://huggingface.co/datasets/zai-org/humaneval-x) dataset using the greedy decoding strategy. The output will be saved to the `output` directory.
 
 ```bash
 accelerate launch run_gen.py \
 --model_name_or_path gpt2 \
 --torch_dtype auto \
---dataset_name THUDM/humaneval-x \
+--dataset_name zai-org/humaneval-x \
 --dataset_config_name java \
 --dataset_split test \
 --text_column_name prompt \

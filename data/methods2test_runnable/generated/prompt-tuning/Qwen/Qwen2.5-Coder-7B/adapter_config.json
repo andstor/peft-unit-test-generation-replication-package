@@ -1,0 +1,17 @@
+{
+    "task_type": "CAUSAL_LM",
+    "peft_type": "PROMPT_TUNING",
+    "auto_mapping": null,
+    "base_model_name_or_path": "Qwen/Qwen2.5-Coder-7B",
+    "revision": null,
+    "inference_mode": true,
+    "num_virtual_tokens": 20,
+    "token_dim": 3584,
+    "num_transformer_submodules": 1,
+    "num_attention_heads": 28,
+    "num_layers": 28,
+    "prompt_tuning_init": "RANDOM",
+    "prompt_tuning_init_text": null,
+    "tokenizer_name_or_path": "Qwen/Qwen2.5-Coder-7B",
+    "tokenizer_kwargs": null
+}

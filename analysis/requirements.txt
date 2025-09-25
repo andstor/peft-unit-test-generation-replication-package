@@ -1,6 +1,8 @@
 ipykernel
 ipywidgets
 codebleu
+crystalbleu
+nltk
 tqdm
 pandarallel
 matplotlib

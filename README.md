@@ -54,7 +54,7 @@ data/
 |   |-- coverage_branch.csv                            CSV file containing the branch coverage of the generated unit tests.
 |   |-- coverage_instruction.csv                       CSV file containing the instruction coverage of the generated unit tests.
 |   |-- passing_rate.csv                               CSV file containing the percentage of the generated unit tests that are runnable.
-|   |-- scores.csv                                     CSV file containing the CodeBLEU scores of the experiments.
+|   |-- codebleu_scores.csv                            CSV file containing the CodeBLEU scores of the experiments.
 |   |-- valid_syntax.csv                               CSV file containing the valid syntax fraction generated code.
 |-- params_data.csv                                    CSV file with count of trainable parameters for each model.
 ```
