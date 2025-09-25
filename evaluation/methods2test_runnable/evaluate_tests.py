@@ -172,6 +172,7 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                     executor.register_unit_test(testCandidate)
                     executor.register_focal_method(focal_method)
                     executor.install_coverage_tool()
+                    executor.install_mutation_tool()
                     
                     ### GENERATED CODE ###
                     # Now try to compile the generated code
@@ -205,10 +206,13 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                         status = "success"
                         logger.info("TEST PASSED")
                     
-                    coverage = None
+                    coverage = mutation_report = None
                     if results is not None:
                         coverage = executor.get_coverage_report()
                         logger.info(pd.Series(coverage).to_frame().T)
+                        
+                        mutation_report = executor.get_mutation_report()
+                        logger.info(f"Number of killed mutants: {len(mutation_report)}")
                         
                     data = {}
                     data["id"] = id
@@ -217,6 +221,9 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                     # add coverage to data without knowing the keys
                     if coverage is not None:
                         data.update(coverage)
+                    
+                    if mutation_report is not None:
+                        data.update(mutation_report)
                         
                     writeq.put((data, output_file))
             
