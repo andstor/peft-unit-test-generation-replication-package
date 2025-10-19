@@ -75,7 +75,7 @@ class PITMutationTool(MutationTool):
         from .pitester_report import PITesterReport
         mutation_file = self.get_report_file()
 
-        if mutation_file is None:
+        if not mutation_file.exists():
             logger.warning("No mutation file found")
             return None
 
@@ -159,7 +159,7 @@ class JacocoCoverageTool(CoverageTool):
         from .jacoco_report import JaCoCoReport
         coverage_file = self.get_report_file()
 
-        if coverage_file is None:
+        if not coverage_file.exists():
             logger.warning("No coverage file found")
             return None
 
@@ -301,7 +301,7 @@ class MavenBuildSystem(BuildSystem):
                 text=True,               # Decode output to string
                 check=True,               # Raise exception on non-zero exit codes
                 cwd=self.build_working_dir,  # Set working directory
-                timeout=60
+                #timeout=60
             )
             return result.stdout, result.stderr, result.returncode
         except subprocess.CalledProcessError as e:
@@ -317,7 +317,7 @@ class MavenBuildSystem(BuildSystem):
                 text=True,               # Decode output to string
                 check=True,               # Raise exception on non-zero exit codes
                 cwd=self.build_working_dir,  # Set working directory
-                timeout=60
+                #timeout=60
             )
             return result.stdout, result.stderr
         except subprocess.CalledProcessError as e:
@@ -490,7 +490,7 @@ class GradleBuildSystem(BuildSystem):
                 text=True,               # Decode output to string
                 check=True,               # Raise exception on non-zero exit codes
                 cwd=self.build_working_dir,  # Set working directory
-                timeout=60
+                #timeout=60
             )
             return result.stdout, result.stderr
         except subprocess.CalledProcessError as e:
@@ -507,7 +507,7 @@ class GradleBuildSystem(BuildSystem):
                 text=True,               # Decode output to string
                 check=True,               # Raise exception on non-zero exit codes
                 cwd=self.build_working_dir,  # Set working directory
-                timeout=60
+                #timeout=60
             )
             return result.stdout, result.stderr
         except subprocess.CalledProcessError as e:

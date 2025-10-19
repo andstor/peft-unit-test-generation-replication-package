@@ -206,25 +206,26 @@ def process_test(dataq: Queue, writeq: Queue, progressq: Queue, sem: BoundedSema
                         status = "success"
                         logger.info("TEST PASSED")
                     
-                    coverage = mutation_report = None
-                    if results is not None:
-                        coverage = executor.get_coverage_report()
-                        logger.info(pd.Series(coverage).to_frame().T)
-                        
-                        mutation_report = executor.get_mutation_report()
-                        logger.info(f"Number of killed mutants: {len(mutation_report)}")
-                        
                     data = {}
                     data["id"] = id
                     data["status"] = status
                     data["build_tool"] = executor.build_system.get_name()
-                    # add coverage to data without knowing the keys
-                    if coverage is not None:
-                        data.update(coverage)
                     
-                    if mutation_report is not None:
-                        data.update(mutation_report)
+                    coverage = mutation_report = None
+                    if results is not None:
                         
+                        # add coverage to data without knowing the keys
+                        coverage = executor.get_coverage_report()
+                        if coverage is not None:
+                            data.update(coverage)
+                            logger.info(pd.Series(coverage).to_frame().T)
+                        
+                        # add mutation report to data without knowing the keys
+                        mutation_report = executor.get_mutation_report()
+                        if mutation_report is not None:
+                            data.update(mutation_report)
+                            logger.info(f"Number of killed mutants: {len(mutation_report)}")
+                    
                     writeq.put((data, output_file))
             
                 except Exception as e:
