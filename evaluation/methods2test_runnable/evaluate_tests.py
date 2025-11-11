@@ -327,6 +327,7 @@ def main(args):
             out_df = pd.read_json(output_file, orient='records', lines=True, dtype=False)
             if not out_df.empty:
                 out_df = out_df.set_index("id")
+                out_df = out_df[out_df["status"] != "exception"] # Consider only successfully processed tests
                 processed_ids.update(set(out_df.index))
         progressq.put(len(processed_ids))
         
