@@ -1,0 +1,14 @@
+id,downloads,downloadsAllTime,createdAt
+Qwen/Qwen2.5-Coder-14B,4621,185216,2024-11-08 10:48:15
+Qwen/Qwen2.5-Coder-3B,15469,213837,2024-11-08 10:48:10
+Qwen/Qwen2.5-Coder-7B,22839,453481,2024-09-16 11:57:24
+meta-llama/CodeLlama-7b-hf,2274,200519,2024-03-13 19:27:11
+bigcode/starcoder2-7b,17013,695181,2024-02-20 18:00:27
+bigcode/starcoder2-15b,5397,450456,2024-02-20 17:58:19
+bigcode/starcoder2-3b,192177,6168133,2023-11-29 15:22:51
+bigcode/starcoderbase,7185,210970,2023-05-03 15:16:10
+Salesforce/codegen2-16B_P,13,37908,2023-04-26 16:05:09
+Salesforce/codegen2-7B_P,90,28639,2023-04-26 16:04:49
+Salesforce/codegen2-3_7B_P,42,39302,2023-04-25 02:08:59
+Salesforce/codegen2-1B_P,226,77365,2023-04-25 01:42:39
+Salesforce/codegen-350M-multi,4113,588888,2022-04-11 16:11:35
