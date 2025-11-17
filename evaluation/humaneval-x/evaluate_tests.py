@@ -23,7 +23,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate generated tests on methods2test dataset.")
     parser.add_argument("--split", type=str, default="test", help="Dataset split")
     parser.add_argument("--data_dir", type=str, default="../../data/humaneval-x/fixed", help="Temporary directory for caching and repos. Relative to script directory.")
-    parser.add_argument("--output_dir", type=str, default="../../data/humaneval-x/coverage", help="Directory to store results. Relative to script directory.")
+    parser.add_argument("--output_dir", type=str, default="../../data/humaneval-x/executed", help="Directory to store results. Relative to script directory.")
     parser.add_argument("--tmp_dir", type=str, default="tmp", help="Temporary directory for caching and repos. Relative to script directory.")
 
     return parser.parse_args()
@@ -39,33 +39,12 @@ def find_file_paths(data_dir):
     return file_paths
 
 
-def get_coverage_report():
-    """Run Maven to get the coverage report for the given test_id and new_classname."""
-    coverage_file = pd.read_csv("target/site/jacoco/jacoco.csv")
-    for i, row in coverage_file.iterrows():
-        data = row.to_dict()
-
-        if data["INSTRUCTION_COVERED"] + data["INSTRUCTION_MISSED"] == 0:
-            instruction_coverage = 0
-        else:
-            instruction_coverage = data["INSTRUCTION_COVERED"] / (data["INSTRUCTION_MISSED"] + data["INSTRUCTION_COVERED"])
-        data["instruction_coverage"] = instruction_coverage
-
-        if data["BRANCH_COVERED"] + data["BRANCH_MISSED"] == 0:
-            branch_coverage = 0
-        else:
-            branch_coverage = data["BRANCH_COVERED"] / (data["BRANCH_MISSED"] + data["BRANCH_COVERED"])
-        data["branch_coverage"] = branch_coverage
-
-        return data
-
-
 def main(args):
     tmp_dir = SCRIPT_DIR / args.tmp_dir
     save_dir = SCRIPT_DIR / args.output_dir
     data_dir = SCRIPT_DIR / args.data_dir
     
-    dataset = load_dataset("zai-org/humaneval-x", "java")
+    dataset = load_dataset("zai-org/humaneval-x", "java", revision="refs/pr/5")
     humanevalx = dataset["test"].to_pandas().set_index("task_id")
     
     file_paths = find_file_paths(data_dir)
@@ -120,7 +99,7 @@ def main(args):
                 f.write(package + "\n" + imports + "\n" + test)
             
             try:
-                result = subprocess.run(["mvn", "clean", "test", "-Dmaven.test.failure.ignore=true"], timeout=60)
+                result = subprocess.run(["mvn", "clean", "test", "-Dmaven.test.failure.ignore=true"], timeout=120)
             except Exception as e:
                 data = {}
                 data["id"] = test_id
@@ -130,7 +109,7 @@ def main(args):
                 
             else:
                 parser = SurefireReportParser()
-                results = parser.get_testsuite_results_by_name(new_classname + "Test")
+                results = parser.get_testsuite_results_by_name("com.humaneval." + new_classname + "Test")
                 status = None
                 if results is None:
                     logger.info("COMPILATION ERROR")
@@ -148,18 +127,11 @@ def main(args):
                     status = "success"
                     logger.info("TEST PASSED")
                     
-                coverage = None
-                if results is not None:
-                    coverage = get_coverage_report()
-                    logger.info(pd.Series(coverage).to_frame().T)
                     
                 data = {}
                 data["id"] = test_id
                 data["status"] = status
-                # add coverage to data without knowing the keys
-                if coverage is not None:
-                    data.update(coverage)
-                    
+
                 print(data)
                 with open(output_file, "a") as jacoco_file:
                     jacoco_file.write(json.dumps(data) + "\n")

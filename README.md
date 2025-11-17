@@ -46,22 +46,23 @@ data/
 |   |           |-- <model_name>/                      The name of the model.
 |   |               |-- 0000[i]-of-0000[n].test.jsonl  JSONL file with generated unit tests.
 |   |-- fixed/                                         Same as "generated" but with fixed data.
-|   |-- coverage/                                      The coverage data of the generated unit tests.
+|   |-- executed/                                      The execution data of the generated unit tests.
 |   |   |-- <tuning_method>/                           The tuning method used. Full pre-trained, fine-tuning, LoRA, IA^3, and prompt tuning.
 |   |       |-- <namespace>/                           The organization that created the base model.
 |   |           |-- <model_name>/                      The name of the model.
 |   |               |-- jacoco.jsonl                   JSONL file with jacoco report data.
+|   |-- codebleu_scores.csv                            CSV file containing the CodeBLEU scores of the experiments.
 |   |-- coverage_branch.csv                            CSV file containing the branch coverage of the generated unit tests.
 |   |-- coverage_instruction.csv                       CSV file containing the instruction coverage of the generated unit tests.
+|   |-- mutation_score.csv                             CSV file containing the mutation scores of the generated unit tests.
 |   |-- passing_rate.csv                               CSV file containing the percentage of the generated unit tests that are runnable.
-|   |-- codebleu_scores.csv                            CSV file containing the CodeBLEU scores of the experiments.
 |   |-- valid_syntax.csv                               CSV file containing the valid syntax fraction generated code.
 |-- params_data.csv                                    CSV file with count of trainable parameters for each model.
 ```
 
 
 ## Analysis
-From the generated data, we fix it using the `fix_data.ipynb` notebook. After fixing the data, we calculate the CodeBLEU scores using the `calc_similarity.ipynb` notebook. After code coverage is calculated (see the [evaluation](#evaluation) section), we calculate the statistics of the passing rate and coverage results using the `calc_execution_metrics.ipynb` notebook. Finally, we analyze the data and generate the plots using the `plots.ipynb` notebook.
+From the generated data, we fix it using the `fix_data.ipynb` notebook. After fixing the data, we calculate the CodeBLEU scores using the `calc_similarity.ipynb` notebook. After code coverage and mutation scores are calculated (see the [evaluation](#evaluation) section), we calculate the statistics of the passing rate, coverage, and mutation score results using the `calc_execution_metrics.ipynb` notebook. Finally, we analyze the data and generate the plots using the `plots.ipynb` notebook.
 
 ```
 analysis/
@@ -106,10 +107,10 @@ Follow the setup instructions within each directory. To replicate the experiment
 
 1. Train the models using the `run_train.py` script.
 2. Construct the `methods2test_runnable` evaluation dataset by following the instructions in the `evaluation/methods2test_runnable/README.md` file.
-3. Generate the unit tests for the `methods2test_runnable` dataset and the `humaneval-x` dataset using the `run_gen.py` script.
+3. Generate the unit tests for the `methods2test_runnable` dataset and focal methods for the `humaneval-x` dataset using the `run_gen.py` script.
 4. Fix the generated data using the `fix_data.ipynb` notebook.
 5. Calculate the CodeBLEU scores using the `calc_similarity.ipynb` notebook.
-6. Execute generated tests and collect coverage data by following instructions for running evaluation of the `methods2test_runnable` dataset and the `humaneval-x` dataset. See the respective `README.md` files for details.
+6. Execute tests and collect quality metrics data by following instructions for running evaluation of the `methods2test_runnable` dataset and the `humaneval-x` dataset. See the respective `README.md` files for details.
 7. Calculate the statistics of the passing rate and coverage results using the `calc_execution_metrics.ipynb` notebook.
 8. Analyze the data and generate the figures using the `plots.ipynb` notebook.
 9. Analyze the data and generate tables by running the `tables.ipynb` notebook.
