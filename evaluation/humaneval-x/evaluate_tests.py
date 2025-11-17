@@ -52,7 +52,7 @@ def main(args):
     for file_path in file_paths:
         res_file_dir = save_dir / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
         os.makedirs(res_file_dir, exist_ok=True)
-        output_file = res_file_dir / "jacoco.jsonl"
+        output_file = res_file_dir / "results.jsonl"
         
         gen_ds_df = pd.read_json(file_path, orient='records', lines=True, dtype=False)  
         if gen_ds_df.empty:
@@ -104,8 +104,8 @@ def main(args):
                 data = {}
                 data["id"] = test_id
                 data["status"] = "exception"
-                with open(output_file, "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
+                with open(output_file, "a") as results_file:
+                    results_file.write(json.dumps(data) + "\n")
                 
             else:
                 parser = SurefireReportParser()
@@ -133,8 +133,8 @@ def main(args):
                 data["status"] = status
 
                 print(data)
-                with open(output_file, "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
+                with open(output_file, "a") as results_file:
+                    results_file.write(json.dumps(data) + "\n")
             finally:
                 os.remove(test_path)
                 os.remove(main_path)

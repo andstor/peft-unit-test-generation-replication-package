@@ -76,8 +76,8 @@ def jsonl_writer_worker(writeq: Queue):
             try:
                 # Get data and its respective file from the queue
                 data, file_path = item
-                with open(file_path, "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
+                with open(file_path, "a") as results_file:
+                    results_file.write(json.dumps(data) + "\n")
                     
             except Exception as e:
                 print(f"Error writing data: {e}")
@@ -309,7 +309,7 @@ def main(args):
     for file_path in file_paths:
         res_file_dir = save_dir / Path(*file_path.split(os.sep)[-4:-1]) # Extract method, namespace, and model name from the path
         os.makedirs(res_file_dir, exist_ok=True)
-        output_file = res_file_dir / "jacoco.jsonl"
+        output_file = res_file_dir / "results.jsonl"
         
         
         gen_ds_df = pd.read_json(file_path, orient='records', lines=True, dtype=False)  

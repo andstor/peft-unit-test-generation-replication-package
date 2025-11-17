@@ -71,7 +71,7 @@ docker run \
 
 #### Evaluate Tests
 
-Evaluate the tests using the following command. This will run the tests and calculate the coverage using Jacoco.
+Evaluate the tests using the following command. This will run the tests and calculate the coverage using Jacoco and mutation score using Pitest.
 
 ```bash
 docker run \

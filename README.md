@@ -50,7 +50,7 @@ data/
 |   |   |-- <tuning_method>/                           The tuning method used. Full pre-trained, fine-tuning, LoRA, IA^3, and prompt tuning.
 |   |       |-- <namespace>/                           The organization that created the base model.
 |   |           |-- <model_name>/                      The name of the model.
-|   |               |-- jacoco.jsonl                   JSONL file with jacoco report data.
+|   |               |-- results.jsonl                  JSONL file with execution data.
 |   |-- codebleu_scores.csv                            CSV file containing the CodeBLEU scores of the experiments.
 |   |-- coverage_branch.csv                            CSV file containing the branch coverage of the generated unit tests.
 |   |-- coverage_instruction.csv                       CSV file containing the instruction coverage of the generated unit tests.
@@ -68,7 +68,7 @@ From the generated data, we fix it using the `fix_data.ipynb` notebook. After fi
 analysis/
 |-- java-universal-parser/          Directory containing the Java parser used to validate generated code.
 |-- fix_data.ipynb                  Jupyter Notebook file used to fix the generated data. Also calculates the syntactic validity of the generated code.
-|-- calc_execution_metrics.ipynb    Jupyter Notebook file used to calculate the statistics of the passing rate and coverage results.
+|-- calc_execution_metrics.ipynb    Jupyter Notebook file used to calculate the statistics of the passing rate, coverage, and mutation score results.
 |-- calc_similarity.ipynb           Jupyter Notebook file used to calculate the CodeBLEU scores of the fixed data.
 |-- plots.ipynb                     Jupyter Notebook file containing the Python code used to analyze the extracted data and generate the resulting plots.
 |-- tables.ipynb                    Jupyter Notebook file containing the Python code used to analyze the extracted data and generate the resulting tables.

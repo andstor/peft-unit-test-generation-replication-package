@@ -76,8 +76,8 @@ def jsonl_writer_worker(writeq: Queue, save_path: Path):
                 # Get data and its respective file from the queue
                 data = item
 
-                with open(save_path, "a") as jacoco_file:
-                    jacoco_file.write(json.dumps(data) + "\n")
+                with open(save_path, "a") as results_file:
+                    results_file.write(json.dumps(data) + "\n")
                     
             except Exception as e:
                 print(f"Error writing data: {e}")
