@@ -65,5 +65,5 @@ apptainer run \
   --mount type=bind,source="$(pwd)"/tmp/,target=/workspace/evaluation/humaneval-x/tmp \
   --mount type=bind,source="$(pwd)"/../../data/humaneval-x/executed/,target=/workspace/data/humaneval-x/executed \
   --mount type=bind,source="$(pwd)"/../../data/humaneval-x/fixed/,target=/workspace/data/humaneval-x/fixed,readonly \
-  docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/humaneval-x:main python -u evaluate_tests.py --num_proc 20
+  docker://ghcr.io/andstor/peft-unit-test-generation-replication-package/humaneval-x:main python -u evaluate_tests.py --num_proc 1
 ```
