@@ -8,3 +8,4 @@ pandarallel
 matplotlib
 transformers
 tree-sitter-java==0.21
+sacrebleu
