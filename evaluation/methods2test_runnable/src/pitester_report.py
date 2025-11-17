@@ -77,7 +77,7 @@ if __name__ == "__main__":
     with open("target/pit-reports/mutations.xml", "r", encoding="utf-8") as f:
         xml_content = f.read()
 
-    report = MutationsReport(xml_content)
+    report = PITesterReport(xml_content)
 
     test_identifier = "com.humaneval.SolutionJava0Test.testJava1(com.humaneval.SolutionJava0Test)"
     killed_by_test = report.get_mutations_by_test(test_identifier, "KILLED")
