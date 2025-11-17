@@ -57,6 +57,7 @@ data/
 |   |-- mutation_score.csv                             CSV file containing the mutation scores of the generated unit tests.
 |   |-- passing_rate.csv                               CSV file containing the percentage of the generated unit tests that are runnable.
 |   |-- valid_syntax.csv                               CSV file containing the valid syntax fraction generated code.
+|-- model_downloads.csv                                CSV file with model download statistics.
 |-- params_data.csv                                    CSV file with count of trainable parameters for each model.
 ```
 
@@ -91,10 +92,11 @@ evaluation/
 |   |-- find_golden_commits.py            Python script for finding the golden commits in the methods2test repository.
 |   |-- package_runnable.py               Python script for packaging the runnable methods2test codes.
 |   |-- src/                              Directory containing the source code for the runnable methods2test codes.
-|   |   |-- jacoco_report.py              Python script for generating the Jacoco report.
+|   |   |-- jacoco_report.py              Python script for extracting the Jacoco report.
 |   |   |-- java_descriptor_converter.py  Python script for converting Java descriptors.
 |   |   |-- java_utils.py                 Python script for Java utility functions.
-|   |   |-- surefire_report.py            Python script for generating the Surefire report.
+|   |   |-- pitester_report.py            Python script for extracting the Pitest report.
+|   |   |-- surefire_report.py            Python script for extracting the Surefire report.
 |   |   |-- test_executer.py              Python script for executing the tests.
 |   |-- output/                           Directory for storing the intermediate results.
 |   |   |-- commits_[split].jsonl         JSONL file with commits for buildable methods2test test repositories.
@@ -111,7 +113,7 @@ Follow the setup instructions within each directory. To replicate the experiment
 4. Fix the generated data using the `fix_data.ipynb` notebook.
 5. Calculate the CodeBLEU scores using the `calc_similarity.ipynb` notebook.
 6. Execute tests and collect quality metrics data by following instructions for running evaluation of the `methods2test_runnable` dataset and the `humaneval-x` dataset. See the respective `README.md` files for details.
-7. Calculate the statistics of the passing rate and coverage results using the `calc_execution_metrics.ipynb` notebook.
+7. Calculate the statistics of the passing rate, coverage, and mutation score results using the `calc_execution_metrics.ipynb` notebook.
 8. Analyze the data and generate the figures using the `plots.ipynb` notebook.
 9. Analyze the data and generate tables by running the `tables.ipynb` notebook.
 
