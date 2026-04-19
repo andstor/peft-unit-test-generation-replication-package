@@ -1,0 +1,4 @@
+datasets<3.0
+huggingface_hub<0.32
+pandas
+tqdm
