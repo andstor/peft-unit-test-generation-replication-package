@@ -1,0 +1,56 @@
+{
+    "transformers_version": "5.5.3",
+    "architectures": [
+        "CodeGenForCausalLM"
+    ],
+    "output_hidden_states": false,
+    "return_dict": true,
+    "dtype": "float32",
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+    },
+    "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+    },
+    "problem_type": null,
+    "vocab_size": 51200,
+    "n_positions": 2048,
+    "n_ctx": 2048,
+    "n_embd": 1024,
+    "n_layer": 20,
+    "n_head": 16,
+    "rotary_dim": 32,
+    "n_inner": null,
+    "activation_function": "gelu_new",
+    "resid_pdrop": 0.0,
+    "embd_pdrop": 0.0,
+    "attn_pdrop": 0.0,
+    "layer_norm_epsilon": 1e-05,
+    "initializer_range": 0.02,
+    "use_cache": true,
+    "bos_token_id": 1,
+    "eos_token_id": 50256,
+    "tie_word_embeddings": false,
+    "_name_or_path": "andstor/Salesforce-codegen-350M-multi-unit-test-fine-tuning",
+    "gradient_checkpointing": false,
+    "model_type": "codegen",
+    "scale_attn_weights": true,
+    "summary_activation": null,
+    "summary_first_dropout": 0.1,
+    "summary_proj_to_labels": true,
+    "summary_type": "cls_index",
+    "summary_use_proj": true,
+    "task_specific_params": {
+        "text-generation": {
+            "do_sample": true,
+            "max_length": 50,
+            "temperature": 1.0
+        }
+    },
+    "tokenizer_class": "GPT2Tokenizer",
+    "output_attentions": false
+}
