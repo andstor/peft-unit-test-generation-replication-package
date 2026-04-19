@@ -30,6 +30,8 @@ jobs:
             build-dir: evaluation/methods2test_runnable
           - name: humaneval-x
             build-dir: evaluation/humaneval-x
+          - name: defects4j_fixed_runnable
+            build-dir: evaluation/defects4j_fixed_runnable
 
     env:
       REGISTRY: ghcr.io
