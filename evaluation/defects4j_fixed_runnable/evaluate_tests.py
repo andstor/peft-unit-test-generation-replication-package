@@ -432,8 +432,6 @@ def evaluate_bug_group(
 
             if rc != 0:
                 record = {"id": rec_id, "status": "compilation error"}
-                if COMPILE_ERROR_TAIL > 0:
-                    record["compile_error"] = compile_out[-COMPILE_ERROR_TAIL:]
                 append_result(results_file, record)
                 continue
 
