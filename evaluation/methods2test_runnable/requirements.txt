@@ -5,3 +5,4 @@ ipywidgets
 gitpython
 numpy
 hf_xet
+lizard

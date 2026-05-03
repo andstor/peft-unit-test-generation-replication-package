@@ -43,3 +43,4 @@ COPY  src ./src
 COPY  validate_buildable.py .
 COPY  validate_runnable.py .
 COPY  evaluate_tests.py .
+COPY  collect_repo_stats.py .
